@@ -39,7 +39,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(544, 410);
+            this.BtnCancelar.Location = new System.Drawing.Point(498, 387);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(77, 31);
@@ -53,13 +53,13 @@
             this.GrdBusquedaClientes.AllowUserToAddRows = false;
             this.GrdBusquedaClientes.AllowUserToDeleteRows = false;
             this.GrdBusquedaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdBusquedaClientes.Location = new System.Drawing.Point(10, 48);
+            this.GrdBusquedaClientes.Location = new System.Drawing.Point(10, 39);
             this.GrdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
             this.GrdBusquedaClientes.Name = "GrdBusquedaClientes";
             this.GrdBusquedaClientes.ReadOnly = true;
             this.GrdBusquedaClientes.RowHeadersWidth = 102;
             this.GrdBusquedaClientes.RowTemplate.Height = 40;
-            this.GrdBusquedaClientes.Size = new System.Drawing.Size(646, 342);
+            this.GrdBusquedaClientes.Size = new System.Drawing.Size(587, 333);
             this.GrdBusquedaClientes.TabIndex = 19;
             // 
             // TxtBuscar
@@ -85,7 +85,7 @@
             // BtnSeleccionar
             // 
             this.BtnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSeleccionar.Location = new System.Drawing.Point(443, 410);
+            this.BtnSeleccionar.Location = new System.Drawing.Point(397, 387);
             this.BtnSeleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSeleccionar.Name = "BtnSeleccionar";
             this.BtnSeleccionar.Size = new System.Drawing.Size(99, 31);
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 447);
+            this.ClientSize = new System.Drawing.Size(599, 419);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.GrdBusquedaClientes);
             this.Controls.Add(this.TxtBuscar);

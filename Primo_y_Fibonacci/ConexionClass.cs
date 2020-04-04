@@ -34,6 +34,14 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Cliente");
 
+            comandosSQL.CommandText = "select * from Empleado";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Empleado");
+
+            comandosSQL.CommandText = "select * from Productos";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Productos");
+
             return ds;
         }
         public void mantenimiento_datos(String[] datos, String accion)
@@ -41,24 +49,46 @@ namespace Primo_y_Fibonacci
             String sql = "";
             if (accion == "nuevo"){
 
-                sql = "INSERT INTO Cliente (NombreCliente, E_Mail, Dirección) VALUES(" +
-                 
+                sql = "INSERT INTO Cliente (NombreCliente, EMail, Dirección) VALUES(" +
+                    
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'" +
                     ")";
 
-            } else if (accion == "modificar")  {
-                sql = "UPDATE Cliente SET" +
+                sql = "INSERT INTO Empleado (codigo, NombreEmpleado, Dirección, EMail) VALUES(" +
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
+                    ")";
+
+            }
+
+            else if (accion == "modificar")  {
+
+                sql = "UPDATE Cliente SET " +
                 
-                "NombreCliente      = '" + datos[1] + "'," +
-                "E_Mail              = '" + datos[2] + "'," +
-                "Dirección           = '" + datos[3] + "'," +
-                "WHERE IdCliente     = '" + datos[0] + "'";
+                " NombreCliente       = '" + datos[1] + "'," +
+                " EMail               = '" + datos[2] + "'," +
+                " Dirección           = '" + datos[3] + "'" +
+                " WHERE IdCliente     = '" + datos[0] + "'";
+
+                sql = "UPDATE Empleado SET " +
+
+               "codigo              = '" + datos[1] + "'," +
+               "NombreEmpleado      = '" + datos[2] + "'," +
+               "Dirección           = '" + datos[3] + "'," +
+               "EMail               = '" + datos[4] + "'" +
+               "WHERE IdEmpleado    = '" + datos[0] + "'";
+
 
             } else if (accion == "eliminar") {
-                sql = "DELETE Cliente FROM Cliente WHERE IdCliente ='" + datos[0] + "'";
+                sql = "DELETE Cliente FROM Cliente WHERE IdCliente='" + datos[0] + "'";
+
+                sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
             }
+
             procesarSQL(sql);
 
         }

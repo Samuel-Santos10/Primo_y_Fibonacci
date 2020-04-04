@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtDirección = new System.Windows.Forms.TextBox();
             this.LblIDCliente = new System.Windows.Forms.Label();
             this.TxtIdCliente = new System.Windows.Forms.TextBox();
@@ -39,6 +40,10 @@
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.GrbCliente = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblop2 = new System.Windows.Forms.Label();
+            this.lblop = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
@@ -48,12 +53,12 @@
             this.GrbNavegacion = new System.Windows.Forms.GroupBox();
             this.BtnAnterior = new System.Windows.Forms.Button();
             this.BtnPrimero = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnempleado = new System.Windows.Forms.Button();
             this.GrbDatosCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GrbDatosCliente
@@ -76,6 +81,17 @@
             this.GrbDatosCliente.TabIndex = 14;
             this.GrbDatosCliente.TabStop = false;
             this.GrbDatosCliente.Text = "DATOS DE CLIENTE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // TxtDirección
             // 
@@ -148,6 +164,10 @@
             // 
             // GrbCliente
             // 
+            this.GrbCliente.Controls.Add(this.label3);
+            this.GrbCliente.Controls.Add(this.label2);
+            this.GrbCliente.Controls.Add(this.lblop2);
+            this.GrbCliente.Controls.Add(this.lblop);
             this.GrbCliente.Controls.Add(this.BtnBuscar);
             this.GrbCliente.Controls.Add(this.BtnDelete);
             this.GrbCliente.Controls.Add(this.BtnModificar);
@@ -159,13 +179,55 @@
             this.GrbCliente.TabIndex = 13;
             this.GrbCliente.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(303, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Buscar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(121, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Eliminar";
+            // 
+            // lblop2
+            // 
+            this.lblop2.AutoSize = true;
+            this.lblop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop2.Location = new System.Drawing.Point(214, 78);
+            this.lblop2.Name = "lblop2";
+            this.lblop2.Size = new System.Drawing.Size(40, 13);
+            this.lblop2.TabIndex = 17;
+            this.lblop2.Text = "Editar";
+            // 
+            // lblop
+            // 
+            this.lblop.AutoSize = true;
+            this.lblop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop.Location = new System.Drawing.Point(32, 78);
+            this.lblop.Name = "lblop";
+            this.lblop.Size = new System.Drawing.Size(44, 13);
+            this.lblop.TabIndex = 16;
+            this.lblop.Text = "Nuevo";
+            // 
             // BtnBuscar
             // 
+            this.BtnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.BackgroundImage")));
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnBuscar.Location = new System.Drawing.Point(292, 18);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(84, 30);
-            this.BtnBuscar.TabIndex = 7;
-            this.BtnBuscar.Text = "BUSCAR";
+            this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
+            this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
             // 
@@ -184,12 +246,15 @@
             // 
             // BtnModificar
             // 
+            this.BtnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnModificar.BackgroundImage")));
+            this.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModificar.Location = new System.Drawing.Point(202, 18);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(84, 30);
+            this.BtnModificar.Size = new System.Drawing.Size(66, 57);
             this.BtnModificar.TabIndex = 5;
-            this.BtnModificar.Text = "MODIFICAR";
-            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.UseVisualStyleBackColor = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click_1);
             // 
             // BtnNuevo
@@ -198,6 +263,8 @@
             this.BtnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.BackgroundImage")));
             this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNuevo.ForeColor = System.Drawing.Color.Transparent;
             this.BtnNuevo.Location = new System.Drawing.Point(22, 18);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
@@ -270,17 +337,6 @@
             this.BtnPrimero.UseVisualStyleBackColor = false;
             this.BtnPrimero.Click += new System.EventHandler(this.BtnPrimero_Click_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -292,26 +348,39 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "NAVEGACIÓN";
             // 
+            // btnempleado
+            // 
+            this.btnempleado.Location = new System.Drawing.Point(79, 515);
+            this.btnempleado.Name = "btnempleado";
+            this.btnempleado.Size = new System.Drawing.Size(94, 39);
+            this.btnempleado.TabIndex = 16;
+            this.btnempleado.Text = "Empleado";
+            this.btnempleado.UseVisualStyleBackColor = true;
+            this.btnempleado.Click += new System.EventHandler(this.btnempleado_Click_1);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(539, 552);
+            this.ClientSize = new System.Drawing.Size(558, 576);
+            this.Controls.Add(this.btnempleado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbDatosCliente);
             this.Controls.Add(this.GrbCliente);
             this.Controls.Add(this.GrbNavegacion);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.GrbDatosCliente.ResumeLayout(false);
             this.GrbDatosCliente.PerformLayout();
-            this.GrbCliente.ResumeLayout(false);
-            this.GrbNavegacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GrbCliente.ResumeLayout(false);
+            this.GrbCliente.PerformLayout();
+            this.GrbNavegacion.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +409,10 @@
         private System.Windows.Forms.Button BtnAnterior;
         private System.Windows.Forms.Button BtnPrimero;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblop;
+        private System.Windows.Forms.Label lblop2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnempleado;
     }
 }

@@ -86,7 +86,6 @@ namespace Primo_y_Fibonacci
         void limpiar_cajas()
         {
             
-            TxtEmail.Text = "";
             TxtNombre.Text = "";
             TxtEmail.Text = "";
             TxtDirección.Text = "";
@@ -103,10 +102,9 @@ namespace Primo_y_Fibonacci
         private void BtnNuevo_Click_1(object sender, EventArgs e)
         {
   
-            if (BtnNuevo.Text == "Nuevo")
-            {//boton de nuevo
-                BtnNuevo.Text = "Guardar";
-                BtnModificar.Text = "Cancelar";
+            if (lblop.Text == "Nuevo"){//boton de nuevo
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
                 accion = "nuevo";
 
                 limpiar_cajas();
@@ -118,7 +116,7 @@ namespace Primo_y_Fibonacci
               TxtIdCliente.Text,
               TxtNombre.Text,
               TxtEmail.Text,
-              TxtDirección.Text,
+              TxtDirección.Text
                 };
                 objConexion.mantenimiento_datos(valores, accion);
                 actualizarDs();
@@ -127,24 +125,24 @@ namespace Primo_y_Fibonacci
 
                 controles(true);
 
-                BtnNuevo.Text = "Nuevo";
-                BtnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Editar";
             }
         }
 
         private void BtnModificar_Click_1(object sender, EventArgs e)
         {
 
-            if (BtnModificar.Text == "Modificar")
+            if (lblop2.Text == "Editar")
             {//boton de modificar
-                BtnNuevo.Text = "Guardar";
-                BtnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
                 accion = "modificar";
 
                 controles(false);
 
-                BtnNuevo.Text = "Guardar";
-                BtnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+               lblop2.Text = "Cancelar";
 
             }
             else
@@ -152,8 +150,8 @@ namespace Primo_y_Fibonacci
                 controles(true);
                 mostrarDatos();
 
-                BtnNuevo.Text = "Nuevo";
-                BtnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Editar";
             }
         }
 
@@ -164,7 +162,7 @@ namespace Primo_y_Fibonacci
             if (MessageBox.Show("Esta seguro de elimina a " + TxtNombre.Text, "Registro de Clientes",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { LblIDCliente.Text };
+                String[] valores = { TxtIdCliente.Text };
                 objConexion.mantenimiento_datos(valores, "eliminar");
 
                 actualizarDs();
@@ -183,6 +181,19 @@ namespace Primo_y_Fibonacci
             if (frmBusqueda._IdCliente > 0)
             {
                 posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdCliente));
+                mostrarDatos();
+            }
+        }
+
+        private void btnempleado_Click_1(object sender, EventArgs e)
+        {
+
+            Empleados frmEmpleado = new Empleados();
+            frmEmpleado.ShowDialog();
+
+            if (frmEmpleado._IdEmpleado > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmEmpleado._IdEmpleado));
                 mostrarDatos();
             }
         }
