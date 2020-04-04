@@ -56,8 +56,6 @@ namespace Primo_y_Fibonacci
          filtrar_datos(TxtBuscar.Text);
         }
 
-     
-
 
         private void BtnCancelar_Click_1(object sender, EventArgs e)
         {

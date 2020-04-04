@@ -180,5 +180,17 @@ namespace Primo_y_Fibonacci
             }
         }
 
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+            Busqueda_Empleado frmBusqueda = new Busqueda_Empleado();
+            frmBusqueda.ShowDialog();
+
+            if (frmBusqueda._IdEmpleado > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdEmpleado));
+                mostrarDatos();
+            }
+        }
     }
 }
