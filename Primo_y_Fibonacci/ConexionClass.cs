@@ -44,6 +44,8 @@ namespace Primo_y_Fibonacci
 
             return ds;
         }
+
+
         public void mantenimiento_datos(String[] datos, String accion)
         {
             String sql = "";
@@ -54,13 +56,6 @@ namespace Primo_y_Fibonacci
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'" +
-                    ")";
-
-                sql = "INSERT INTO Empleado (codigo, NombreEmpleado, Dirección, EMail) VALUES(" +
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'" +
                     ")";
 
             }
@@ -74,6 +69,32 @@ namespace Primo_y_Fibonacci
                 " Dirección           = '" + datos[3] + "'" +
                 " WHERE IdCliente     = '" + datos[0] + "'";
 
+
+            } else if (accion == "eliminar") {
+                sql = "DELETE Cliente FROM Cliente WHERE IdCliente='" + datos[0] + "'";
+
+            }
+            procesarSQL(sql);
+        }
+
+        public void manteni_datos(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Empleado (codigo, NombreEmpleado, Dirección, EMail) VALUES(" +
+                     "'" + datos[1] + "'," +
+                     "'" + datos[2] + "'," +
+                     "'" + datos[3] + "'," +
+                     "'" + datos[4] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
                 sql = "UPDATE Empleado SET " +
 
                "codigo              = '" + datos[1] + "'," +
@@ -82,17 +103,24 @@ namespace Primo_y_Fibonacci
                "EMail               = '" + datos[4] + "'" +
                "WHERE IdEmpleado    = '" + datos[0] + "'";
 
-
-            } else if (accion == "eliminar") {
-                sql = "DELETE Cliente FROM Cliente WHERE IdCliente='" + datos[0] + "'";
-
-                sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
             }
+            else if (accion == "eliminar")
+            {
+            
+            sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
 
-            procesarSQL(sql);
-
+            }
+            procesSQL(sql);
         }
+
         void procesarSQL(String sql)
+        {
+            comandosSQL.Connection = miConexion;
+            comandosSQL.CommandText = sql;
+            comandosSQL.ExecuteNonQuery();
+        }
+
+        void procesSQL(String sql)
         {
             comandosSQL.Connection = miConexion;
             comandosSQL.CommandText = sql;

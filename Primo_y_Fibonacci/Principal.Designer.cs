@@ -55,6 +55,7 @@
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnempleado = new System.Windows.Forms.Button();
+            this.btnproducto = new System.Windows.Forms.Button();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -358,12 +359,23 @@
             this.btnempleado.UseVisualStyleBackColor = true;
             this.btnempleado.Click += new System.EventHandler(this.btnempleado_Click_1);
             // 
+            // btnproducto
+            // 
+            this.btnproducto.Location = new System.Drawing.Point(222, 515);
+            this.btnproducto.Name = "btnproducto";
+            this.btnproducto.Size = new System.Drawing.Size(94, 39);
+            this.btnproducto.TabIndex = 17;
+            this.btnproducto.Text = "Producto";
+            this.btnproducto.UseVisualStyleBackColor = true;
+            this.btnproducto.Click += new System.EventHandler(this.btnproducto_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(558, 576);
+            this.Controls.Add(this.btnproducto);
             this.Controls.Add(this.btnempleado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbDatosCliente);
@@ -414,5 +426,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnempleado;
+        private System.Windows.Forms.Button btnproducto;
     }
 }

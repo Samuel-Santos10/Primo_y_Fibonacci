@@ -187,15 +187,15 @@ namespace Primo_y_Fibonacci
 
         private void btnempleado_Click_1(object sender, EventArgs e)
         {
+            Empleados Empleado = new Empleados();
 
-            Empleados frmEmpleado = new Empleados();
-            frmEmpleado.ShowDialog();
+            Empleado.Show();
+        }
 
-            if (frmEmpleado._IdEmpleado > 0)
-            {
-                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmEmpleado._IdEmpleado));
-                mostrarDatos();
-            }
+        private void btnproducto_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

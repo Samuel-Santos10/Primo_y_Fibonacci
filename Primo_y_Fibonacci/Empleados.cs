@@ -13,7 +13,6 @@ namespace Primo_y_Fibonacci
     public partial class Empleados : Form
     {
         ConexionClass objConexion = new ConexionClass();
-        public int _IdEmpleado;
         int posicion = 0;
         string accion = "nuevo";
         DataTable tbl = new DataTable();
@@ -128,7 +127,7 @@ namespace Primo_y_Fibonacci
               txtcorreoEmp.Text
                 };
 
-                objConexion.mantenimiento_datos(valores, accion);
+                objConexion.manteni_datos(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();

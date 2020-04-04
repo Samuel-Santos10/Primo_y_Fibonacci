@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.GrdBusquedaClientes = new System.Windows.Forms.DataGridView();
+            this.GrdBusquedaEmpleado = new System.Windows.Forms.DataGridView();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.lblbuscar = new System.Windows.Forms.Label();
             this.BtnSeleccionar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GrdBusquedaClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdBusquedaEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(500, 378);
+            this.BtnCancelar.Location = new System.Drawing.Point(511, 436);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(77, 31);
@@ -48,19 +48,19 @@
             this.BtnCancelar.UseVisualStyleBackColor = true;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // GrdBusquedaClientes
+            // GrdBusquedaEmpleado
             // 
-            this.GrdBusquedaClientes.AllowUserToAddRows = false;
-            this.GrdBusquedaClientes.AllowUserToDeleteRows = false;
-            this.GrdBusquedaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrdBusquedaClientes.Location = new System.Drawing.Point(5, 43);
-            this.GrdBusquedaClientes.Margin = new System.Windows.Forms.Padding(1);
-            this.GrdBusquedaClientes.Name = "GrdBusquedaClientes";
-            this.GrdBusquedaClientes.ReadOnly = true;
-            this.GrdBusquedaClientes.RowHeadersWidth = 102;
-            this.GrdBusquedaClientes.RowTemplate.Height = 40;
-            this.GrdBusquedaClientes.Size = new System.Drawing.Size(624, 333);
-            this.GrdBusquedaClientes.TabIndex = 24;
+            this.GrdBusquedaEmpleado.AllowUserToAddRows = false;
+            this.GrdBusquedaEmpleado.AllowUserToDeleteRows = false;
+            this.GrdBusquedaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdBusquedaEmpleado.Location = new System.Drawing.Point(5, 43);
+            this.GrdBusquedaEmpleado.Margin = new System.Windows.Forms.Padding(1);
+            this.GrdBusquedaEmpleado.Name = "GrdBusquedaEmpleado";
+            this.GrdBusquedaEmpleado.ReadOnly = true;
+            this.GrdBusquedaEmpleado.RowHeadersWidth = 102;
+            this.GrdBusquedaEmpleado.RowTemplate.Height = 40;
+            this.GrdBusquedaEmpleado.Size = new System.Drawing.Size(624, 391);
+            this.GrdBusquedaEmpleado.TabIndex = 24;
             // 
             // TxtBuscar
             // 
@@ -85,7 +85,7 @@
             // BtnSeleccionar
             // 
             this.BtnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSeleccionar.Location = new System.Drawing.Point(399, 378);
+            this.BtnSeleccionar.Location = new System.Drawing.Point(410, 436);
             this.BtnSeleccionar.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSeleccionar.Name = "BtnSeleccionar";
             this.BtnSeleccionar.Size = new System.Drawing.Size(99, 31);
@@ -99,9 +99,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(639, 415);
+            this.ClientSize = new System.Drawing.Size(639, 477);
             this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.GrdBusquedaClientes);
+            this.Controls.Add(this.GrdBusquedaEmpleado);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.lblbuscar);
             this.Controls.Add(this.BtnSeleccionar);
@@ -110,7 +110,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda_Empleado";
             this.Load += new System.EventHandler(this.Busqueda_Empleado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GrdBusquedaClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrdBusquedaEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +119,7 @@
         #endregion
 
         private System.Windows.Forms.Button BtnCancelar;
-        private System.Windows.Forms.DataGridView GrdBusquedaClientes;
+        private System.Windows.Forms.DataGridView GrdBusquedaEmpleado;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.Button BtnSeleccionar;
