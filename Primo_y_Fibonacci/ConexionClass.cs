@@ -77,6 +77,13 @@ namespace Primo_y_Fibonacci
             procesarSQL(sql);
         }
 
+        void procesarSQL(String sql)
+        {
+            comandosSQL.Connection = miConexion;
+            comandosSQL.CommandText = sql;
+            comandosSQL.ExecuteNonQuery();
+        }
+
         public void manteni_datos(String[] datos, String accion)
         {
             String sql = "";
@@ -113,18 +120,53 @@ namespace Primo_y_Fibonacci
             procesSQL(sql);
         }
 
-        void procesarSQL(String sql)
-        {
-            comandosSQL.Connection = miConexion;
-            comandosSQL.CommandText = sql;
-            comandosSQL.ExecuteNonQuery();
-        }
-
         void procesSQL(String sql)
         {
             comandosSQL.Connection = miConexion;
             comandosSQL.CommandText = sql;
             comandosSQL.ExecuteNonQuery();
         }
+
+        public void mante_datos(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Productos (codigo, Descripción, IdCategoria) VALUES(" +
+                     "'" + datos[1] + "'," +
+                     "'" + datos[2] + "'," +
+                     "'" + datos[3] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Productos SET " +
+
+               "codigo              = '" + datos[1] + "'," +
+               "Descripción         = '" + datos[2] + "'," +
+               "IdCategoria         = '" + datos[3] + "'" +
+               "WHERE IdProductos    = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+
+                sql = "DELETE Productos FROM Productos WHERE IdProductos='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+        void procesoSQL(String sql)
+        {
+            comandosSQL.Connection = miConexion;
+            comandosSQL.CommandText = sql;
+            comandosSQL.ExecuteNonQuery();
+        }
+
+        
     }
 }

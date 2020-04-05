@@ -171,7 +171,7 @@ namespace Primo_y_Fibonacci
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { txtIdEmpleado.Text };
-                objConexion.mantenimiento_datos(valores, "eliminar");
+                objConexion.manteni_datos(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -190,6 +190,11 @@ namespace Primo_y_Fibonacci
                 posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdEmpleado));
                 mostrarDatos();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

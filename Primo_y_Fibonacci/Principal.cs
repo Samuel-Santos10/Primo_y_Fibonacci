@@ -185,17 +185,25 @@ namespace Primo_y_Fibonacci
             }
         }
 
-        private void btnempleado_Click_1(object sender, EventArgs e)
+ 
+
+        private void formularioEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Empleados Empleado = new Empleados();
 
             Empleado.Show();
         }
 
-        private void btnproducto_Click(object sender, EventArgs e)
+        private void formularioProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Productos Productos = new Productos();
 
+            Productos.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
