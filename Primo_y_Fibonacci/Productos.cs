@@ -36,11 +36,20 @@ namespace Primo_y_Fibonacci
 
         void mostrarDatos()
         {
-            TxtIdProductos.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-            txtcodigoprod.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-            TxtDescripcion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            TxtIdCategoria.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-            
+            try
+            {
+                TxtIdProductos.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtcodigoprod.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                TxtDescripcion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                TxtIdCategoria.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+
+            lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("No hay Datos que mostrar", "Registros de Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar_cajas();
+        }
         }
 
         private void BtnPrimero_Click(object sender, EventArgs e)
@@ -162,7 +171,7 @@ namespace Primo_y_Fibonacci
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de elimina a " + TxtDescripcion.Text, "Registro de Productos",
+            if (MessageBox.Show("Esta seguro de eliminar a " + TxtDescripcion.Text, "Registro de Productos",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { TxtIdProductos.Text };
@@ -184,6 +193,11 @@ namespace Primo_y_Fibonacci
                 posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdProductos));
                 mostrarDatos();
             }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

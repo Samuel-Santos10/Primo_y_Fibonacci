@@ -40,6 +40,8 @@
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.GrbCliente = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblop2 = new System.Windows.Forms.Label();
@@ -58,8 +60,7 @@
             this.formularioEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formularioProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnsalir = new System.Windows.Forms.Button();
+            this.lblnregistros = new System.Windows.Forms.Label();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -128,7 +129,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(137, 81);
+            this.LblNombre.Location = new System.Drawing.Point(152, 81);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 3;
@@ -162,7 +163,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(137, 124);
+            this.LblEmail.Location = new System.Drawing.Point(164, 124);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(52, 13);
             this.LblEmail.TabIndex = 5;
@@ -187,6 +188,28 @@
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 13;
             this.GrbCliente.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(442, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Salir";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
+            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.Location = new System.Drawing.Point(424, 13);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(66, 57);
+            this.btnsalir.TabIndex = 20;
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -310,6 +333,7 @@
             // GrbNavegacion
             // 
             this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbNavegacion.Controls.Add(this.lblnregistros);
             this.GrbNavegacion.Controls.Add(this.BtnAnterior);
             this.GrbNavegacion.Controls.Add(this.BtnPrimero);
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
@@ -373,18 +397,18 @@
             // formularioEmpleadoToolStripMenuItem
             // 
             this.formularioEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.formularioEmpleadoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formularioEmpleadoToolStripMenuItem.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formularioEmpleadoToolStripMenuItem.Name = "formularioEmpleadoToolStripMenuItem";
-            this.formularioEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.formularioEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
             this.formularioEmpleadoToolStripMenuItem.Text = "Formulario Empleado";
             this.formularioEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.formularioEmpleadoToolStripMenuItem_Click);
             // 
             // formularioProductosToolStripMenuItem
             // 
             this.formularioProductosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.formularioProductosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formularioProductosToolStripMenuItem.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formularioProductosToolStripMenuItem.Name = "formularioProductosToolStripMenuItem";
-            this.formularioProductosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.formularioProductosToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.formularioProductosToolStripMenuItem.Text = "Formulario Productos";
             this.formularioProductosToolStripMenuItem.Click += new System.EventHandler(this.formularioProductosToolStripMenuItem_Click);
             // 
@@ -399,27 +423,15 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "OPCIONES";
             // 
-            // label5
+            // lblnregistros
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(442, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Salir";
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
-            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(424, 13);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(66, 57);
-            this.btnsalir.TabIndex = 20;
-            this.btnsalir.UseVisualStyleBackColor = true;
-            this.btnsalir.Click += new System.EventHandler(this.button1_Click);
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnregistros.Location = new System.Drawing.Point(262, 27);
+            this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
+            this.lblnregistros.TabIndex = 20;
             // 
             // Principal
             // 
@@ -447,6 +459,7 @@
             this.GrbCliente.ResumeLayout(false);
             this.GrbCliente.PerformLayout();
             this.GrbNavegacion.ResumeLayout(false);
+            this.GrbNavegacion.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -487,5 +500,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Label lblnregistros;
     }
 }

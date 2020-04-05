@@ -36,13 +36,23 @@ namespace Primo_y_Fibonacci
 
         void mostrarDatos()
         {
+            try
+
+            {
             txtIdEmpleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
             txtcodigoEmp.Text = tbl.Rows[posicion].ItemArray[1].ToString();
             txtnomEmpl.Text = tbl.Rows[posicion].ItemArray[2].ToString();
             txtdireccionEmp.Text = tbl.Rows[posicion].ItemArray[3].ToString();
             txtcorreoEmp.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-            
 
+                lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No hay Datos que mostrar", "Registros de Empleados",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar_cajas();
+            }
         }
 
         private void BtnPrimero_Click(object sender, EventArgs e)
@@ -167,7 +177,7 @@ namespace Primo_y_Fibonacci
         private void BtnDelete_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Esta seguro de elimina a " + txtnomEmpl.Text, "Registro de Empleado",
+            if (MessageBox.Show("Esta seguro de eliminar a " + txtnomEmpl.Text, "Registro de Empleado",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { txtIdEmpleado.Text };
