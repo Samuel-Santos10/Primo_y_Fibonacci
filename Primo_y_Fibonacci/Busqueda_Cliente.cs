@@ -45,7 +45,7 @@ namespace Primo_y_Fibonacci
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaClientes.DataSource;
-            bs.Filter = "NombreCliente like '%" + valor + "%'";
+            bs.Filter = "(NombreCliente + Dirección + EMail + codigo) like '%" + valor + "%'";
             GrdBusquedaClientes.DataSource = bs;
 
         }
@@ -63,7 +63,7 @@ namespace Primo_y_Fibonacci
             Close();
         }
 
-        
+      
     }
 }
 

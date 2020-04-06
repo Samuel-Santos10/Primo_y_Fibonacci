@@ -38,9 +38,10 @@ namespace Primo_y_Fibonacci
             try
             {
             TxtIdCliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-            TxtNombre.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-            TxtEmail.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            TxtDirección.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+            txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+            TxtNombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+            TxtEmail.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+            TxtDirección.Text = tbl.Rows[posicion].ItemArray[4].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -96,7 +97,7 @@ namespace Primo_y_Fibonacci
 
         void limpiar_cajas()
         {
-            
+            txtcodigo.Text = "";
             TxtNombre.Text = "";
             TxtEmail.Text = "";
             TxtDirección.Text = "";
@@ -125,6 +126,7 @@ namespace Primo_y_Fibonacci
             { //boton de guardar
                 String[] valores = {
               TxtIdCliente.Text,
+              txtcodigo.Text,
               TxtNombre.Text,
               TxtEmail.Text,
               TxtDirección.Text

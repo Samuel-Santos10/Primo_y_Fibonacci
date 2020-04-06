@@ -53,6 +53,7 @@
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.GrbNavegacion = new System.Windows.Forms.GroupBox();
+            this.lblnregistros = new System.Windows.Forms.Label();
             this.BtnAnterior = new System.Windows.Forms.Button();
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +61,8 @@
             this.formularioEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formularioProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblnregistros = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -71,6 +73,8 @@
             // GrbDatosCliente
             // 
             this.GrbDatosCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GrbDatosCliente.Controls.Add(this.label6);
+            this.GrbDatosCliente.Controls.Add(this.txtcodigo);
             this.GrbDatosCliente.Controls.Add(this.pictureBox1);
             this.GrbDatosCliente.Controls.Add(this.TxtDirección);
             this.GrbDatosCliente.Controls.Add(this.LblIDCliente);
@@ -102,7 +106,7 @@
             // 
             // TxtDirección
             // 
-            this.TxtDirección.Location = new System.Drawing.Point(234, 159);
+            this.TxtDirección.Location = new System.Drawing.Point(234, 178);
             this.TxtDirección.Multiline = true;
             this.TxtDirección.Name = "TxtDirección";
             this.TxtDirección.Size = new System.Drawing.Size(282, 39);
@@ -129,7 +133,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(152, 81);
+            this.LblNombre.Location = new System.Drawing.Point(152, 106);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 3;
@@ -139,7 +143,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(137, 166);
+            this.LblDireccion.Location = new System.Drawing.Point(137, 185);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(79, 13);
             this.LblDireccion.TabIndex = 7;
@@ -147,14 +151,14 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(234, 74);
+            this.TxtNombre.Location = new System.Drawing.Point(234, 99);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(193, 20);
             this.TxtNombre.TabIndex = 4;
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(234, 117);
+            this.TxtEmail.Location = new System.Drawing.Point(234, 136);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(193, 20);
             this.TxtEmail.TabIndex = 6;
@@ -163,7 +167,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(164, 124);
+            this.LblEmail.Location = new System.Drawing.Point(164, 143);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(52, 13);
             this.LblEmail.TabIndex = 5;
@@ -345,6 +349,16 @@
             this.GrbNavegacion.TabIndex = 12;
             this.GrbNavegacion.TabStop = false;
             // 
+            // lblnregistros
+            // 
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnregistros.Location = new System.Drawing.Point(262, 27);
+            this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
+            this.lblnregistros.TabIndex = 20;
+            // 
             // BtnAnterior
             // 
             this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -423,15 +437,22 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "OPCIONES";
             // 
-            // lblnregistros
+            // label6
             // 
-            this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnregistros.Location = new System.Drawing.Point(262, 27);
-            this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblnregistros.Name = "lblnregistros";
-            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
-            this.lblnregistros.TabIndex = 20;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(136, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "ID CLIENTE:";
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(234, 69);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtcodigo.TabIndex = 12;
             // 
             // Principal
             // 
@@ -501,5 +522,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Label lblnregistros;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtcodigo;
     }
 }

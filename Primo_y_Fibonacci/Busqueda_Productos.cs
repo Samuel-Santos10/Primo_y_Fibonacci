@@ -44,7 +44,7 @@ namespace Primo_y_Fibonacci
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaProducto.DataSource;
-            bs.Filter = "Descripción like '%" + valor + "%'";
+            bs.Filter = "(Descripción + codigo) like '%" + valor + "%'";
             GrdBusquedaProducto.DataSource = bs;
 
         }

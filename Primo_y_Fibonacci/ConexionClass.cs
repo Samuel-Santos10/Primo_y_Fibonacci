@@ -51,11 +51,12 @@ namespace Primo_y_Fibonacci
             String sql = "";
             if (accion == "nuevo"){
 
-                sql = "INSERT INTO Cliente (NombreCliente, EMail, Dirección) VALUES(" +
+                sql = "INSERT INTO Cliente (codigo, NombreCliente, EMail, Dirección) VALUES(" +
                     
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'" +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
                     ")";
 
             }
@@ -63,10 +64,10 @@ namespace Primo_y_Fibonacci
             else if (accion == "modificar")  {
 
                 sql = "UPDATE Cliente SET " +
-                
-                " NombreCliente       = '" + datos[1] + "'," +
-                " EMail               = '" + datos[2] + "'," +
-                " Dirección           = '" + datos[3] + "'" +
+                " codigo              = '" + datos[1] + "'," +
+                " NombreCliente       = '" + datos[2] + "'," +
+                " EMail               = '" + datos[3] + "'," +
+                " Dirección           = '" + datos[4] + "'" +
                 " WHERE IdCliente     = '" + datos[0] + "'";
 
 
