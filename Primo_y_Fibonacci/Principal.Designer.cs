@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtDirección = new System.Windows.Forms.TextBox();
             this.LblIDCliente = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.formularioEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formularioProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -92,6 +92,23 @@
             this.GrbDatosCliente.TabIndex = 14;
             this.GrbDatosCliente.TabStop = false;
             this.GrbDatosCliente.Text = "DATOS DE CLIENTE";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(157, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "CODIGO:";
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(234, 69);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtcodigo.TabIndex = 12;
             // 
             // pictureBox1
             // 
@@ -436,23 +453,6 @@
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "OPCIONES";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(136, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "ID CLIENTE:";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(234, 69);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtcodigo.TabIndex = 12;
             // 
             // Principal
             // 
