@@ -30,16 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtnit = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtDirección = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.LblIDCliente = new System.Windows.Forms.Label();
             this.TxtIdCliente = new System.Windows.Forms.TextBox();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblDireccion = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.txtdui = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.GrbCliente = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,45 +63,79 @@
             this.BtnAnterior = new System.Windows.Forms.Button();
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.formularioEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formularioProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrbDatosCliente
             // 
             this.GrbDatosCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GrbDatosCliente.Controls.Add(this.txttelefono);
+            this.GrbDatosCliente.Controls.Add(this.label8);
+            this.GrbDatosCliente.Controls.Add(this.txtnit);
+            this.GrbDatosCliente.Controls.Add(this.label7);
             this.GrbDatosCliente.Controls.Add(this.label6);
             this.GrbDatosCliente.Controls.Add(this.txtcodigo);
             this.GrbDatosCliente.Controls.Add(this.pictureBox1);
-            this.GrbDatosCliente.Controls.Add(this.TxtDirección);
+            this.GrbDatosCliente.Controls.Add(this.TxtDireccion);
             this.GrbDatosCliente.Controls.Add(this.LblIDCliente);
             this.GrbDatosCliente.Controls.Add(this.TxtIdCliente);
             this.GrbDatosCliente.Controls.Add(this.LblNombre);
             this.GrbDatosCliente.Controls.Add(this.LblDireccion);
             this.GrbDatosCliente.Controls.Add(this.TxtNombre);
-            this.GrbDatosCliente.Controls.Add(this.TxtEmail);
+            this.GrbDatosCliente.Controls.Add(this.txtdui);
             this.GrbDatosCliente.Controls.Add(this.LblEmail);
             this.GrbDatosCliente.Enabled = false;
             this.GrbDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbDatosCliente.Location = new System.Drawing.Point(0, 30);
+            this.GrbDatosCliente.Location = new System.Drawing.Point(0, 1);
             this.GrbDatosCliente.Name = "GrbDatosCliente";
-            this.GrbDatosCliente.Size = new System.Drawing.Size(525, 228);
+            this.GrbDatosCliente.Size = new System.Drawing.Size(525, 278);
             this.GrbDatosCliente.TabIndex = 14;
             this.GrbDatosCliente.TabStop = false;
             this.GrbDatosCliente.Text = "DATOS DE CLIENTE";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(234, 194);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(100, 20);
+            this.txttelefono.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(139, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "TELEFONO:";
+            // 
+            // txtnit
+            // 
+            this.txtnit.Location = new System.Drawing.Point(234, 161);
+            this.txtnit.Name = "txtnit";
+            this.txtnit.Size = new System.Drawing.Size(100, 20);
+            this.txtnit.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(183, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "NIT:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(157, 72);
+            this.label6.Location = new System.Drawing.Point(157, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 11;
@@ -105,7 +143,7 @@
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(234, 69);
+            this.txtcodigo.Location = new System.Drawing.Point(234, 59);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(100, 20);
             this.txtcodigo.TabIndex = 12;
@@ -121,19 +159,19 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // TxtDirección
+            // TxtDireccion
             // 
-            this.TxtDirección.Location = new System.Drawing.Point(234, 178);
-            this.TxtDirección.Multiline = true;
-            this.TxtDirección.Name = "TxtDirección";
-            this.TxtDirección.Size = new System.Drawing.Size(282, 39);
-            this.TxtDirección.TabIndex = 8;
+            this.TxtDireccion.Location = new System.Drawing.Point(234, 228);
+            this.TxtDireccion.Multiline = true;
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(282, 39);
+            this.TxtDireccion.TabIndex = 8;
             // 
             // LblIDCliente
             // 
             this.LblIDCliente.AutoSize = true;
             this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCliente.Location = new System.Drawing.Point(137, 38);
+            this.LblIDCliente.Location = new System.Drawing.Point(137, 30);
             this.LblIDCliente.Name = "LblIDCliente";
             this.LblIDCliente.Size = new System.Drawing.Size(80, 13);
             this.LblIDCliente.TabIndex = 1;
@@ -141,7 +179,7 @@
             // 
             // TxtIdCliente
             // 
-            this.TxtIdCliente.Location = new System.Drawing.Point(234, 31);
+            this.TxtIdCliente.Location = new System.Drawing.Point(234, 23);
             this.TxtIdCliente.Name = "TxtIdCliente";
             this.TxtIdCliente.Size = new System.Drawing.Size(100, 20);
             this.TxtIdCliente.TabIndex = 2;
@@ -150,7 +188,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(152, 106);
+            this.LblNombre.Location = new System.Drawing.Point(152, 98);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 3;
@@ -160,7 +198,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(137, 185);
+            this.LblDireccion.Location = new System.Drawing.Point(136, 231);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(79, 13);
             this.LblDireccion.TabIndex = 7;
@@ -168,27 +206,27 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(234, 99);
+            this.TxtNombre.Location = new System.Drawing.Point(234, 91);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(193, 20);
             this.TxtNombre.TabIndex = 4;
             // 
-            // TxtEmail
+            // txtdui
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(234, 136);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(193, 20);
-            this.TxtEmail.TabIndex = 6;
+            this.txtdui.Location = new System.Drawing.Point(234, 127);
+            this.txtdui.Name = "txtdui";
+            this.txtdui.Size = new System.Drawing.Size(100, 20);
+            this.txtdui.TabIndex = 6;
             // 
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(164, 143);
+            this.LblEmail.Location = new System.Drawing.Point(183, 130);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(52, 13);
+            this.LblEmail.Size = new System.Drawing.Size(33, 13);
             this.LblEmail.TabIndex = 5;
-            this.LblEmail.Text = "E-MAIL:";
+            this.LblEmail.Text = "DUI:";
             // 
             // GrbCliente
             // 
@@ -204,7 +242,7 @@
             this.GrbCliente.Controls.Add(this.BtnModificar);
             this.GrbCliente.Controls.Add(this.BtnNuevo);
             this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 391);
+            this.GrbCliente.Location = new System.Drawing.Point(0, 427);
             this.GrbCliente.Name = "GrbCliente";
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 13;
@@ -360,7 +398,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(0, 290);
+            this.GrbNavegacion.Location = new System.Drawing.Point(0, 321);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 12;
@@ -407,48 +445,18 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 270);
+            this.label1.Location = new System.Drawing.Point(208, 301);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 15;
             this.label1.Text = "NAVEGACIÓN";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formularioEmpleadoToolStripMenuItem,
-            this.formularioProductosToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(525, 28);
-            this.menuStrip1.TabIndex = 18;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // formularioEmpleadoToolStripMenuItem
-            // 
-            this.formularioEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.formularioEmpleadoToolStripMenuItem.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formularioEmpleadoToolStripMenuItem.Name = "formularioEmpleadoToolStripMenuItem";
-            this.formularioEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.formularioEmpleadoToolStripMenuItem.Text = "Formulario Empleado";
-            this.formularioEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.formularioEmpleadoToolStripMenuItem_Click);
-            // 
-            // formularioProductosToolStripMenuItem
-            // 
-            this.formularioProductosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.formularioProductosToolStripMenuItem.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formularioProductosToolStripMenuItem.Name = "formularioProductosToolStripMenuItem";
-            this.formularioProductosToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
-            this.formularioProductosToolStripMenuItem.Text = "Formulario Productos";
-            this.formularioProductosToolStripMenuItem.Click += new System.EventHandler(this.formularioProductosToolStripMenuItem_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 365);
+            this.label4.Location = new System.Drawing.Point(222, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 19;
@@ -459,15 +467,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(525, 499);
+            this.ClientSize = new System.Drawing.Size(525, 562);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.GrbDatosCliente);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbNavegacion);
             this.Controls.Add(this.GrbCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Principal";
@@ -481,8 +487,6 @@
             this.GrbCliente.PerformLayout();
             this.GrbNavegacion.ResumeLayout(false);
             this.GrbNavegacion.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,13 +496,13 @@
 
         private System.Windows.Forms.GroupBox GrbDatosCliente;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox TxtDirección;
+        private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label LblIDCliente;
         private System.Windows.Forms.TextBox TxtIdCliente;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblDireccion;
         private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.TextBox txtdui;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.GroupBox GrbCliente;
         private System.Windows.Forms.Button BtnBuscar;
@@ -515,14 +519,15 @@
         private System.Windows.Forms.Label lblop2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem formularioEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formularioProductosToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Label lblnregistros;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.TextBox txtnit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label label8;
     }
 }

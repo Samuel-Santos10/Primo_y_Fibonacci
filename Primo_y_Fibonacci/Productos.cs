@@ -38,12 +38,21 @@ namespace Primo_y_Fibonacci
         {
             try
             {
-                TxtIdProductos.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-                txtcodigoprod.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-                TxtDescripcion.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-                TxtIdCategoria.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["Categorias"];
+                cboCategoriaProductos.DisplayMember = "Categoria";
+                cboCategoriaProductos.ValueMember = "Categorias.IdCategoria";
+                cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
-            lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+                lblidProducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtcodigoprod.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtproducto.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txtmarca.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtmodelo.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+                txtcapacidad.Text = tbl.Rows[posicion].ItemArray[6].ToString();
+                txtmedida.Text = tbl.Rows[posicion].ItemArray[7].ToString();
+
+
+                lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             } catch (Exception ex)
             {
                 MessageBox.Show("No hay Datos que mostrar", "Registros de Productos",
@@ -67,7 +76,7 @@ namespace Primo_y_Fibonacci
             }
             else
             {
-                MessageBox.Show("Primer Registro...", "Registros De Empleado",
+                MessageBox.Show("Primer Registro...", "Registros De Productos",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -81,7 +90,7 @@ namespace Primo_y_Fibonacci
             }
             else
             {
-                MessageBox.Show("Ultimo Registro...", "Registros de Empleado",
+                MessageBox.Show("Ultimo Registro...", "Registros de Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -96,8 +105,11 @@ namespace Primo_y_Fibonacci
         {
       
             txtcodigoprod.Text = "";
-            TxtDescripcion.Text = "";
-         
+            txtproducto.Text = "";
+            txtmarca.Text = "";
+            txtmodelo.Text = "";
+            txtcapacidad.Text = "";
+            txtmedida.Text = "";
         }
 
         void controles(Boolean valor)
@@ -105,7 +117,7 @@ namespace Primo_y_Fibonacci
             GrbNavegacion.Enabled = valor;
             BtnDelete.Enabled = valor;
             BtnBuscar.Enabled = valor;
-            GrbDatosCliente.Enabled = !valor;
+            GrbDatosProducto.Enabled = !valor;
         }
 
         private void BtnNuevo_Click(object sender, EventArgs e)
@@ -125,14 +137,18 @@ namespace Primo_y_Fibonacci
 
             { //boton de guardar
                 String[] valores = {
-              TxtIdProductos.Text,
+              lblidProducto.Text,
+              cboCategoriaProductos.SelectedValue.ToString(),
               txtcodigoprod.Text,
-              TxtDescripcion.Text,
-              TxtIdCategoria.Text,
-             
+              txtproducto.Text,
+              txtmarca.Text,
+              txtmodelo.Text,
+              txtcapacidad.Text,
+              txtmedida.Text
+
                 };
 
-                objConexion.mante_datos(valores, accion);
+                objConexion.mantenimiento_datos_Productos(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();
@@ -171,11 +187,11 @@ namespace Primo_y_Fibonacci
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de eliminar a " + TxtDescripcion.Text, "Registro de Productos",
+            if (MessageBox.Show("Esta seguro de eliminar a " + txtproducto.Text, "Registro de Productos",
                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { TxtIdProductos.Text };
-                objConexion.mante_datos(valores, "eliminar");
+                String[] valores = { lblidProducto.Text };
+                objConexion.mantenimiento_datos_Productos(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -185,14 +201,7 @@ namespace Primo_y_Fibonacci
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            Busqueda_Productos frmBusqueda = new Busqueda_Productos();
-            frmBusqueda.ShowDialog();
-
-            if (frmBusqueda._IdProductos > 0)
-            {
-                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdProductos));
-                mostrarDatos();
-            }
+           
         }
 
         private void btnsalir_Click(object sender, EventArgs e)

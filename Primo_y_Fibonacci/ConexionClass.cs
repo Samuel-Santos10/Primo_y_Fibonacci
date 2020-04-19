@@ -42,21 +42,36 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Productos");
 
+            comandosSQL.CommandText = "select * from Proveedor";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Proveedor");
+
+            comandosSQL.CommandText = "select * from Categorias";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Categorias");
+
+            comandosSQL.CommandText = "select * from Detalle_Venta";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Detalle_Venta");
+
+
             return ds;
         }
 
 
-        public void mantenimiento_datos(String[] datos, String accion)
+        public void mantenimiento_datos_Cliente(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo"){
 
-                sql = "INSERT INTO Cliente (codigo, NombreCliente, EMail, Dirección) VALUES(" +
+                sql = "INSERT INTO Cliente (codigo, nombre, dui, nit, telefono, direccion) VALUES(" +
                     
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'" +
+                    "'" + datos[4] + "'," +
+                    "'" + datos[5] + "'," +
+                    "'" + datos[6] + "'" +
                     ")";
 
             }
@@ -65,9 +80,11 @@ namespace Primo_y_Fibonacci
 
                 sql = "UPDATE Cliente SET " +
                 " codigo              = '" + datos[1] + "'," +
-                " NombreCliente       = '" + datos[2] + "'," +
-                " EMail               = '" + datos[3] + "'," +
-                " Dirección           = '" + datos[4] + "'" +
+                " nombre              = '" + datos[2] + "'," +
+                " dui                 = '" + datos[3] + "'," +
+                " nit                 = '" + datos[4] + "'," +
+                " telefono            = '" + datos[5] + "'," +
+                " direccion           = '" + datos[6] + "'" +
                 " WHERE IdCliente     = '" + datos[0] + "'";
 
 
@@ -75,23 +92,143 @@ namespace Primo_y_Fibonacci
                 sql = "DELETE Cliente FROM Cliente WHERE IdCliente='" + datos[0] + "'";
 
             }
-            procesarSQL(sql);
+            procesoSQL(sql);
         }
 
-        void procesarSQL(String sql)
-        {
-            comandosSQL.Connection = miConexion;
-            comandosSQL.CommandText = sql;
-            comandosSQL.ExecuteNonQuery();
-        }
 
-        public void manteni_datos(String[] datos, String accion)
+        public void mantenimiento_datos_Empleado(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Empleado (codigo, NombreEmpleado, Dirección, EMail) VALUES(" +
+                sql = "INSERT INTO Empleado (codigo, nombre, dui, nit, direccion, telefono) VALUES(" +
+                    
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'," +
+                    "'" + datos[5] + "'," +
+                    "'" + datos[6] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Empleado SET " +
+
+                "codigo              = '" + datos[1] + "'," +
+                "nombre              = '" + datos[2] + "'," +
+                "dui                 = '" + datos[3] + "'," +
+                "nit                 = '" + datos[4] + "'," +
+                "direccion           = '" + datos[5] + "'," +
+                "telefono            = '" + datos[6] + "'" +
+               "WHERE IdEmpleado      = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+            
+            sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+
+
+        public void mantenimiento_datos_Proveedor(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Proveedor (codigo, nombre, dui, direccion, telefono) VALUES(" +
+
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'," +
+                    "'" + datos[5] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Proveedor SET " +
+
+                "codigo              = '" + datos[1] + "'," +
+                "nombre              = '" + datos[2] + "'," +
+                "dui                 = '" + datos[3] + "'," +
+                "direccion           = '" + datos[4] + "'," +
+                "telefono            = '" + datos[5] + "'" +
+               "WHERE IdProveedor      = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+
+                sql = "DELETE Proveedor FROM Proveedor WHERE IdProveedor='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+
+
+        //Productos
+        public void mantenimiento_datos_Productos(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Productos (IdCategoria, codigo, nombre, marca, modelo, capacidad, medida) VALUES(" +
+                     "'" + datos[1] + "'," +
+                     "'" + datos[2] + "'," +
+                     "'" + datos[3] + "'," +
+                     "'" + datos[4] + "'," +
+                     "'" + datos[5] + "'," +
+                     "'" + datos[6] + "'," +
+                     "'" + datos[7] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Productos SET " +
+
+               "IdCategoria         = '" + datos[1] + "'," +
+               "codigo              = '" + datos[2] + "'," +
+               "nombre              = '" + datos[3] + "'," +
+               "marca               = '" + datos[4] + "'," +
+               "modelo              = '" + datos[5] + "'," +
+               "capacidad           = '" + datos[6] + "'," +
+               "medida              = '" + datos[7] + "'" +
+               "WHERE IdProductos   = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+
+                sql = "DELETE Productos FROM Productos WHERE IdProductos='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+       
+
+        public void mantenimiento_datos_dventas(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Detalle_Venta (unidades, cantidad_venta, cant_producto_vendido, precio_total) VALUES(" +
                      "'" + datos[1] + "'," +
                      "'" + datos[2] + "'," +
                      "'" + datos[3] + "'," +
@@ -103,64 +240,24 @@ namespace Primo_y_Fibonacci
             else if (accion == "modificar")
             {
 
-                sql = "UPDATE Empleado SET " +
+                sql = "UPDATE Detalle_Venta SET " +
 
-               "codigo              = '" + datos[1] + "'," +
-               "NombreEmpleado      = '" + datos[2] + "'," +
-               "Dirección           = '" + datos[3] + "'," +
-               "EMail               = '" + datos[4] + "'" +
-               "WHERE IdEmpleado    = '" + datos[0] + "'";
-
-            }
-            else if (accion == "eliminar")
-            {
-            
-            sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
-
-            }
-            procesSQL(sql);
-        }
-
-        void procesSQL(String sql)
-        {
-            comandosSQL.Connection = miConexion;
-            comandosSQL.CommandText = sql;
-            comandosSQL.ExecuteNonQuery();
-        }
-
-        public void mante_datos(String[] datos, String accion)
-        {
-            String sql = "";
-            if (accion == "nuevo")
-            {
-
-                sql = "INSERT INTO Productos (codigo, Descripción, IdCategoria) VALUES(" +
-                     "'" + datos[1] + "'," +
-                     "'" + datos[2] + "'," +
-                     "'" + datos[3] + "'" +
-                     ")";
-
-            }
-
-            else if (accion == "modificar")
-            {
-
-                sql = "UPDATE Productos SET " +
-
-               "codigo              = '" + datos[1] + "'," +
-               "Descripción         = '" + datos[2] + "'," +
-               "IdCategoria         = '" + datos[3] + "'" +
-               "WHERE IdProductos    = '" + datos[0] + "'";
+               "unidades                   = '" + datos[1] + "'," +
+               "cantidad_venta             = '" + datos[2] + "'," +
+               "cant_producto_vendido      = '" + datos[3] + "'," +
+               "precio_total               = '" + datos[4] + "'" +
+               "WHERE IdDetalle_Venta      = '" + datos[0] + "'";
 
             }
             else if (accion == "eliminar")
             {
 
-                sql = "DELETE Productos FROM Productos WHERE IdProductos='" + datos[0] + "'";
+                sql = "DELETE Detalle_Venta FROM Detalle_Venta WHERE IdDetalle_Venta='" + datos[0] + "'";
 
             }
             procesoSQL(sql);
         }
+
         void procesoSQL(String sql)
         {
             comandosSQL.Connection = miConexion;
@@ -168,6 +265,5 @@ namespace Primo_y_Fibonacci
             comandosSQL.ExecuteNonQuery();
         }
 
-        
     }
 }

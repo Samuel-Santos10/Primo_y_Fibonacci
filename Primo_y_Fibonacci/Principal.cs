@@ -40,8 +40,10 @@ namespace Primo_y_Fibonacci
             TxtIdCliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
             txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
             TxtNombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            TxtEmail.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-            TxtDirección.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+            txtdui.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+            txtnit.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+            TxtDireccion.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+            txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -99,8 +101,10 @@ namespace Primo_y_Fibonacci
         {
             txtcodigo.Text = "";
             TxtNombre.Text = "";
-            TxtEmail.Text = "";
-            TxtDirección.Text = "";
+            txtdui.Text = "";
+            txtnit.Text = "";
+            txttelefono.Text = "";
+            TxtDireccion.Text = "";
         }
 
         void controles(Boolean valor)
@@ -128,10 +132,12 @@ namespace Primo_y_Fibonacci
               TxtIdCliente.Text,
               txtcodigo.Text,
               TxtNombre.Text,
-              TxtEmail.Text,
-              TxtDirección.Text
+              txtdui.Text,
+              txtnit.Text,
+              txttelefono.Text,
+              TxtDireccion.Text
                 };
-                objConexion.mantenimiento_datos(valores, accion);
+                objConexion.mantenimiento_datos_Cliente(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();
@@ -176,7 +182,7 @@ namespace Primo_y_Fibonacci
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { TxtIdCliente.Text };
-                objConexion.mantenimiento_datos(valores, "eliminar");
+                objConexion.mantenimiento_datos_Cliente(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -198,25 +204,10 @@ namespace Primo_y_Fibonacci
             }
         }
 
- 
-
-        private void formularioEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Empleados Empleado = new Empleados();
-
-            Empleado.Show();
-        }
-
-        private void formularioProductosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Productos Productos = new Productos();
-
-            Productos.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
+    
     }
 }

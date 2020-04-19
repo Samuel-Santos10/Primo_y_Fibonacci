@@ -42,8 +42,10 @@ namespace Primo_y_Fibonacci
             txtIdEmpleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
             txtcodigoEmp.Text = tbl.Rows[posicion].ItemArray[1].ToString();
             txtnomEmpl.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            txtdireccionEmp.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-            txtcorreoEmp.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+            txtdui.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+            txtnit.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+            txtdireccionEmp.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+            txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -101,8 +103,9 @@ namespace Primo_y_Fibonacci
             txtcodigoEmp.Text = "";
             txtnomEmpl.Text = "";
             txtdireccionEmp.Text = "";
-            txtcorreoEmp.Text = "";
-
+            txtdui.Text = "";
+            txtnit.Text = "";
+            txttelefono.Text = "";
         }
 
         void controles(Boolean valor)
@@ -110,7 +113,7 @@ namespace Primo_y_Fibonacci
             GrbNavegacion.Enabled = valor;
             BtnDelete.Enabled = valor;
             BtnBuscar.Enabled = valor;
-            GrbDatosCliente.Enabled = !valor;
+            GrbDatosEmpleado.Enabled = !valor;
         }
 
     
@@ -133,11 +136,14 @@ namespace Primo_y_Fibonacci
               txtIdEmpleado.Text,
               txtcodigoEmp.Text,
               txtnomEmpl.Text,
+              txtdui.Text,
+              txtnit.Text,
               txtdireccionEmp.Text,
-              txtcorreoEmp.Text
+              txttelefono.Text
+
                 };
 
-                objConexion.manteni_datos(valores, accion);
+                objConexion.mantenimiento_datos_Empleado(valores, accion);
                 actualizarDs();
                 posicion = tbl.Rows.Count - 1;
                 mostrarDatos();
@@ -181,7 +187,7 @@ namespace Primo_y_Fibonacci
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { txtIdEmpleado.Text };
-                objConexion.manteni_datos(valores, "eliminar");
+                objConexion.mantenimiento_datos_Empleado(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
@@ -206,5 +212,7 @@ namespace Primo_y_Fibonacci
         {
             Close();
         }
+
+      
     }
 }

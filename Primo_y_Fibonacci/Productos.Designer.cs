@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
-            this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.GrbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.lblidProducto = new System.Windows.Forms.Label();
+            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cboCategoriaProductos = new System.Windows.Forms.ComboBox();
+            this.txtproducto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtcodigoprod = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtIdCategoria = new System.Windows.Forms.TextBox();
-            this.LblEmail = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.lbldireccion = new System.Windows.Forms.Label();
-            this.TxtIdProductos = new System.Windows.Forms.TextBox();
-            this.LblIdProductos = new System.Windows.Forms.Label();
+            this.LblIdPro = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GrbCliente = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,49 +62,133 @@
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.GrbDatosCliente.SuspendLayout();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtcapacidad = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtmedida = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.GrbDatosProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // GrbDatosCliente
+            // GrbDatosProducto
             // 
-            this.GrbDatosCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.GrbDatosCliente.Controls.Add(this.txtcodigoprod);
-            this.GrbDatosCliente.Controls.Add(this.label7);
-            this.GrbDatosCliente.Controls.Add(this.textBox6);
-            this.GrbDatosCliente.Controls.Add(this.label6);
-            this.GrbDatosCliente.Controls.Add(this.TxtIdCategoria);
-            this.GrbDatosCliente.Controls.Add(this.LblEmail);
-            this.GrbDatosCliente.Controls.Add(this.TxtDescripcion);
-            this.GrbDatosCliente.Controls.Add(this.lbldireccion);
-            this.GrbDatosCliente.Controls.Add(this.TxtIdProductos);
-            this.GrbDatosCliente.Controls.Add(this.LblIdProductos);
-            this.GrbDatosCliente.Enabled = false;
-            this.GrbDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbDatosCliente.Location = new System.Drawing.Point(1, 0);
-            this.GrbDatosCliente.Margin = new System.Windows.Forms.Padding(1);
-            this.GrbDatosCliente.Name = "GrbDatosCliente";
-            this.GrbDatosCliente.Padding = new System.Windows.Forms.Padding(1);
-            this.GrbDatosCliente.Size = new System.Drawing.Size(525, 258);
-            this.GrbDatosCliente.TabIndex = 7;
-            this.GrbDatosCliente.TabStop = false;
-            this.GrbDatosCliente.Text = "DATOS PRODUCTOS";
+            this.GrbDatosProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GrbDatosProducto.Controls.Add(this.txtmedida);
+            this.GrbDatosProducto.Controls.Add(this.label12);
+            this.GrbDatosProducto.Controls.Add(this.txtcapacidad);
+            this.GrbDatosProducto.Controls.Add(this.label11);
+            this.GrbDatosProducto.Controls.Add(this.txtmodelo);
+            this.GrbDatosProducto.Controls.Add(this.label10);
+            this.GrbDatosProducto.Controls.Add(this.lblidProducto);
+            this.GrbDatosProducto.Controls.Add(this.txtmarca);
+            this.GrbDatosProducto.Controls.Add(this.label9);
+            this.GrbDatosProducto.Controls.Add(this.pictureBox1);
+            this.GrbDatosProducto.Controls.Add(this.cboCategoriaProductos);
+            this.GrbDatosProducto.Controls.Add(this.txtproducto);
+            this.GrbDatosProducto.Controls.Add(this.label8);
+            this.GrbDatosProducto.Controls.Add(this.txtcodigoprod);
+            this.GrbDatosProducto.Controls.Add(this.label7);
+            this.GrbDatosProducto.Controls.Add(this.textBox6);
+            this.GrbDatosProducto.Controls.Add(this.label6);
+            this.GrbDatosProducto.Controls.Add(this.lbldireccion);
+            this.GrbDatosProducto.Controls.Add(this.LblIdPro);
+            this.GrbDatosProducto.Enabled = false;
+            this.GrbDatosProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrbDatosProducto.Location = new System.Drawing.Point(1, 1);
+            this.GrbDatosProducto.Margin = new System.Windows.Forms.Padding(1);
+            this.GrbDatosProducto.Name = "GrbDatosProducto";
+            this.GrbDatosProducto.Padding = new System.Windows.Forms.Padding(1);
+            this.GrbDatosProducto.Size = new System.Drawing.Size(525, 314);
+            this.GrbDatosProducto.TabIndex = 7;
+            this.GrbDatosProducto.TabStop = false;
+            this.GrbDatosProducto.Text = "DATOS PRODUCTOS";
+            // 
+            // lblidProducto
+            // 
+            this.lblidProducto.AutoSize = true;
+            this.lblidProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidProducto.Location = new System.Drawing.Point(296, 72);
+            this.lblidProducto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidProducto.Name = "lblidProducto";
+            this.lblidProducto.Size = new System.Drawing.Size(0, 13);
+            this.lblidProducto.TabIndex = 19;
+            // 
+            // txtmarca
+            // 
+            this.txtmarca.Location = new System.Drawing.Point(290, 182);
+            this.txtmarca.Margin = new System.Windows.Forms.Padding(1);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.Size = new System.Drawing.Size(112, 20);
+            this.txtmarca.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(214, 185);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "MARCA:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(21, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cboCategoriaProductos
+            // 
+            this.cboCategoriaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoriaProductos.FormattingEnabled = true;
+            this.cboCategoriaProductos.Location = new System.Drawing.Point(290, 34);
+            this.cboCategoriaProductos.Margin = new System.Windows.Forms.Padding(1);
+            this.cboCategoriaProductos.Name = "cboCategoriaProductos";
+            this.cboCategoriaProductos.Size = new System.Drawing.Size(154, 21);
+            this.cboCategoriaProductos.TabIndex = 15;
+            // 
+            // txtproducto
+            // 
+            this.txtproducto.Location = new System.Drawing.Point(290, 146);
+            this.txtproducto.Margin = new System.Windows.Forms.Padding(1);
+            this.txtproducto.Name = "txtproducto";
+            this.txtproducto.Size = new System.Drawing.Size(142, 20);
+            this.txtproducto.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(204, 149);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "NOMBRE:";
             // 
             // txtcodigoprod
             // 
-            this.txtcodigoprod.Location = new System.Drawing.Point(128, 67);
+            this.txtcodigoprod.Location = new System.Drawing.Point(290, 108);
             this.txtcodigoprod.Margin = new System.Windows.Forms.Padding(1);
-            this.txtcodigoprod.Multiline = true;
             this.txtcodigoprod.Name = "txtcodigoprod";
-            this.txtcodigoprod.Size = new System.Drawing.Size(112, 25);
+            this.txtcodigoprod.Size = new System.Drawing.Size(112, 20);
             this.txtcodigoprod.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(53, 70);
+            this.label7.Location = new System.Drawing.Point(209, 111);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
@@ -126,72 +213,34 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "label6";
             // 
-            // TxtIdCategoria
-            // 
-            this.TxtIdCategoria.Location = new System.Drawing.Point(128, 219);
-            this.TxtIdCategoria.Margin = new System.Windows.Forms.Padding(1);
-            this.TxtIdCategoria.Multiline = true;
-            this.TxtIdCategoria.Name = "TxtIdCategoria";
-            this.TxtIdCategoria.Size = new System.Drawing.Size(112, 25);
-            this.TxtIdCategoria.TabIndex = 5;
-            // 
-            // LblEmail
-            // 
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(15, 222);
-            this.LblEmail.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(95, 13);
-            this.LblEmail.TabIndex = 4;
-            this.LblEmail.Text = "IDCATEGORIA:";
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(128, 102);
-            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(1);
-            this.TxtDescripcion.Multiline = true;
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(318, 102);
-            this.TxtDescripcion.TabIndex = 3;
-            // 
             // lbldireccion
             // 
             this.lbldireccion.AutoSize = true;
             this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldireccion.Location = new System.Drawing.Point(15, 105);
+            this.lbldireccion.Location = new System.Drawing.Point(186, 37);
             this.lbldireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(99, 13);
+            this.lbldireccion.Size = new System.Drawing.Size(82, 13);
             this.lbldireccion.TabIndex = 2;
-            this.lbldireccion.Text = "DESCREPCION:";
+            this.lbldireccion.Text = "CATEGORIA:";
             // 
-            // TxtIdProductos
+            // LblIdPro
             // 
-            this.TxtIdProductos.Location = new System.Drawing.Point(128, 32);
-            this.TxtIdProductos.Margin = new System.Windows.Forms.Padding(1);
-            this.TxtIdProductos.Multiline = true;
-            this.TxtIdProductos.Name = "TxtIdProductos";
-            this.TxtIdProductos.Size = new System.Drawing.Size(112, 25);
-            this.TxtIdProductos.TabIndex = 1;
-            // 
-            // LblIdProductos
-            // 
-            this.LblIdProductos.AutoSize = true;
-            this.LblIdProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdProductos.Location = new System.Drawing.Point(15, 35);
-            this.LblIdProductos.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.LblIdProductos.Name = "LblIdProductos";
-            this.LblIdProductos.Size = new System.Drawing.Size(101, 13);
-            this.LblIdProductos.TabIndex = 0;
-            this.LblIdProductos.Text = "IDPRODUCTOS:";
+            this.LblIdPro.AutoSize = true;
+            this.LblIdPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIdPro.Location = new System.Drawing.Point(244, 72);
+            this.LblIdPro.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.LblIdPro.Name = "LblIdPro";
+            this.LblIdPro.Size = new System.Drawing.Size(24, 13);
+            this.LblIdPro.TabIndex = 0;
+            this.LblIdPro.Text = "ID:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 269);
+            this.label1.Location = new System.Drawing.Point(190, 330);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 22;
@@ -211,7 +260,7 @@
             this.GrbCliente.Controls.Add(this.BtnModificar);
             this.GrbCliente.Controls.Add(this.BtnNuevo);
             this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 384);
+            this.GrbCliente.Location = new System.Drawing.Point(0, 448);
             this.GrbCliente.Name = "GrbCliente";
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 21;
@@ -341,7 +390,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(0, 289);
+            this.GrbNavegacion.Location = new System.Drawing.Point(0, 350);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 20;
@@ -414,30 +463,88 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(198, 363);
+            this.label4.Location = new System.Drawing.Point(198, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "OPCIONES";
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.Location = new System.Drawing.Point(290, 219);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(1);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.Size = new System.Drawing.Size(112, 20);
+            this.txtmodelo.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(205, 222);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "MODELO:";
+            // 
+            // txtcapacidad
+            // 
+            this.txtcapacidad.Location = new System.Drawing.Point(290, 253);
+            this.txtcapacidad.Margin = new System.Windows.Forms.Padding(1);
+            this.txtcapacidad.Name = "txtcapacidad";
+            this.txtcapacidad.Size = new System.Drawing.Size(112, 20);
+            this.txtcapacidad.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(187, 256);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "CAPACIDAD:";
+            // 
+            // txtmedida
+            // 
+            this.txtmedida.Location = new System.Drawing.Point(290, 288);
+            this.txtmedida.Margin = new System.Windows.Forms.Padding(1);
+            this.txtmedida.Name = "txtmedida";
+            this.txtmedida.Size = new System.Drawing.Size(112, 20);
+            this.txtmedida.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(209, 291);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "MEDIDA:";
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(525, 499);
+            this.ClientSize = new System.Drawing.Size(525, 562);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbCliente);
-            this.Controls.Add(this.GrbDatosCliente);
+            this.Controls.Add(this.GrbDatosProducto);
             this.Controls.Add(this.GrbNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
-            this.GrbDatosCliente.ResumeLayout(false);
-            this.GrbDatosCliente.PerformLayout();
+            this.GrbDatosProducto.ResumeLayout(false);
+            this.GrbDatosProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GrbCliente.ResumeLayout(false);
             this.GrbCliente.PerformLayout();
             this.GrbNavegacion.ResumeLayout(false);
@@ -449,15 +556,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GrbDatosCliente;
+        private System.Windows.Forms.GroupBox GrbDatosProducto;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtIdCategoria;
-        private System.Windows.Forms.Label LblEmail;
-        private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label lbldireccion;
-        private System.Windows.Forms.TextBox TxtIdProductos;
-        private System.Windows.Forms.Label LblIdProductos;
+        private System.Windows.Forms.Label LblIdPro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrbCliente;
         private System.Windows.Forms.Label label3;
@@ -479,5 +582,18 @@
         private System.Windows.Forms.TextBox txtcodigoprod;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblnregistros;
+        private System.Windows.Forms.ComboBox cboCategoriaProductos;
+        private System.Windows.Forms.TextBox txtproducto;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtmarca;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblidProducto;
+        private System.Windows.Forms.TextBox txtmedida;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtcapacidad;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtmodelo;
+        private System.Windows.Forms.Label label10;
     }
 }

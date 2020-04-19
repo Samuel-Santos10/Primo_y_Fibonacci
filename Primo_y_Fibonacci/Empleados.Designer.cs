@@ -30,9 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.label1 = new System.Windows.Forms.Label();
-            this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
+            this.GrbDatosEmpleado = new System.Windows.Forms.GroupBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtcodigoEmp = new System.Windows.Forms.TextBox();
+            this.txtnit = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtdireccionEmp = new System.Windows.Forms.TextBox();
             this.LblIDCliente = new System.Windows.Forms.Label();
@@ -40,9 +44,9 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblDireccion = new System.Windows.Forms.Label();
             this.txtnomEmpl = new System.Windows.Forms.TextBox();
-            this.txtcorreoEmp = new System.Windows.Forms.TextBox();
+            this.txtdui = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
-            this.GrbCliente = new System.Windows.Forms.GroupBox();
+            this.Grbempleado = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,15 +58,15 @@
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.GrbNavegacion = new System.Windows.Forms.GroupBox();
+            this.lblnregistros = new System.Windows.Forms.Label();
             this.BtnAnterior = new System.Windows.Forms.Button();
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblnregistros = new System.Windows.Forms.Label();
-            this.GrbDatosCliente.SuspendLayout();
+            this.GrbDatosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.GrbCliente.SuspendLayout();
+            this.Grbempleado.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,51 +75,89 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 256);
+            this.label1.Location = new System.Drawing.Point(196, 306);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 19;
             this.label1.Text = "NAVEGACIÓN";
             // 
-            // GrbDatosCliente
+            // GrbDatosEmpleado
             // 
-            this.GrbDatosCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.GrbDatosCliente.Controls.Add(this.label4);
-            this.GrbDatosCliente.Controls.Add(this.txtcodigoEmp);
-            this.GrbDatosCliente.Controls.Add(this.pictureBox1);
-            this.GrbDatosCliente.Controls.Add(this.txtdireccionEmp);
-            this.GrbDatosCliente.Controls.Add(this.LblIDCliente);
-            this.GrbDatosCliente.Controls.Add(this.txtIdEmpleado);
-            this.GrbDatosCliente.Controls.Add(this.LblNombre);
-            this.GrbDatosCliente.Controls.Add(this.LblDireccion);
-            this.GrbDatosCliente.Controls.Add(this.txtnomEmpl);
-            this.GrbDatosCliente.Controls.Add(this.txtcorreoEmp);
-            this.GrbDatosCliente.Controls.Add(this.LblEmail);
-            this.GrbDatosCliente.Enabled = false;
-            this.GrbDatosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbDatosCliente.Location = new System.Drawing.Point(-2, 1);
-            this.GrbDatosCliente.Name = "GrbDatosCliente";
-            this.GrbDatosCliente.Size = new System.Drawing.Size(527, 250);
-            this.GrbDatosCliente.TabIndex = 18;
-            this.GrbDatosCliente.TabStop = false;
-            this.GrbDatosCliente.Text = "DATOS DE EMPLEADO";
+            this.GrbDatosEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbDatosEmpleado.Controls.Add(this.txttelefono);
+            this.GrbDatosEmpleado.Controls.Add(this.label4);
+            this.GrbDatosEmpleado.Controls.Add(this.label8);
+            this.GrbDatosEmpleado.Controls.Add(this.txtcodigoEmp);
+            this.GrbDatosEmpleado.Controls.Add(this.txtnit);
+            this.GrbDatosEmpleado.Controls.Add(this.label7);
+            this.GrbDatosEmpleado.Controls.Add(this.pictureBox1);
+            this.GrbDatosEmpleado.Controls.Add(this.txtdireccionEmp);
+            this.GrbDatosEmpleado.Controls.Add(this.LblIDCliente);
+            this.GrbDatosEmpleado.Controls.Add(this.txtIdEmpleado);
+            this.GrbDatosEmpleado.Controls.Add(this.LblNombre);
+            this.GrbDatosEmpleado.Controls.Add(this.LblDireccion);
+            this.GrbDatosEmpleado.Controls.Add(this.txtnomEmpl);
+            this.GrbDatosEmpleado.Controls.Add(this.txtdui);
+            this.GrbDatosEmpleado.Controls.Add(this.LblEmail);
+            this.GrbDatosEmpleado.Enabled = false;
+            this.GrbDatosEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrbDatosEmpleado.Location = new System.Drawing.Point(0, 1);
+            this.GrbDatosEmpleado.Name = "GrbDatosEmpleado";
+            this.GrbDatosEmpleado.Size = new System.Drawing.Size(525, 278);
+            this.GrbDatosEmpleado.TabIndex = 18;
+            this.GrbDatosEmpleado.TabStop = false;
+            this.GrbDatosEmpleado.Text = "DATOS DE EMPLEADO";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(234, 199);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(100, 20);
+            this.txttelefono.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(162, 69);
+            this.label4.Location = new System.Drawing.Point(162, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "CODIGO:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(145, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "TELEFONO:";
+            // 
             // txtcodigoEmp
             // 
-            this.txtcodigoEmp.Location = new System.Drawing.Point(234, 66);
+            this.txtcodigoEmp.Location = new System.Drawing.Point(234, 60);
             this.txtcodigoEmp.Name = "txtcodigoEmp";
             this.txtcodigoEmp.Size = new System.Drawing.Size(100, 20);
             this.txtcodigoEmp.TabIndex = 12;
+            // 
+            // txtnit
+            // 
+            this.txtnit.Location = new System.Drawing.Point(234, 163);
+            this.txtnit.Name = "txtnit";
+            this.txtnit.Size = new System.Drawing.Size(100, 20);
+            this.txtnit.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(189, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "NIT:";
             // 
             // pictureBox1
             // 
@@ -130,17 +172,17 @@
             // 
             // txtdireccionEmp
             // 
-            this.txtdireccionEmp.Location = new System.Drawing.Point(234, 186);
+            this.txtdireccionEmp.Location = new System.Drawing.Point(234, 233);
             this.txtdireccionEmp.Multiline = true;
             this.txtdireccionEmp.Name = "txtdireccionEmp";
-            this.txtdireccionEmp.Size = new System.Drawing.Size(282, 42);
+            this.txtdireccionEmp.Size = new System.Drawing.Size(282, 39);
             this.txtdireccionEmp.TabIndex = 8;
             // 
             // LblIDCliente
             // 
             this.LblIDCliente.AutoSize = true;
             this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCliente.Location = new System.Drawing.Point(126, 38);
+            this.LblIDCliente.Location = new System.Drawing.Point(126, 30);
             this.LblIDCliente.Name = "LblIDCliente";
             this.LblIDCliente.Size = new System.Drawing.Size(95, 13);
             this.LblIDCliente.TabIndex = 1;
@@ -148,7 +190,7 @@
             // 
             // txtIdEmpleado
             // 
-            this.txtIdEmpleado.Location = new System.Drawing.Point(234, 35);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(234, 27);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.Size = new System.Drawing.Size(100, 20);
             this.txtIdEmpleado.TabIndex = 2;
@@ -157,7 +199,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(157, 108);
+            this.LblNombre.Location = new System.Drawing.Point(157, 98);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 3;
@@ -167,7 +209,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(142, 199);
+            this.LblDireccion.Location = new System.Drawing.Point(142, 236);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(79, 13);
             this.LblDireccion.TabIndex = 7;
@@ -175,47 +217,47 @@
             // 
             // txtnomEmpl
             // 
-            this.txtnomEmpl.Location = new System.Drawing.Point(234, 101);
+            this.txtnomEmpl.Location = new System.Drawing.Point(234, 95);
             this.txtnomEmpl.Name = "txtnomEmpl";
             this.txtnomEmpl.Size = new System.Drawing.Size(193, 20);
             this.txtnomEmpl.TabIndex = 4;
             // 
-            // txtcorreoEmp
+            // txtdui
             // 
-            this.txtcorreoEmp.Location = new System.Drawing.Point(234, 144);
-            this.txtcorreoEmp.Name = "txtcorreoEmp";
-            this.txtcorreoEmp.Size = new System.Drawing.Size(193, 20);
-            this.txtcorreoEmp.TabIndex = 6;
+            this.txtdui.Location = new System.Drawing.Point(234, 129);
+            this.txtdui.Name = "txtdui";
+            this.txtdui.Size = new System.Drawing.Size(100, 20);
+            this.txtdui.TabIndex = 6;
             // 
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(169, 147);
+            this.LblEmail.Location = new System.Drawing.Point(188, 132);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(52, 13);
+            this.LblEmail.Size = new System.Drawing.Size(33, 13);
             this.LblEmail.TabIndex = 5;
-            this.LblEmail.Text = "E-MAIL:";
+            this.LblEmail.Text = "DUI:";
             // 
-            // GrbCliente
+            // Grbempleado
             // 
-            this.GrbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GrbCliente.Controls.Add(this.label6);
-            this.GrbCliente.Controls.Add(this.button1);
-            this.GrbCliente.Controls.Add(this.label3);
-            this.GrbCliente.Controls.Add(this.label2);
-            this.GrbCliente.Controls.Add(this.lblop2);
-            this.GrbCliente.Controls.Add(this.lblop);
-            this.GrbCliente.Controls.Add(this.BtnBuscar);
-            this.GrbCliente.Controls.Add(this.BtnDelete);
-            this.GrbCliente.Controls.Add(this.BtnModificar);
-            this.GrbCliente.Controls.Add(this.BtnNuevo);
-            this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 379);
-            this.GrbCliente.Name = "GrbCliente";
-            this.GrbCliente.Size = new System.Drawing.Size(525, 96);
-            this.GrbCliente.TabIndex = 17;
-            this.GrbCliente.TabStop = false;
+            this.Grbempleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Grbempleado.Controls.Add(this.label6);
+            this.Grbempleado.Controls.Add(this.button1);
+            this.Grbempleado.Controls.Add(this.label3);
+            this.Grbempleado.Controls.Add(this.label2);
+            this.Grbempleado.Controls.Add(this.lblop2);
+            this.Grbempleado.Controls.Add(this.lblop);
+            this.Grbempleado.Controls.Add(this.BtnBuscar);
+            this.Grbempleado.Controls.Add(this.BtnDelete);
+            this.Grbempleado.Controls.Add(this.BtnModificar);
+            this.Grbempleado.Controls.Add(this.BtnNuevo);
+            this.Grbempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grbempleado.Location = new System.Drawing.Point(0, 437);
+            this.Grbempleado.Name = "Grbempleado";
+            this.Grbempleado.Size = new System.Drawing.Size(525, 96);
+            this.Grbempleado.TabIndex = 17;
+            this.Grbempleado.TabStop = false;
             // 
             // label6
             // 
@@ -341,11 +383,21 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(-1, 278);
+            this.GrbNavegacion.Location = new System.Drawing.Point(-1, 328);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 16;
             this.GrbNavegacion.TabStop = false;
+            // 
+            // lblnregistros
+            // 
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnregistros.Location = new System.Drawing.Point(252, 27);
+            this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
+            this.lblnregistros.TabIndex = 6;
             // 
             // BtnAnterior
             // 
@@ -404,21 +456,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(208, 353);
+            this.label5.Location = new System.Drawing.Point(208, 411);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "OPCIONES";
-            // 
-            // lblnregistros
-            // 
-            this.lblnregistros.AutoSize = true;
-            this.lblnregistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnregistros.Location = new System.Drawing.Point(252, 27);
-            this.lblnregistros.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblnregistros.Name = "lblnregistros";
-            this.lblnregistros.Size = new System.Drawing.Size(0, 13);
-            this.lblnregistros.TabIndex = 6;
             // 
             // Empleados
             // 
@@ -426,22 +468,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(525, 499);
+            this.ClientSize = new System.Drawing.Size(525, 562);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.GrbDatosCliente);
-            this.Controls.Add(this.GrbCliente);
+            this.Controls.Add(this.GrbDatosEmpleado);
+            this.Controls.Add(this.Grbempleado);
             this.Controls.Add(this.GrbNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.Empleados_Load);
-            this.GrbDatosCliente.ResumeLayout(false);
-            this.GrbDatosCliente.PerformLayout();
+            this.GrbDatosEmpleado.ResumeLayout(false);
+            this.GrbDatosEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.GrbCliente.ResumeLayout(false);
-            this.GrbCliente.PerformLayout();
+            this.Grbempleado.ResumeLayout(false);
+            this.Grbempleado.PerformLayout();
             this.GrbNavegacion.ResumeLayout(false);
             this.GrbNavegacion.PerformLayout();
             this.ResumeLayout(false);
@@ -452,7 +494,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox GrbDatosCliente;
+        private System.Windows.Forms.GroupBox GrbDatosEmpleado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtdireccionEmp;
         private System.Windows.Forms.Label LblIDCliente;
@@ -460,9 +502,9 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblDireccion;
         private System.Windows.Forms.TextBox txtnomEmpl;
-        private System.Windows.Forms.TextBox txtcorreoEmp;
+        private System.Windows.Forms.TextBox txtdui;
         private System.Windows.Forms.Label LblEmail;
-        private System.Windows.Forms.GroupBox GrbCliente;
+        private System.Windows.Forms.GroupBox Grbempleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblop2;
@@ -482,5 +524,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblnregistros;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtnit;
+        private System.Windows.Forms.Label label7;
     }
 }
