@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.GrbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.txtmedida = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtcapacidad = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtmodelo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblidProducto = new System.Windows.Forms.Label();
             this.txtmarca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,12 +68,6 @@
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtmodelo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtcapacidad = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtmedida = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.GrbDatosProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -106,6 +106,63 @@
             this.GrbDatosProducto.TabIndex = 7;
             this.GrbDatosProducto.TabStop = false;
             this.GrbDatosProducto.Text = "DATOS PRODUCTOS";
+            // 
+            // txtmedida
+            // 
+            this.txtmedida.Location = new System.Drawing.Point(290, 288);
+            this.txtmedida.Margin = new System.Windows.Forms.Padding(1);
+            this.txtmedida.Name = "txtmedida";
+            this.txtmedida.Size = new System.Drawing.Size(112, 20);
+            this.txtmedida.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(209, 291);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "MEDIDA:";
+            // 
+            // txtcapacidad
+            // 
+            this.txtcapacidad.Location = new System.Drawing.Point(290, 253);
+            this.txtcapacidad.Margin = new System.Windows.Forms.Padding(1);
+            this.txtcapacidad.Name = "txtcapacidad";
+            this.txtcapacidad.Size = new System.Drawing.Size(112, 20);
+            this.txtcapacidad.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(187, 256);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "CAPACIDAD:";
+            // 
+            // txtmodelo
+            // 
+            this.txtmodelo.Location = new System.Drawing.Point(290, 219);
+            this.txtmodelo.Margin = new System.Windows.Forms.Padding(1);
+            this.txtmodelo.Name = "txtmodelo";
+            this.txtmodelo.Size = new System.Drawing.Size(112, 20);
+            this.txtmodelo.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(205, 222);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "MODELO:";
             // 
             // lblidProducto
             // 
@@ -370,11 +427,11 @@
             // 
             this.BtnNuevo.BackColor = System.Drawing.Color.Transparent;
             this.BtnNuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.BackgroundImage")));
-            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnNuevo.Location = new System.Drawing.Point(22, 18);
+            this.BtnNuevo.Location = new System.Drawing.Point(22, 19);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
             this.BtnNuevo.TabIndex = 4;
@@ -468,63 +525,6 @@
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "OPCIONES";
-            // 
-            // txtmodelo
-            // 
-            this.txtmodelo.Location = new System.Drawing.Point(290, 219);
-            this.txtmodelo.Margin = new System.Windows.Forms.Padding(1);
-            this.txtmodelo.Name = "txtmodelo";
-            this.txtmodelo.Size = new System.Drawing.Size(112, 20);
-            this.txtmodelo.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(205, 222);
-            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "MODELO:";
-            // 
-            // txtcapacidad
-            // 
-            this.txtcapacidad.Location = new System.Drawing.Point(290, 253);
-            this.txtcapacidad.Margin = new System.Windows.Forms.Padding(1);
-            this.txtcapacidad.Name = "txtcapacidad";
-            this.txtcapacidad.Size = new System.Drawing.Size(112, 20);
-            this.txtcapacidad.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(187, 256);
-            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "CAPACIDAD:";
-            // 
-            // txtmedida
-            // 
-            this.txtmedida.Location = new System.Drawing.Point(290, 288);
-            this.txtmedida.Margin = new System.Windows.Forms.Padding(1);
-            this.txtmedida.Name = "txtmedida";
-            this.txtmedida.Size = new System.Drawing.Size(112, 20);
-            this.txtmedida.TabIndex = 25;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(209, 291);
-            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "MEDIDA:";
             // 
             // Productos
             // 

@@ -17,14 +17,7 @@ namespace Primo_y_Fibonacci
             InitializeComponent();
         }
 
-        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Empleados frmEmpleado = new Empleados();
-            frmEmpleado.MdiParent = this;
-            frmEmpleado.Show();
 
-           
-        }
 
         private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,6 +54,26 @@ namespace Primo_y_Fibonacci
             Close();
         }
 
-      
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Empleados frmEmpleado = new Empleados();
+            frmEmpleado.MdiParent = this;
+            frmEmpleado.Show();
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Categoria frmCategoria = new Categoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inventario frminven = new Inventario();
+            frminven.MdiParent = this;
+            frminven.Show();
+        }
     }
 }

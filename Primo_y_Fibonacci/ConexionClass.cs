@@ -38,6 +38,10 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Empleado");
 
+            comandosSQL.CommandText = "select * from Tipo_Usuario";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Tipo_Usuario");
+
             comandosSQL.CommandText = "select * from Productos";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Productos");
@@ -53,6 +57,10 @@ namespace Primo_y_Fibonacci
             comandosSQL.CommandText = "select * from Detalle_Venta";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Detalle_Venta");
+
+            comandosSQL.CommandText = "select * from Inventario";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Inventario");
 
 
             return ds;
@@ -95,21 +103,22 @@ namespace Primo_y_Fibonacci
             procesoSQL(sql);
         }
 
-
+        //Empleado
         public void mantenimiento_datos_Empleado(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Empleado (codigo, nombre, dui, nit, direccion, telefono) VALUES(" +
+                sql = "INSERT INTO Empleado (IDTipoUsuario, codigo, nombre, dui, nit, direccion, telefono) VALUES(" +
                     
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
                     "'" + datos[3] + "'," +
                     "'" + datos[4] + "'," +
                     "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'" +
+                    "'" + datos[6] + "'," +
+                    "'" + datos[7] + "'" +
                      ")";
 
             }
@@ -118,13 +127,13 @@ namespace Primo_y_Fibonacci
             {
 
                 sql = "UPDATE Empleado SET " +
-
-                "codigo              = '" + datos[1] + "'," +
-                "nombre              = '" + datos[2] + "'," +
-                "dui                 = '" + datos[3] + "'," +
-                "nit                 = '" + datos[4] + "'," +
-                "direccion           = '" + datos[5] + "'," +
-                "telefono            = '" + datos[6] + "'" +
+                "IDTipoUsuario       = '" + datos[1] + "'," +
+                "codigo              = '" + datos[2] + "'," +
+                "nombre              = '" + datos[3] + "'," +
+                "dui                 = '" + datos[4] + "'," +
+                "nit                 = '" + datos[5] + "'," +
+                "direccion           = '" + datos[6] + "'," +
+                "telefono            = '" + datos[7] + "'" +
                "WHERE IdEmpleado      = '" + datos[0] + "'";
 
             }
@@ -253,6 +262,73 @@ namespace Primo_y_Fibonacci
             {
 
                 sql = "DELETE Detalle_Venta FROM Detalle_Venta WHERE IdDetalle_Venta='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+
+        public void mantenimiento_datos_Categoria(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Categorias (categoriaa) VALUES(" +
+                     "'" + datos[1] + "'" +
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Categorias SET " +
+
+               "categoriaa                  = '" + datos[1] + "'" +
+               "WHERE IdCategoria           = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+
+                sql = "DELETE Categorias FROM Categorias WHERE IdCategoria='" + datos[0] + "'";
+
+            }
+            procesoSQL(sql);
+        }
+
+        public void mantenimiento_datos_Inventario(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Inventario (ID_Producto, ID_Ventas, existenci_producto, unidades) VALUES(" +
+                     "'" + datos[1] + "'," +
+                     "'" + datos[2] + "'," +
+                     "'" + datos[3] + "'," +
+                     "'" + datos[4] + "'" +
+                   
+                     ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE Productos SET " +
+
+               "ID_Producto         = '" + datos[1] + "'," +
+               "ID_Ventas           = '" + datos[2] + "'," +
+               "existenci_producto   = '" + datos[3] + "'," +
+               "unidades             = '" + datos[4] + "'" +
+               "WHERE IdInventario   = '" + datos[0] + "'";
+
+            }
+            else if (accion == "eliminar")
+            {
+
+                sql = "DELETE Inventario FROM Inventario WHERE IdInventario='" + datos[0] + "'";
 
             }
             procesoSQL(sql);

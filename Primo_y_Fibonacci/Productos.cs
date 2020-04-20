@@ -39,7 +39,7 @@ namespace Primo_y_Fibonacci
             try
             {
                 cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["Categorias"];
-                cboCategoriaProductos.DisplayMember = "Categoria";
+                cboCategoriaProductos.DisplayMember = "categoriaa";
                 cboCategoriaProductos.ValueMember = "Categorias.IdCategoria";
                 cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 

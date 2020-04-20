@@ -39,13 +39,19 @@ namespace Primo_y_Fibonacci
             try
 
             {
-            txtIdEmpleado.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-            txtcodigoEmp.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-            txtnomEmpl.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            txtdui.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-            txtnit.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-            txtdireccionEmp.Text = tbl.Rows[posicion].ItemArray[5].ToString();
-            txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
+
+            cbotipoEmple.DataSource = objConexion.obtener_datos().Tables["Tipo_Usuario"];
+            cbotipoEmple.DisplayMember = "nombre";
+            cbotipoEmple.ValueMember = "Tipo_Usuario.IdTipoUsuario";
+            cbotipoEmple.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
+
+            lblidemple.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+            txtcodigoEmp.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+            txtnomEmpl.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+            txtdui.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+            txtnit.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+            txtdireccionEmp.Text = tbl.Rows[posicion].ItemArray[6].ToString();
+            txttelefono.Text = tbl.Rows[posicion].ItemArray[7].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -133,7 +139,8 @@ namespace Primo_y_Fibonacci
 
             { //boton de guardar
                 String[] valores = {
-              txtIdEmpleado.Text,
+              lblidemple.Text,
+              cbotipoEmple.SelectedValue.ToString(),
               txtcodigoEmp.Text,
               txtnomEmpl.Text,
               txtdui.Text,
@@ -186,7 +193,7 @@ namespace Primo_y_Fibonacci
             if (MessageBox.Show("Esta seguro de eliminar a " + txtnomEmpl.Text, "Registro de Empleado",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { txtIdEmpleado.Text };
+                String[] valores = { lblidemple.Text };
                 objConexion.mantenimiento_datos_Empleado(valores, "eliminar");
 
                 actualizarDs();
@@ -198,14 +205,7 @@ namespace Primo_y_Fibonacci
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
 
-            Busqueda_Empleado frmBusqueda = new Busqueda_Empleado();
-            frmBusqueda.ShowDialog();
-
-            if (frmBusqueda._IdEmpleado > 0)
-            {
-                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdEmpleado));
-                mostrarDatos();
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

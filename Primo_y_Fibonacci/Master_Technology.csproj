@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busqueda_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_Categoria.Designer.cs">
+      <DependentUpon>Busqueda_Categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busqueda_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     <Compile Include="Busqueda_Proveedor.Designer.cs">
       <DependentUpon>Busqueda_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compra_Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra_Orden.Designer.cs">
+      <DependentUpon>Compra_Orden.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConexionClass.cs" />
     <Compile Include="Detalle_Venta.cs">
       <SubType>Form</SubType>
@@ -103,6 +121,12 @@
     </Compile>
     <Compile Include="Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -130,6 +154,9 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Busqueda_Categoria.resx">
+      <DependentUpon>Busqueda_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busqueda_Cliente.resx">
       <DependentUpon>Busqueda_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,11 +172,20 @@
     <EmbeddedResource Include="Busqueda_Proveedor.resx">
       <DependentUpon>Busqueda_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra_Orden.resx">
+      <DependentUpon>Compra_Orden.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_Venta.resx">
       <DependentUpon>Detalle_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
