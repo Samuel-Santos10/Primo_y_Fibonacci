@@ -30,6 +30,7 @@ namespace Primo_y_Fibonacci
             mostrarDatos();
 
           
+
         }
 
         void actualizarDs()
