@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.GrbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BtnBuscarCategoriaProducto = new System.Windows.Forms.Button();
             this.txtmedida = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtcapacidad = new System.Windows.Forms.TextBox();
@@ -77,6 +79,8 @@
             // GrbDatosProducto
             // 
             this.GrbDatosProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GrbDatosProducto.Controls.Add(this.label13);
+            this.GrbDatosProducto.Controls.Add(this.BtnBuscarCategoriaProducto);
             this.GrbDatosProducto.Controls.Add(this.txtmedida);
             this.GrbDatosProducto.Controls.Add(this.label12);
             this.GrbDatosProducto.Controls.Add(this.txtcapacidad);
@@ -102,10 +106,32 @@
             this.GrbDatosProducto.Margin = new System.Windows.Forms.Padding(1);
             this.GrbDatosProducto.Name = "GrbDatosProducto";
             this.GrbDatosProducto.Padding = new System.Windows.Forms.Padding(1);
-            this.GrbDatosProducto.Size = new System.Drawing.Size(525, 314);
+            this.GrbDatosProducto.Size = new System.Drawing.Size(524, 314);
             this.GrbDatosProducto.TabIndex = 7;
             this.GrbDatosProducto.TabStop = false;
             this.GrbDatosProducto.Text = "DATOS PRODUCTOS";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(449, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "Buscar";
+            // 
+            // BtnBuscarCategoriaProducto
+            // 
+            this.BtnBuscarCategoriaProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarCategoriaProducto.BackgroundImage")));
+            this.BtnBuscarCategoriaProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarCategoriaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnBuscarCategoriaProducto.Location = new System.Drawing.Point(450, 34);
+            this.BtnBuscarCategoriaProducto.Name = "BtnBuscarCategoriaProducto";
+            this.BtnBuscarCategoriaProducto.Size = new System.Drawing.Size(47, 21);
+            this.BtnBuscarCategoriaProducto.TabIndex = 26;
+            this.BtnBuscarCategoriaProducto.UseVisualStyleBackColor = true;
+            this.BtnBuscarCategoriaProducto.Click += new System.EventHandler(this.BtnBuscarCategoriaProducto_Click);
             // 
             // txtmedida
             // 
@@ -206,7 +232,6 @@
             // 
             // cboCategoriaProductos
             // 
-            this.cboCategoriaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoriaProductos.FormattingEnabled = true;
             this.cboCategoriaProductos.Location = new System.Drawing.Point(290, 34);
             this.cboCategoriaProductos.Margin = new System.Windows.Forms.Padding(1);
@@ -595,5 +620,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtmodelo;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BtnBuscarCategoriaProducto;
     }
 }

@@ -37,7 +37,6 @@ namespace Primo_y_Fibonacci
 
        private void Busqueda_Cliente_Load(object sender, EventArgs e)
         {
-
          GrdBusquedaClientes.DataSource = objConexion.obtener_datos().Tables["Cliente"].DefaultView;
         }
       
@@ -45,7 +44,7 @@ namespace Primo_y_Fibonacci
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaClientes.DataSource;
-            bs.Filter = "(NombreCliente + Dirección + EMail + codigo) like '%" + valor + "%'";
+            bs.Filter = "(Idcliente + codigo + nombre + direccion) like '%" + valor + "%'";
             GrdBusquedaClientes.DataSource = bs;
 
         }

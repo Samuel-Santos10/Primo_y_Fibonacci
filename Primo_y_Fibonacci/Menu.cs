@@ -42,13 +42,7 @@ namespace Primo_y_Fibonacci
             frmProductos.Show();
         }
 
-        private void detalleVentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Detalle_Venta frmdventas = new Detalle_Venta();
-            frmdventas.MdiParent = this;
-            frmdventas.Show();
-
-        }
+    
         private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -75,5 +69,21 @@ namespace Primo_y_Fibonacci
             frminven.MdiParent = this;
             frminven.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuario frmUsuarios = new Usuario();
+            frmUsuarios.MdiParent = this;
+            frmUsuarios.Show();
+        }
+
+        private void tipoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoUsuario frmTipo = new TipoUsuario();
+            frmTipo.MdiParent = this;
+            frmTipo.Show();
+        }
+
+        
     }
 }

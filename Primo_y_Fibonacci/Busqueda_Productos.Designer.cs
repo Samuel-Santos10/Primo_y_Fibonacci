@@ -46,6 +46,7 @@
             this.BtnCancelar.TabIndex = 30;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // GrdBusquedaProducto
             // 

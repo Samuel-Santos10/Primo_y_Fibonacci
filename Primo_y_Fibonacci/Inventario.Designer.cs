@@ -33,7 +33,7 @@
             this.lblidventas = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblidinventario = new System.Windows.Forms.Label();
-            this.cbotProducto = new System.Windows.Forms.ComboBox();
+            this.cbotInventProducto = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblID = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BtnBuscarInventarioProducto = new System.Windows.Forms.Button();
             this.GrbDatosInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -69,10 +71,12 @@
             // GrbDatosInventario
             // 
             this.GrbDatosInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GrbDatosInventario.Controls.Add(this.label13);
+            this.GrbDatosInventario.Controls.Add(this.BtnBuscarInventarioProducto);
             this.GrbDatosInventario.Controls.Add(this.lblidventas);
             this.GrbDatosInventario.Controls.Add(this.label7);
             this.GrbDatosInventario.Controls.Add(this.lblidinventario);
-            this.GrbDatosInventario.Controls.Add(this.cbotProducto);
+            this.GrbDatosInventario.Controls.Add(this.cbotInventProducto);
             this.GrbDatosInventario.Controls.Add(this.label9);
             this.GrbDatosInventario.Controls.Add(this.pictureBox1);
             this.GrbDatosInventario.Controls.Add(this.LblID);
@@ -88,7 +92,6 @@
             this.GrbDatosInventario.TabIndex = 19;
             this.GrbDatosInventario.TabStop = false;
             this.GrbDatosInventario.Text = "DATOS DE INVENTARIO";
-            this.GrbDatosInventario.Enter += new System.EventHandler(this.GrbDatosInventario_Enter);
             // 
             // lblidventas
             // 
@@ -118,15 +121,15 @@
             this.lblidinventario.Size = new System.Drawing.Size(0, 13);
             this.lblidinventario.TabIndex = 29;
             // 
-            // cbotProducto
+            // cbotInventProducto
             // 
-            this.cbotProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbotProducto.FormattingEnabled = true;
-            this.cbotProducto.Location = new System.Drawing.Point(310, 37);
-            this.cbotProducto.Margin = new System.Windows.Forms.Padding(1);
-            this.cbotProducto.Name = "cbotProducto";
-            this.cbotProducto.Size = new System.Drawing.Size(154, 21);
-            this.cbotProducto.TabIndex = 28;
+            this.cbotInventProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotInventProducto.FormattingEnabled = true;
+            this.cbotInventProducto.Location = new System.Drawing.Point(310, 37);
+            this.cbotInventProducto.Margin = new System.Windows.Forms.Padding(1);
+            this.cbotInventProducto.Name = "cbotInventProducto";
+            this.cbotInventProducto.Size = new System.Drawing.Size(154, 21);
+            this.cbotInventProducto.TabIndex = 28;
             // 
             // label9
             // 
@@ -308,6 +311,7 @@
             this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
             this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnDelete
             // 
@@ -427,6 +431,28 @@
             this.BtnUltimo.UseVisualStyleBackColor = false;
             this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(471, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Buscar";
+            // 
+            // BtnBuscarInventarioProducto
+            // 
+            this.BtnBuscarInventarioProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarInventarioProducto.BackgroundImage")));
+            this.BtnBuscarInventarioProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarInventarioProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnBuscarInventarioProducto.Location = new System.Drawing.Point(472, 37);
+            this.BtnBuscarInventarioProducto.Name = "BtnBuscarInventarioProducto";
+            this.BtnBuscarInventarioProducto.Size = new System.Drawing.Size(47, 21);
+            this.BtnBuscarInventarioProducto.TabIndex = 32;
+            this.BtnBuscarInventarioProducto.UseVisualStyleBackColor = true;
+            this.BtnBuscarInventarioProducto.Click += new System.EventHandler(this.BtnBuscarCategoriaProducto_Click);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,7 +484,7 @@
 
         private System.Windows.Forms.GroupBox GrbDatosInventario;
         private System.Windows.Forms.Label lblidinventario;
-        private System.Windows.Forms.ComboBox cbotProducto;
+        private System.Windows.Forms.ComboBox cbotInventProducto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LblID;
@@ -487,5 +513,7 @@
         private System.Windows.Forms.Button BtnPrimero;
         private System.Windows.Forms.Button BtnSiguiente;
         private System.Windows.Forms.Button BtnUltimo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BtnBuscarInventarioProducto;
     }
 }

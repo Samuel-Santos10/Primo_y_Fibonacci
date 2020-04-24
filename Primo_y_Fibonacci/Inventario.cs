@@ -28,22 +28,26 @@ namespace Primo_y_Fibonacci
         {
             actualizarDs();
             mostrarDatos();
+
+          
         }
 
         void actualizarDs()
         {
             tbl = objConexion.obtener_datos().Tables["Inventario"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdInventario"] };
+
+            cbotInventProducto.DataSource = objConexion.obtener_datos().Tables["Productos"];
+            cbotInventProducto.DisplayMember = "nombre";
+            cbotInventProducto.ValueMember = "Productos.IdProductos";
+            
         }
 
         void mostrarDatos()
         {
             try
             {
-                cbotProducto.DataSource = objConexion.obtener_datos().Tables["Productos"];
-                cbotProducto.DisplayMember = "nombre";
-                cbotProducto.ValueMember = "Productos.IdProductos";
-                cbotProducto.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
+                cbotInventProducto.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
                 lblidinventario.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 lblidventas.Text = tbl.Rows[posicion].ItemArray[2].ToString();
@@ -134,10 +138,10 @@ namespace Primo_y_Fibonacci
             { //boton de guardar
                 String[] valores = {
               lblidinventario.Text,
-              cbotProducto.SelectedValue.ToString(),
+              cbotInventProducto.SelectedValue.ToString(),
               lblidventas.Text,
               txtcantExistente.Text,
-              txtunidades.Text,
+              txtunidades.Text
      
                 };
 
@@ -196,9 +200,28 @@ namespace Primo_y_Fibonacci
             Close();
         }
 
-        private void GrbDatosInventario_Enter(object sender, EventArgs e)
-        {
 
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            Busqueda_Inventario buscarInventario = new Busqueda_Inventario();
+            buscarInventario.ShowDialog();
+
+            if (buscarInventario._IdInventario > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(buscarInventario._IdInventario));
+                mostrarDatos();
+            }
+        }
+
+        private void BtnBuscarCategoriaProducto_Click(object sender, EventArgs e)
+        {
+            Busqueda_Productos buscarProducto = new Busqueda_Productos();
+            buscarProducto.ShowDialog();
+
+            if (buscarProducto._IdProductos > 0)
+            {
+                cbotInventProducto.SelectedValue = buscarProducto._IdProductos;
+            }
         }
     }
 }

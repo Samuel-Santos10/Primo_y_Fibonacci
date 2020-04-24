@@ -85,6 +85,12 @@
     <Compile Include="Busqueda_Empleado.Designer.cs">
       <DependentUpon>Busqueda_Empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busqueda_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_Inventario.Designer.cs">
+      <DependentUpon>Busqueda_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busqueda_Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,18 @@
     </Compile>
     <Compile Include="Busqueda_Proveedor.Designer.cs">
       <DependentUpon>Busqueda_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda_Tipo_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_Tipo_Usuario.Designer.cs">
+      <DependentUpon>Busqueda_Tipo_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busqueda_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_Usuarios.Designer.cs">
+      <DependentUpon>Busqueda_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Categoria.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,18 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoUsuario.Designer.cs">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Busqueda_Categoria.resx">
       <DependentUpon>Busqueda_Categoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,11 +196,20 @@
     <EmbeddedResource Include="Busqueda_Empleado.resx">
       <DependentUpon>Busqueda_Empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda_Inventario.resx">
+      <DependentUpon>Busqueda_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busqueda_Productos.resx">
       <DependentUpon>Busqueda_Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busqueda_Proveedor.resx">
       <DependentUpon>Busqueda_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda_Tipo_Usuario.resx">
+      <DependentUpon>Busqueda_Tipo_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda_Usuarios.resx">
+      <DependentUpon>Busqueda_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Categoria.resx">
       <DependentUpon>Categoria.cs</DependentUpon>
@@ -207,6 +246,12 @@
     </Compile>
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoUsuario.resx">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -26,21 +26,26 @@ namespace Primo_y_Fibonacci
         {
             actualizarDs();
             mostrarDatos();
+
+            cboCategoriaProductos.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cboCategoriaProductos.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void actualizarDs()
         {
             tbl = objConexion.obtener_datos().Tables["Productos"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdProductos"] };
+
+            cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["Categorias"];
+            cboCategoriaProductos.DisplayMember = "categoriaa";
+            cboCategoriaProductos.ValueMember = "Categorias.IdCategoria";
         }
 
         void mostrarDatos()
         {
             try
             {
-                cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["Categorias"];
-                cboCategoriaProductos.DisplayMember = "categoriaa";
-                cboCategoriaProductos.ValueMember = "Categorias.IdCategoria";
+                
                 cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
                 lblidProducto.Text = tbl.Rows[posicion].ItemArray[0].ToString();
@@ -199,14 +204,34 @@ namespace Primo_y_Fibonacci
             }
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+            Busqueda_Productos buscarProducto = new Busqueda_Productos();
+            buscarProducto.ShowDialog();
+
+            if (buscarProducto._IdProductos > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(buscarProducto._IdProductos));
+                mostrarDatos();
+            }
+        }
+
+        private void BtnBuscarCategoriaProducto_Click(object sender, EventArgs e)
+        {
+            Busqueda_Categoria buscarCategoria = new Busqueda_Categoria();
+            buscarCategoria.ShowDialog();
+
+            if (buscarCategoria._IdCategoria > 0)
+            {
+                cboCategoriaProductos.SelectedValue = buscarCategoria._IdCategoria;
+            }
         }
     }
 }

@@ -23,14 +23,14 @@ namespace Primo_y_Fibonacci
 
         private void Busqueda_Productos_Load(object sender, EventArgs e)
         {
-            GrdBusquedaProducto.DataSource = objConexion.obtener_datos().Tables["Productos"].DefaultView;
+            GrdBusquedaProducto.DataSource = objConexion.obtener_datos().Tables["Productos_Categorias"].DefaultView;
         }
 
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
             if (GrdBusquedaProducto.RowCount > 0)
             {
-                _IdProductos = int.Parse(GrdBusquedaProducto.CurrentRow.Cells[0].Value.ToString());
+                _IdProductos = int.Parse(GrdBusquedaProducto.CurrentRow.Cells["IdProductos"].Value.ToString());
                 Close();
             }
             else
@@ -44,7 +44,7 @@ namespace Primo_y_Fibonacci
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaProducto.DataSource;
-            bs.Filter = "(Descripción + codigo) like '%" + valor + "%'";
+            bs.Filter = "categoriaa like '%" + valor + "%' or codigo like '%" + valor + "%' or nombre like '%" + valor + "%'";
             GrdBusquedaProducto.DataSource = bs;
 
         }
@@ -53,6 +53,11 @@ namespace Primo_y_Fibonacci
         {
             filtrar_datos(TxtBuscar.Text);
             
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

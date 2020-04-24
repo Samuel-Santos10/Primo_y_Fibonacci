@@ -33,13 +33,14 @@
             this.formulariosBasicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detalleVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulariosIntermediosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,8 +63,9 @@
             this.formulariosBasicosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.proveedorToolStripMenuItem,
             this.clienteToolStripMenuItem,
-            this.detalleVentasToolStripMenuItem,
-            this.categoriaToolStripMenuItem});
+            this.categoriaToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.tipoUsuarioToolStripMenuItem});
             this.formulariosBasicosToolStripMenuItem.Font = new System.Drawing.Font("Bodoni MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formulariosBasicosToolStripMenuItem.Name = "formulariosBasicosToolStripMenuItem";
             this.formulariosBasicosToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
@@ -73,7 +75,7 @@
             // 
             this.proveedorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
@@ -81,25 +83,33 @@
             // 
             this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
-            // 
-            // detalleVentasToolStripMenuItem
-            // 
-            this.detalleVentasToolStripMenuItem.BackColor = System.Drawing.Color.LightPink;
-            this.detalleVentasToolStripMenuItem.Name = "detalleVentasToolStripMenuItem";
-            this.detalleVentasToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
-            this.detalleVentasToolStripMenuItem.Text = "Detalle Ventas";
-            this.detalleVentasToolStripMenuItem.Click += new System.EventHandler(this.detalleVentasToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.categoriaToolStripMenuItem.Text = "Categorias";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // tipoUsuarioToolStripMenuItem
+            // 
+            this.tipoUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tipoUsuarioToolStripMenuItem.Name = "tipoUsuarioToolStripMenuItem";
+            this.tipoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.tipoUsuarioToolStripMenuItem.Text = "Tipo Usuario";
+            this.tipoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.tipoUsuarioToolStripMenuItem_Click);
             // 
             // formulariosIntermediosToolStripMenuItem
             // 
@@ -129,6 +139,14 @@
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
+            // inventarioToolStripMenuItem
+            // 
+            this.inventarioToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.inventarioToolStripMenuItem.Text = "Inventario";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
+            // 
             // sALIRToolStripMenuItem
             // 
             this.sALIRToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -138,14 +156,6 @@
             this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.sALIRToolStripMenuItem.Text = "SALIR";
             this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
-            // 
-            // inventarioToolStripMenuItem
-            // 
-            this.inventarioToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.inventarioToolStripMenuItem.Text = "Inventario";
-            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -177,9 +187,10 @@
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detalleVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoUsuarioToolStripMenuItem;
     }
 }
