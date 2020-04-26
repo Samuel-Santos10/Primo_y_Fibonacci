@@ -26,23 +26,26 @@ namespace Primo_y_Fibonacci
         {
             actualizarDs();
             mostrarDatos();
+
+            cbotipoEmple.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cbotipoEmple.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void actualizarDs()
         {
             tbl = objConexion.obtener_datos().Tables["Empleado"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["IdEmpleado"]};
+
+            cbotipoEmple.DataSource = objConexion.obtener_datos().Tables["Tipo_Usuario"];
+            cbotipoEmple.DisplayMember = "nombre";
+            cbotipoEmple.ValueMember = "Tipo_Usuario.IdTipoUsuario";
         }
 
         void mostrarDatos()
         {
             try
 
-            {
-
-            cbotipoEmple.DataSource = objConexion.obtener_datos().Tables["Tipo_Usuario"];
-            cbotipoEmple.DisplayMember = "nombre";
-            cbotipoEmple.ValueMember = "Tipo_Usuario.IdTipoUsuario";
+            {          
             cbotipoEmple.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
             lblidemple.Text = tbl.Rows[posicion].ItemArray[0].ToString();
@@ -204,7 +207,14 @@ namespace Primo_y_Fibonacci
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            Busqueda_Empleado BuscarTipoUsuario = new Busqueda_Empleado();
+            BuscarTipoUsuario.ShowDialog();
 
+            if (BuscarTipoUsuario._IdEmpleado > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(BuscarTipoUsuario._IdEmpleado));
+                mostrarDatos();
+            }
             
         }
 
@@ -213,6 +223,15 @@ namespace Primo_y_Fibonacci
             Close();
         }
 
-      
+        private void BtnBuscarTipoEmpleado_Click(object sender, EventArgs e)
+        {
+            Busqueda_Tipo_Usuario buscartipo = new Busqueda_Tipo_Usuario();
+            buscartipo.ShowDialog();
+
+            if (buscartipo._IdTipoUsuario > 0)
+            {
+                cbotipoEmple.SelectedValue = buscartipo._IdTipoUsuario;
+            }
+        }
     }
 }

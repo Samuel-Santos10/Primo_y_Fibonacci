@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.GrbDatosInventario = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BtnBuscarInventarioProducto = new System.Windows.Forms.Button();
             this.lblidventas = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblidinventario = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.BtnBuscarInventarioProducto = new System.Windows.Forms.Button();
             this.GrbDatosInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -93,6 +93,28 @@
             this.GrbDatosInventario.TabStop = false;
             this.GrbDatosInventario.Text = "DATOS DE INVENTARIO";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(471, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Buscar";
+            // 
+            // BtnBuscarInventarioProducto
+            // 
+            this.BtnBuscarInventarioProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarInventarioProducto.BackgroundImage")));
+            this.BtnBuscarInventarioProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarInventarioProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnBuscarInventarioProducto.Location = new System.Drawing.Point(472, 37);
+            this.BtnBuscarInventarioProducto.Name = "BtnBuscarInventarioProducto";
+            this.BtnBuscarInventarioProducto.Size = new System.Drawing.Size(47, 21);
+            this.BtnBuscarInventarioProducto.TabIndex = 32;
+            this.BtnBuscarInventarioProducto.UseVisualStyleBackColor = true;
+            this.BtnBuscarInventarioProducto.Click += new System.EventHandler(this.BtnBuscarCategoriaProducto_Click);
+            // 
             // lblidventas
             // 
             this.lblidventas.AutoSize = true;
@@ -123,7 +145,6 @@
             // 
             // cbotInventProducto
             // 
-            this.cbotInventProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbotInventProducto.FormattingEnabled = true;
             this.cbotInventProducto.Location = new System.Drawing.Point(310, 37);
             this.cbotInventProducto.Margin = new System.Windows.Forms.Padding(1);
@@ -430,28 +451,6 @@
             this.BtnUltimo.TabIndex = 3;
             this.BtnUltimo.UseVisualStyleBackColor = false;
             this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(471, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 13);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Buscar";
-            // 
-            // BtnBuscarInventarioProducto
-            // 
-            this.BtnBuscarInventarioProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarInventarioProducto.BackgroundImage")));
-            this.BtnBuscarInventarioProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscarInventarioProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscarInventarioProducto.Location = new System.Drawing.Point(472, 37);
-            this.BtnBuscarInventarioProducto.Name = "BtnBuscarInventarioProducto";
-            this.BtnBuscarInventarioProducto.Size = new System.Drawing.Size(47, 21);
-            this.BtnBuscarInventarioProducto.TabIndex = 32;
-            this.BtnBuscarInventarioProducto.UseVisualStyleBackColor = true;
-            this.BtnBuscarInventarioProducto.Click += new System.EventHandler(this.BtnBuscarCategoriaProducto_Click);
             // 
             // Inventario
             // 

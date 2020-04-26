@@ -42,6 +42,10 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Tipo_Usuario");
 
+            comandosSQL.CommandText = "select Tipo_Usuario.nombre, Empleado.IdEmpleado, Empleado.codigo, Empleado.nombre, Empleado.dui, Empleado.nit, Empleado.direccion, Empleado.telefono, Empleado.ID_Usuario from Empleado inner join Tipo_Usuario on(Tipo_Usuario.IdTipoUsuario=Empleado.IDTipoUsuario)";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Empleado_Tipo_Usuario");
+
             comandosSQL.CommandText = "select * from Productos";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Productos");
@@ -146,7 +150,7 @@ namespace Primo_y_Fibonacci
                 "nit                 = '" + datos[5] + "'," +
                 "direccion           = '" + datos[6] + "'," +
                 "telefono            = '" + datos[7] + "'" +
-               "WHERE IdEmpleado      = '" + datos[0] + "'";
+                "WHERE IdEmpleado    = '" + datos[0] + "'";
 
             }
             else if (accion == "eliminar")
@@ -355,7 +359,6 @@ namespace Primo_y_Fibonacci
             {
 
                 sql = "INSERT INTO Usuarios (nombre,password,TipoUsuario) VALUES(" +
-                     //"'" + datos[0] + "'," +
                      "'" + datos[1] + "'," +
                      "'" + datos[2] + "'," +
                      "'" + datos[3] + "'" +

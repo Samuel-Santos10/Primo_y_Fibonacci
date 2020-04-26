@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.label1 = new System.Windows.Forms.Label();
             this.GrbDatosEmpleado = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblidemple = new System.Windows.Forms.Label();
+            this.BtnBuscarTipoEmpleado = new System.Windows.Forms.Button();
             this.cbotipoEmple = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
@@ -65,7 +68,6 @@
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblidemple = new System.Windows.Forms.Label();
             this.GrbDatosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Grbempleado.SuspendLayout();
@@ -86,7 +88,9 @@
             // GrbDatosEmpleado
             // 
             this.GrbDatosEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbDatosEmpleado.Controls.Add(this.label13);
             this.GrbDatosEmpleado.Controls.Add(this.lblidemple);
+            this.GrbDatosEmpleado.Controls.Add(this.BtnBuscarTipoEmpleado);
             this.GrbDatosEmpleado.Controls.Add(this.cbotipoEmple);
             this.GrbDatosEmpleado.Controls.Add(this.label9);
             this.GrbDatosEmpleado.Controls.Add(this.txttelefono);
@@ -112,9 +116,39 @@
             this.GrbDatosEmpleado.TabStop = false;
             this.GrbDatosEmpleado.Text = "DATOS DE EMPLEADO";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(403, 53);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Buscar";
+            // 
+            // lblidemple
+            // 
+            this.lblidemple.AutoSize = true;
+            this.lblidemple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidemple.Location = new System.Drawing.Point(242, 66);
+            this.lblidemple.Name = "lblidemple";
+            this.lblidemple.Size = new System.Drawing.Size(0, 13);
+            this.lblidemple.TabIndex = 29;
+            // 
+            // BtnBuscarTipoEmpleado
+            // 
+            this.BtnBuscarTipoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarTipoEmpleado.BackgroundImage")));
+            this.BtnBuscarTipoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscarTipoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnBuscarTipoEmpleado.Location = new System.Drawing.Point(404, 29);
+            this.BtnBuscarTipoEmpleado.Name = "BtnBuscarTipoEmpleado";
+            this.BtnBuscarTipoEmpleado.Size = new System.Drawing.Size(47, 21);
+            this.BtnBuscarTipoEmpleado.TabIndex = 28;
+            this.BtnBuscarTipoEmpleado.UseVisualStyleBackColor = true;
+            this.BtnBuscarTipoEmpleado.Click += new System.EventHandler(this.BtnBuscarTipoEmpleado_Click);
+            // 
             // cbotipoEmple
             // 
-            this.cbotipoEmple.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbotipoEmple.FormattingEnabled = true;
             this.cbotipoEmple.Location = new System.Drawing.Point(233, 26);
             this.cbotipoEmple.Margin = new System.Windows.Forms.Padding(1);
@@ -480,15 +514,6 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "OPCIONES";
             // 
-            // lblidemple
-            // 
-            this.lblidemple.AutoSize = true;
-            this.lblidemple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidemple.Location = new System.Drawing.Point(242, 66);
-            this.lblidemple.Name = "lblidemple";
-            this.lblidemple.Size = new System.Drawing.Size(0, 13);
-            this.lblidemple.TabIndex = 29;
-            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,5 +582,7 @@
         private System.Windows.Forms.ComboBox cbotipoEmple;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblidemple;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BtnBuscarTipoEmpleado;
     }
 }

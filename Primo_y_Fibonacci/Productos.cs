@@ -212,7 +212,6 @@ namespace Primo_y_Fibonacci
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-
             Busqueda_Productos buscarProducto = new Busqueda_Productos();
             buscarProducto.ShowDialog();
 

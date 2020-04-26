@@ -23,14 +23,15 @@ namespace Primo_y_Fibonacci
 
         private void BtnSeleccionar_Click(object sender, EventArgs e)
         {
+
             if (GrdBusquedaEmpleado.RowCount > 0)
             {
-                _IdEmpleado = int.Parse(GrdBusquedaEmpleado.CurrentRow.Cells[0].Value.ToString());
+                _IdEmpleado = int.Parse(GrdBusquedaEmpleado.CurrentRow.Cells["IdEmpleado"].Value.ToString());
                 Close();
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Clientes",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -38,14 +39,14 @@ namespace Primo_y_Fibonacci
 
         private void Busqueda_Empleado_Load(object sender, EventArgs e)
         {
-            GrdBusquedaEmpleado.DataSource = objConexion.obtener_datos().Tables["Empleado"].DefaultView;
+            GrdBusquedaEmpleado.DataSource = objConexion.obtener_datos().Tables["Empleado_Tipo_Usuario"].DefaultView;
         }
 
         void filtrar_datos(String valor)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaEmpleado.DataSource;
-            bs.Filter = "(NombreEmpleado + codigo + Dirección + EMail) like '%" + valor + "%'";
+            bs.Filter = "nombre like '%" + valor + "%' or nombre like '%" + valor + "%' or codigo like '%" + valor + "%'";
             GrdBusquedaEmpleado.DataSource = bs;
 
         }

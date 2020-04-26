@@ -29,8 +29,9 @@ namespace Primo_y_Fibonacci
             actualizarDs();
             mostrarDatos();
 
-          
 
+            cbotInventProducto.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cbotInventProducto.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         void actualizarDs()
