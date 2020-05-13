@@ -223,7 +223,6 @@
             this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
             this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnDelete
             // 
@@ -236,7 +235,6 @@
             this.BtnDelete.Size = new System.Drawing.Size(66, 57);
             this.BtnDelete.TabIndex = 6;
             this.BtnDelete.UseVisualStyleBackColor = false;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnModificar
             // 
@@ -249,7 +247,6 @@
             this.BtnModificar.Size = new System.Drawing.Size(66, 57);
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.UseVisualStyleBackColor = false;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnNuevo
             // 
@@ -264,7 +261,6 @@
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
             this.BtnNuevo.TabIndex = 4;
             this.BtnNuevo.UseVisualStyleBackColor = false;
-            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // GrbNavegacion
             // 
@@ -302,7 +298,6 @@
             this.BtnAnterior.Size = new System.Drawing.Size(56, 46);
             this.BtnAnterior.TabIndex = 1;
             this.BtnAnterior.UseVisualStyleBackColor = false;
-            this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
             // BtnPrimero
             // 
@@ -315,7 +310,6 @@
             this.BtnPrimero.Size = new System.Drawing.Size(56, 46);
             this.BtnPrimero.TabIndex = 0;
             this.BtnPrimero.UseVisualStyleBackColor = false;
-            this.BtnPrimero.Click += new System.EventHandler(this.BtnPrimero_Click);
             // 
             // BtnSiguiente
             // 
@@ -328,7 +322,6 @@
             this.BtnSiguiente.Size = new System.Drawing.Size(56, 46);
             this.BtnSiguiente.TabIndex = 2;
             this.BtnSiguiente.UseVisualStyleBackColor = false;
-            this.BtnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
             // 
             // BtnUltimo
             // 
@@ -341,7 +334,6 @@
             this.BtnUltimo.Size = new System.Drawing.Size(56, 46);
             this.BtnUltimo.TabIndex = 3;
             this.BtnUltimo.UseVisualStyleBackColor = false;
-            this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // GrbDatosdventas
             // 

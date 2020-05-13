@@ -93,10 +93,9 @@ namespace Primo_y_Fibonacci
         }
         void limpiar_cajas()
         {
-            LblUsuario.Text = "";
             TxtNombre.Text = "";
             TxtPassword.Text = "";
-            TxtTipoUsuario.Text = "";
+
         }
 
         void controles(Boolean valor)

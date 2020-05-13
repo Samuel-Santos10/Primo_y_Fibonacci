@@ -23,6 +23,37 @@ namespace Primo_y_Fibonacci
             String cadena = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Control.mdf;Integrated Security=True";
             miConexion.ConnectionString = cadena;
             miConexion.Open();
+
+            //inicializar los parametros que se van en las consultas
+            parametrizacion();
+        }
+        private void parametrizacion()
+        {
+            comandosSQL.Parameters.Add("@Id", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@IdC", SqlDbType.Int).Value = 0;
+
+            //FK empleado con tipousuario
+            comandosSQL.Parameters.Add("@IDT", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@IDP", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@IDV", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@exi", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@und", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@cod", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@nom", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@dui", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@nit", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@dir", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@tel", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@mar", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@mod", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@cap", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@med", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@cat", SqlDbType.Char).Value = "";
+
+            comandosSQL.Parameters.Add("@pas", SqlDbType.Char).Value = "";
+            //FK usuario con tipousuario
+            comandosSQL.Parameters.Add("@Tip", SqlDbType.Int).Value = 0;
+
         }
         public DataSet obtener_datos()
         {
@@ -84,37 +115,35 @@ namespace Primo_y_Fibonacci
             String sql = "";
             if (accion == "nuevo")
             {
-
-                sql = "INSERT INTO Cliente (codigo, nombre, dui, nit, telefono, direccion) VALUES(" +
-
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'" +
-                    ")";
-
+                sql = "INSERT INTO Cliente (codigo,nombre,dui,nit,direccion,telefono) VALUES (@cod,@nom,@dui,@nit,@dir,@tel)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Cliente SET " +
-                " codigo              = '" + datos[1] + "'," +
-                " nombre              = '" + datos[2] + "'," +
-                " dui                 = '" + datos[3] + "'," +
-                " nit                 = '" + datos[4] + "'," +
-                " telefono            = '" + datos[5] + "'," +
-                " direccion           = '" + datos[6] + "'" +
-                " WHERE IdCliente     = '" + datos[0] + "'";
-
-
+                " codigo              = @cod," +
+                " nombre              = @nom," +
+                " dui                 = @dui," +
+                " nit                 = @nit," +
+                " direccion           = @dir," +
+                " telefono            = @tel" +
+                " WHERE IdCliente     = @Id";
             }
             else if (accion == "eliminar")
             {
-                sql = "DELETE Cliente FROM Cliente WHERE IdCliente='" + datos[0] + "'";
+                sql = "DELETE Cliente FROM Cliente WHERE IdCliente=@Id";
+            }
 
+
+                comandosSQL.Parameters["@Id"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@cod"].Value = datos[1];
+                    comandosSQL.Parameters["@nom"].Value = datos[2];
+                    comandosSQL.Parameters["@dui"].Value = datos[3];
+                    comandosSQL.Parameters["@nit"].Value = datos[4];
+                    comandosSQL.Parameters["@dir"].Value = datos[5];
+                    comandosSQL.Parameters["@tel"].Value = datos[6];
+                
             }
             procesoSQL(sql);
         }
@@ -126,78 +155,72 @@ namespace Primo_y_Fibonacci
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Empleado (IDTipoUsuario, codigo, nombre, dui, nit, direccion, telefono) VALUES(" +
-
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'," +
-                    "'" + datos[6] + "'," +
-                    "'" + datos[7] + "'" +
-                     ")";
-
+                sql = "INSERT INTO Empleado (IDTipoUsuario,codigo,nombre,dui,nit,direccion,telefono) VALUES (@IDT,@cod,@nom,@dui,@nit,@dir,@tel)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Empleado SET " +
-                "IDTipoUsuario       = '" + datos[1] + "'," +
-                "codigo              = '" + datos[2] + "'," +
-                "nombre              = '" + datos[3] + "'," +
-                "dui                 = '" + datos[4] + "'," +
-                "nit                 = '" + datos[5] + "'," +
-                "direccion           = '" + datos[6] + "'," +
-                "telefono            = '" + datos[7] + "'" +
-                "WHERE IdEmpleado    = '" + datos[0] + "'";
-
+                " IDTipoUsuario       = @IDT," +
+                " codigo              = @cod," +
+                " nombre              = @nom," +
+                " dui                 = @dui," +
+                " nit                 = @nit," +
+                " direccion           = @dir," +
+                " telefono            = @tel" +
+                " WHERE IdEmpleado     = @Id";
             }
             else if (accion == "eliminar")
             {
+                sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado=@Id";
+            }
 
-                sql = "DELETE Empleado FROM Empleado WHERE IdEmpleado='" + datos[0] + "'";
-
+                comandosSQL.Parameters["@Id"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@IDT"].Value = datos[1];
+                    comandosSQL.Parameters["@cod"].Value = datos[2];
+                    comandosSQL.Parameters["@nom"].Value = datos[3];
+                    comandosSQL.Parameters["@dui"].Value = datos[4];
+                    comandosSQL.Parameters["@nit"].Value = datos[5];
+                    comandosSQL.Parameters["@dir"].Value = datos[6];
+                    comandosSQL.Parameters["@tel"].Value = datos[7];
             }
             procesoSQL(sql);
         }
 
-
+        // proveedor
         public void mantenimiento_datos_Proveedor(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Proveedor (codigo, nombre, dui, direccion, telefono) VALUES(" +
-
-                    "'" + datos[1] + "'," +
-                    "'" + datos[2] + "'," +
-                    "'" + datos[3] + "'," +
-                    "'" + datos[4] + "'," +
-                    "'" + datos[5] + "'" +
-                     ")";
-
+                sql = "INSERT INTO Proveedor (codigo,nombre,dui,direccion,telefono) VALUES (@cod,@nom,@dui,@dir,@tel)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Proveedor SET " +
-
-                "codigo              = '" + datos[1] + "'," +
-                "nombre              = '" + datos[2] + "'," +
-                "dui                 = '" + datos[3] + "'," +
-                "direccion           = '" + datos[4] + "'," +
-                "telefono            = '" + datos[5] + "'" +
-               "WHERE IdProveedor      = '" + datos[0] + "'";
-
+                " codigo              = @cod," +
+                " nombre              = @nom," +
+                " dui                 = @dui," +
+                " direccion           = @dir," +
+                " telefono            = @tel" +
+                " WHERE IdProveedor   = @Id";
             }
             else if (accion == "eliminar")
             {
+                sql = "DELETE Proveedor FROM Proveedor WHERE IdProveedor=@Id";
+            }
 
-                sql = "DELETE Proveedor FROM Proveedor WHERE IdProveedor='" + datos[0] + "'";
-
+            
+                comandosSQL.Parameters["@Id"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@cod"].Value = datos[1];
+                    comandosSQL.Parameters["@nom"].Value = datos[2];
+                    comandosSQL.Parameters["@dui"].Value = datos[3];
+                    comandosSQL.Parameters["@dir"].Value = datos[4];
+                    comandosSQL.Parameters["@tel"].Value = datos[5];
             }
             procesoSQL(sql);
         }
@@ -209,143 +232,100 @@ namespace Primo_y_Fibonacci
             String sql = "";
             if (accion == "nuevo")
             {
-
-                sql = "INSERT INTO Productos (IdCategoria, codigo, nombre, marca, modelo, capacidad, medida) VALUES(" +
-                     "'" + datos[1] + "'," +
-                     "'" + datos[2] + "'," +
-                     "'" + datos[3] + "'," +
-                     "'" + datos[4] + "'," +
-                     "'" + datos[5] + "'," +
-                     "'" + datos[6] + "'," +
-                     "'" + datos[7] + "'" +
-                     ")";
-
+                sql = "INSERT INTO Productos (IdCategoria,codigo,nombre,marca,modelo,capacidad,medida) VALUES(@IdC,@cod,@nom,@mar,@mod,@cap,@med)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Productos SET " +
-
-               "IdCategoria         = '" + datos[1] + "'," +
-               "codigo              = '" + datos[2] + "'," +
-               "nombre              = '" + datos[3] + "'," +
-               "marca               = '" + datos[4] + "'," +
-               "modelo              = '" + datos[5] + "'," +
-               "capacidad           = '" + datos[6] + "'," +
-               "medida              = '" + datos[7] + "'" +
-               "WHERE IdProductos   = '" + datos[0] + "'";
-
+                    "IdCategoria       = @idC," +
+                    "codigo            = @cod," +
+                    "nombre            = @nom," +
+                    "marca             = @mar," +
+                    "modelo            = @mod," +
+                    "capacidad         = @cap," +
+                    "medida            = @med " +
+                    "WHERE IdProductos = @Id";
             }
             else if (accion == "eliminar")
             {
+                sql = "DELETE Productos FROM Productos WHERE IdProductos=@Id";
+            }
 
-                sql = "DELETE Productos FROM Productos WHERE IdProductos='" + datos[0] + "'";
-
+            comandosSQL.Parameters["@Id"].Value = datos[0];
+            if (accion != "eliminar")
+            {
+                comandosSQL.Parameters["@IdC"].Value = datos[1];
+                comandosSQL.Parameters["@cod"].Value = datos[2];
+                comandosSQL.Parameters["@nom"].Value = datos[3];
+                comandosSQL.Parameters["@mar"].Value = datos[4];
+                comandosSQL.Parameters["@mod"].Value = datos[5];
+                comandosSQL.Parameters["@cap"].Value = datos[6];
+                comandosSQL.Parameters["@med"].Value = datos[7];
             }
             procesoSQL(sql);
         }
 
-
-        public void mantenimiento_datos_dventas(String[] datos, String accion)
-        {
-            String sql = "";
-            if (accion == "nuevo")
-            {
-
-                sql = "INSERT INTO Detalle_Venta (unidades, cantidad_venta, cant_producto_vendido, precio_total) VALUES(" +
-                     "'" + datos[1] + "'," +
-                     "'" + datos[2] + "'," +
-                     "'" + datos[3] + "'," +
-                     "'" + datos[4] + "'" +
-                     ")";
-
-            }
-
-            else if (accion == "modificar")
-            {
-
-                sql = "UPDATE Detalle_Venta SET " +
-
-               "unidades                   = '" + datos[1] + "'," +
-               "cantidad_venta             = '" + datos[2] + "'," +
-               "cant_producto_vendido      = '" + datos[3] + "'," +
-               "precio_total               = '" + datos[4] + "'" +
-               "WHERE IdDetalle_Venta      = '" + datos[0] + "'";
-
-            }
-            else if (accion == "eliminar")
-            {
-
-                sql = "DELETE Detalle_Venta FROM Detalle_Venta WHERE IdDetalle_Venta='" + datos[0] + "'";
-
-            }
-            procesoSQL(sql);
-        }
-
+        
+        // Categoria
         public void mantenimiento_datos_Categoria(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Categorias (categoriaa) VALUES(" +
-                     "'" + datos[1] + "'" +
-                     ")";
-
+                sql = "INSERT INTO Categorias (categoriaa) VALUES (@cat)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Categorias SET " +
-
-               "categoriaa                  = '" + datos[1] + "'" +
-               "WHERE IdCategoria           = '" + datos[0] + "'";
-
+                " categoriaa        = @cat" +
+                " WHERE IdCategoria = @Id";
             }
+
             else if (accion == "eliminar")
             {
+                sql = "DELETE Categorias FROM Categorias WHERE IdCategoria=@Id";
+            }
 
-                sql = "DELETE Categorias FROM Categorias WHERE IdCategoria='" + datos[0] + "'";
-
+            comandosSQL.Parameters["@Id"].Value = datos[0];
+            if (accion != "eliminar")
+               {
+               comandosSQL.Parameters["@cat"].Value = datos[1];
             }
             procesoSQL(sql);
         }
 
+        // Inventario
         public void mantenimiento_datos_Inventario(String[] datos, String accion)
         {
             String sql = "";
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Inventario (ID_Producto, ID_Ventas, existenci_producto, unidades) VALUES(" +
-                     "'" + datos[1] + "'," +
-                     "'" + datos[2] + "'," +
-                     "'" + datos[3] + "'," +
-                     "'" + datos[4] + "'" +
-
-                     ")";
-
+                sql = "INSERT INTO Inventario (ID_Producto, ID_Ventas, existenci_producto, unidades) VALUES(@IDP,@IDV,@exi,@und)";
             }
-
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Inventario SET " +
-
-               "ID_Producto         = '" + datos[1] + "'," +
-               "ID_Ventas           = '" + datos[2] + "'," +
-               "existenci_producto   = '" + datos[3] + "'," +
-               "unidades             = '" + datos[4] + "'" +
-               "WHERE IdInventario   = '" + datos[0] + "'";
-
+                "ID_Producto              = @IDP," +
+                "ID_Ventas                = @IDV," +
+                "existenci_producto       = @exi," +
+                "unidades                 = @und " +
+                "WHERE IdInventario       = @Id";
             }
+
             else if (accion == "eliminar")
             {
+                sql = "DELETE Inventario FROM Inventario WHERE IdInventario=@Id";
+            }
 
-                sql = "DELETE Inventario FROM Inventario WHERE IdInventario='" + datos[0] + "'";
-
+                comandosSQL.Parameters["@Id"].Value = datos[0];
+                if (accion!="eliminar")
+                {
+                    comandosSQL.Parameters["@IDP"].Value = datos[1];
+                    comandosSQL.Parameters["@IDV"].Value = datos[2];
+                    comandosSQL.Parameters["@exi"].Value = datos[3];
+                    comandosSQL.Parameters["@und"].Value = datos[4];
             }
             procesoSQL(sql);
         }
@@ -358,28 +338,26 @@ namespace Primo_y_Fibonacci
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Usuarios (nombre,password,TipoUsuario) VALUES(" +
-                     "'" + datos[1] + "'," +
-                     "'" + datos[2] + "'," +
-                     "'" + datos[3] + "'" +
-                     ")";
+                sql = "INSERT INTO Usuarios (nombre,password,TipoUsuario) VALUES (@nom,@pas,@Tip)";
             }
             else if (accion == "modificar")
             {
-
                 sql = "UPDATE Usuarios SET " +
-
-               "nombre            = '" + datos[1] + "'," +
-               "password          = '" + datos[2] + "'," +
-               "TipoUsuario       = '" + datos[3] + "'" +
-               "WHERE IdUsuario   = '" + datos[0] + "'";
-
+                " nombre                = @nom," +
+                " password              = @pas," +
+                " TipoUsuario           = @Tip" +
+                " WHERE IdUsuario = @Id";
             }
             else if (accion == "eliminar")
             {
-
-                sql = "DELETE Usuarios FROM Usuarios WHERE IdUsuario='" + datos[0] + "'";
-
+                sql = "DELETE Usuarios FROM Usuarios WHERE IdUsuario=@Id";
+            }
+            comandosSQL.Parameters["@id"].Value = datos[0];
+            if (accion != "eliminar")
+            {
+                comandosSQL.Parameters["@nom"].Value = datos[1];
+                comandosSQL.Parameters["@pas"].Value = datos[2];
+                comandosSQL.Parameters["@Tip"].Value = datos[3];
             }
             procesoSQL(sql);
         }
@@ -392,24 +370,29 @@ namespace Primo_y_Fibonacci
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO Tipo_Usuario (nombre) VALUES(" +
-                     "'" + datos[1] + "'" +
-                     ")";
-
+                sql = "INSERT INTO Tipo_Usuario (nombre) VALUES (@nom)";
             }
             else if (accion == "modificar")
             {
                 sql = "UPDATE Tipo_Usuario SET " +
-
-               "nombre                  = '" + datos[1] + "'" +
-               "WHERE IdTipoUsuario     = '" + datos[0] + "'";
+                " nombre              = @nom" +
+                " WHERE IdTipoUsuario = @Id";
             }
             else if (accion == "eliminar")
             {
-                sql = "DELETE Tipo_Usuario FROM Tipo_Usuario WHERE IdTipoUsuario='" + datos[0] + "'";
+                sql = "DELETE Tipo_Usuario FROM Tipo_Usuario WHERE IdTipoUsuario=@Id";
             }
-                procesoSQL(sql);
+
+          
+                comandosSQL.Parameters["@Id"].Value = datos[0];
+                if (accion != "eliminar")
+                {
+                    comandosSQL.Parameters["@nom"].Value = datos[1];
+            }
+            procesoSQL(sql);
         }
+
+
         void procesoSQL(String sql)
         {
             comandosSQL.Connection = miConexion;

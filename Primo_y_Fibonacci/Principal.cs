@@ -37,13 +37,13 @@ namespace Primo_y_Fibonacci
         {
             try
             {
-            TxtIdCliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
-            txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
-            TxtNombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
-            txtdui.Text = tbl.Rows[posicion].ItemArray[3].ToString();
-            txtnit.Text = tbl.Rows[posicion].ItemArray[4].ToString();
-            TxtDireccion.Text = tbl.Rows[posicion].ItemArray[5].ToString();
-            txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
+                TxtIdCliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                TxtNombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtdui.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txtnit.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                TxtDireccion.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[6].ToString();
 
                 lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
             }
@@ -103,8 +103,8 @@ namespace Primo_y_Fibonacci
             TxtNombre.Text = "";
             txtdui.Text = "";
             txtnit.Text = "";
-            txttelefono.Text = "";
             TxtDireccion.Text = "";
+            txttelefono.Text = "";
         }
 
         void controles(Boolean valor)
@@ -117,8 +117,8 @@ namespace Primo_y_Fibonacci
 
         private void BtnNuevo_Click_1(object sender, EventArgs e)
         {
-  
-            if (lblop.Text == "Nuevo"){//boton de nuevo
+            if (lblop.Text == "Nuevo")
+            {//boton de nuevo
                 lblop.Text = "Guardar";
                 lblop2.Text = "Cancelar";
                 accion = "nuevo";
@@ -134,8 +134,8 @@ namespace Primo_y_Fibonacci
               TxtNombre.Text,
               txtdui.Text,
               txtnit.Text,
-              txttelefono.Text,
-              TxtDireccion.Text
+              TxtDireccion.Text,
+              txttelefono.Text
                 };
                 objConexion.mantenimiento_datos_Cliente(valores, accion);
                 actualizarDs();
