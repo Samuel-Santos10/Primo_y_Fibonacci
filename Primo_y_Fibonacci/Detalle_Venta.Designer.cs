@@ -60,6 +60,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblID = new System.Windows.Forms.Label();
             this.txtprodvendidos = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblidventas = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblidproducto = new System.Windows.Forms.Label();
+            this.txtdescuento = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.GrbCliente.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
             this.GrbDatosdventas.SuspendLayout();
@@ -223,6 +229,7 @@
             this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
             this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnDelete
             // 
@@ -235,6 +242,7 @@
             this.BtnDelete.Size = new System.Drawing.Size(66, 57);
             this.BtnDelete.TabIndex = 6;
             this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnModificar
             // 
@@ -247,6 +255,7 @@
             this.BtnModificar.Size = new System.Drawing.Size(66, 57);
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnNuevo
             // 
@@ -261,6 +270,7 @@
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
             this.BtnNuevo.TabIndex = 4;
             this.BtnNuevo.UseVisualStyleBackColor = false;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // GrbNavegacion
             // 
@@ -298,6 +308,7 @@
             this.BtnAnterior.Size = new System.Drawing.Size(56, 46);
             this.BtnAnterior.TabIndex = 1;
             this.BtnAnterior.UseVisualStyleBackColor = false;
+            this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
             // BtnPrimero
             // 
@@ -310,6 +321,7 @@
             this.BtnPrimero.Size = new System.Drawing.Size(56, 46);
             this.BtnPrimero.TabIndex = 0;
             this.BtnPrimero.UseVisualStyleBackColor = false;
+            this.BtnPrimero.Click += new System.EventHandler(this.BtnPrimero_Click);
             // 
             // BtnSiguiente
             // 
@@ -322,6 +334,7 @@
             this.BtnSiguiente.Size = new System.Drawing.Size(56, 46);
             this.BtnSiguiente.TabIndex = 2;
             this.BtnSiguiente.UseVisualStyleBackColor = false;
+            this.BtnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
             // 
             // BtnUltimo
             // 
@@ -334,10 +347,17 @@
             this.BtnUltimo.Size = new System.Drawing.Size(56, 46);
             this.BtnUltimo.TabIndex = 3;
             this.BtnUltimo.UseVisualStyleBackColor = false;
+            this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // GrbDatosdventas
             // 
             this.GrbDatosdventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.GrbDatosdventas.Controls.Add(this.txtdescuento);
+            this.GrbDatosdventas.Controls.Add(this.label11);
+            this.GrbDatosdventas.Controls.Add(this.label12);
+            this.GrbDatosdventas.Controls.Add(this.lblidproducto);
+            this.GrbDatosdventas.Controls.Add(this.label10);
+            this.GrbDatosdventas.Controls.Add(this.lblidventas);
             this.GrbDatosdventas.Controls.Add(this.txtunidades);
             this.GrbDatosdventas.Controls.Add(this.label7);
             this.GrbDatosdventas.Controls.Add(this.txtpreciototal);
@@ -418,6 +438,64 @@
             this.txtprodvendidos.Size = new System.Drawing.Size(100, 20);
             this.txtprodvendidos.TabIndex = 6;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(449, 75);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "ID:";
+            // 
+            // lblidventas
+            // 
+            this.lblidventas.AutoSize = true;
+            this.lblidventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidventas.Location = new System.Drawing.Point(508, 75);
+            this.lblidventas.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidventas.Name = "lblidventas";
+            this.lblidventas.Size = new System.Drawing.Size(0, 13);
+            this.lblidventas.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(449, 114);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(24, 13);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "ID:";
+            // 
+            // lblidproducto
+            // 
+            this.lblidproducto.AutoSize = true;
+            this.lblidproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidproducto.Location = new System.Drawing.Point(508, 114);
+            this.lblidproducto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidproducto.Name = "lblidproducto";
+            this.lblidproducto.Size = new System.Drawing.Size(0, 13);
+            this.lblidproducto.TabIndex = 38;
+            // 
+            // txtdescuento
+            // 
+            this.txtdescuento.Location = new System.Drawing.Point(334, 232);
+            this.txtdescuento.Name = "txtdescuento";
+            this.txtdescuento.Size = new System.Drawing.Size(100, 20);
+            this.txtdescuento.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(229, 235);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(87, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "DESCUENTO:";
+            // 
             // Detalle_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,5 +556,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.TextBox txtprodvendidos;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblidproducto;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblidventas;
+        private System.Windows.Forms.TextBox txtdescuento;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -34,8 +34,13 @@ namespace Primo_y_Fibonacci
 
             //FK empleado con tipousuario
             comandosSQL.Parameters.Add("@IDT", SqlDbType.Int).Value = 0;
+            //FK inventario
             comandosSQL.Parameters.Add("@IDP", SqlDbType.Int).Value = 0;
             comandosSQL.Parameters.Add("@IDV", SqlDbType.Int).Value = 0;
+            //FK dventa
+            comandosSQL.Parameters.Add("@ID_P", SqlDbType.Int).Value = 0;
+            comandosSQL.Parameters.Add("@ID_V", SqlDbType.Int).Value = 0;
+
             comandosSQL.Parameters.Add("@exi", SqlDbType.Int).Value = 0;
             comandosSQL.Parameters.Add("@und", SqlDbType.Int).Value = 0;
             comandosSQL.Parameters.Add("@cod", SqlDbType.Char).Value = "";
@@ -49,6 +54,10 @@ namespace Primo_y_Fibonacci
             comandosSQL.Parameters.Add("@cap", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@med", SqlDbType.Char).Value = "";
             comandosSQL.Parameters.Add("@cat", SqlDbType.Char).Value = "";
+            //dventa
+            comandosSQL.Parameters.Add("@cav", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@cpv", SqlDbType.Char).Value = "";
+            comandosSQL.Parameters.Add("@prt", SqlDbType.Char).Value = "";
 
             comandosSQL.Parameters.Add("@pas", SqlDbType.Char).Value = "";
             //FK usuario con tipousuario
@@ -85,6 +94,10 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Proveedor");
 
+            comandosSQL.CommandText = "select * from Detalle_Venta";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "Detalle_Venta");
+
             comandosSQL.CommandText = "select Categorias.categoriaa, Productos.IdProductos, Productos.codigo, Productos.nombre, Productos.marca, Productos.modelo, Productos.capacidad, Productos.medida from Productos inner join Categorias on(Categorias.IdCategoria=Productos.IdCategoria)";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Productos_Categorias");
@@ -92,6 +105,8 @@ namespace Primo_y_Fibonacci
             comandosSQL.CommandText = "select Productos.nombre, Inventario.IdInventario, Inventario.existenci_producto, Inventario.unidades  from Inventario inner join Productos on(Productos.IdProductos=Inventario.ID_Producto)";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Inventario_Productos");
+
+
 
             comandosSQL.CommandText = "select * from Categorias";
             miAdaptadorDatos.SelectCommand = comandosSQL;
@@ -392,6 +407,43 @@ namespace Primo_y_Fibonacci
             procesoSQL(sql);
         }
 
+        //detalle venta
+        public void mantenimiento_datos_dventas(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO Detalle_Venta (unidades,cantidad_venta,cant_producto_vendido,precio_total,ID_Ventas,ID_Productos) VALUES (@und,@cav,@cpv,@prt,@IDV,@IDP)";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE Detalle_Venta SET " +
+                " unidades              = @und," +
+                " cantidad_venta        = @cav," +
+                " cant_producto_vendido = @cpv," +
+                " precio_total          = @prt," +
+                " ID_Ventas             = @IDV," +
+                " ID_Productos          = @IDP" +    
+                " WHERE IdDetalle_Venta = @Id";
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE Detalle_Venta FROM Detalle_Venta WHERE IdDetalle_Venta=@Id";
+            }
+
+            comandosSQL.Parameters["@Id"].Value = datos[0];
+            if (accion != "eliminar")
+            {
+                comandosSQL.Parameters["@und"].Value = datos[1];
+                comandosSQL.Parameters["@cav"].Value = datos[2];
+                comandosSQL.Parameters["@cpv"].Value = datos[3];
+                comandosSQL.Parameters["@prt"].Value = datos[4];
+                comandosSQL.Parameters["@IDV"].Value = datos[5];
+                comandosSQL.Parameters["@IDP"].Value = datos[6];
+            }
+            procesoSQL(sql);
+        }
 
         void procesoSQL(String sql)
         {
