@@ -39,6 +39,8 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.txtdui = new System.Windows.Forms.TextBox();
             this.GrbDatosProveedor = new System.Windows.Forms.GroupBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.LblDireccion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
-            this.LblDireccion = new System.Windows.Forms.Label();
             this.GrbDatosProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbNavegacion.SuspendLayout();
@@ -167,6 +167,24 @@
             this.GrbDatosProveedor.TabIndex = 22;
             this.GrbDatosProveedor.TabStop = false;
             this.GrbDatosProveedor.Text = "DATOS DE PROVEEDOR";
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Location = new System.Drawing.Point(234, 224);
+            this.TxtDireccion.Multiline = true;
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(282, 39);
+            this.TxtDireccion.TabIndex = 18;
+            // 
+            // LblDireccion
+            // 
+            this.LblDireccion.AutoSize = true;
+            this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDireccion.Location = new System.Drawing.Point(136, 227);
+            this.LblDireccion.Name = "LblDireccion";
+            this.LblDireccion.Size = new System.Drawing.Size(79, 13);
+            this.LblDireccion.TabIndex = 17;
+            this.LblDireccion.Text = "DIRECCION:";
             // 
             // pictureBox1
             // 
@@ -423,24 +441,6 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "OPCIONES";
             // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Location = new System.Drawing.Point(234, 224);
-            this.TxtDireccion.Multiline = true;
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(282, 39);
-            this.TxtDireccion.TabIndex = 18;
-            // 
-            // LblDireccion
-            // 
-            this.LblDireccion.AutoSize = true;
-            this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(136, 227);
-            this.LblDireccion.Name = "LblDireccion";
-            this.LblDireccion.Size = new System.Drawing.Size(79, 13);
-            this.LblDireccion.TabIndex = 17;
-            this.LblDireccion.Text = "DIRECCION:";
-            // 
             // Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +453,7 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Proveedor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Proveedor";
             this.Load += new System.EventHandler(this.Proveedor_Load);
             this.GrbDatosProveedor.ResumeLayout(false);

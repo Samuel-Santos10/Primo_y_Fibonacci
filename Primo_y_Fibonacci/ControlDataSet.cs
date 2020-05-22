@@ -1,15 +1,18 @@
 ﻿namespace Primo_y_Fibonacci
 {
+}
+
+namespace Primo_y_Fibonacci
+{
 
 
-    partial class ControlDataSet
+    public partial class ControlDataSet
     {
     }
 }
-
-namespace Primo_y_Fibonacci.ControlDataSetTableAdapters {
+namespace Primo_y_Fibonacci {
     
     
-    public partial class DetalleCompraTableAdapter {
+    public partial class ControlDataSet {
     }
 }

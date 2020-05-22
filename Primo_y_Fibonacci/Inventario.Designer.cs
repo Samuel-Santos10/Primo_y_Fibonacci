@@ -464,7 +464,7 @@
             this.Controls.Add(this.GrbDatosInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Inventario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Inventario_Load);
             this.GrbDatosInventario.ResumeLayout(false);

@@ -370,7 +370,7 @@
             this.Controls.Add(this.GrbDatosTipoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TipoUsuario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "TipoUsuario";
             this.Load += new System.EventHandler(this.TipoUsuario_Load);
             this.GrbDatosTipoUsuario.ResumeLayout(false);

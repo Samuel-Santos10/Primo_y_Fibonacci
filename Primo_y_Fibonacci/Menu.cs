@@ -84,6 +84,262 @@ namespace Primo_y_Fibonacci
             frmTipo.Show();
         }
 
-        
+        private void btnmenu_Click(object sender, EventArgs e)
+        {
+            if (panelboton1.Visible == true)
+            {
+                panelboton1.Visible = false;
+            }
+
+            else
+
+            {
+                panelboton1.Visible = true;
+            }
+
+            btnmenu.Location = new Point(2, 158);
+            panelboton1.Location = new Point(2, 193);
+
+            if (panelboton1.Visible == false)
+            {
+                btnmenu.Location = new Point(2, 158);
+                btnsubmenu1.Location = new Point(8, 18);
+                btnsubmenu2.Location = new Point(8, 383);
+                btnsubmenu3.Location = new Point(8, 617);
+            }
+        }
+
+        private void btnsubmenu1_Click(object sender, EventArgs e)
+        {
+            if (panelitem1.Visible == true)
+            {
+                panelitem1.Visible = false;
+            }
+
+            else
+
+            {
+                panelitem1.Visible = true;
+            }
+
+            btnsubmenu1.Location = new Point(8, 18);
+            panelitem1.Location = new Point(8, 53);
+
+            if (panelitem1.Visible == false)
+            {
+
+                btnsubmenu1.Location = new Point(8, 18);
+                btnsubmenu2.Location = new Point(8, 383);
+            }
+        }
+
+        private void btnsubmenu2_Click(object sender, EventArgs e)
+        {
+            if (panelitem2.Visible == true)
+            {
+                panelitem2.Visible = false;
+            }
+
+            else
+
+            {
+                panelitem2.Visible = true;
+            }
+
+            btnsubmenu2.Location = new Point(8, 383);
+            panelitem2.Location = new Point(8, 417);
+
+            if (panelitem2.Visible == false)
+            {
+
+                btnsubmenu1.Location = new Point(8, 18);
+                btnsubmenu2.Location = new Point(8, 383);
+            }
+        }
+
+        private void btnsubmenu3_Click(object sender, EventArgs e)
+        {
+
+            if (panelitem3.Visible == true)
+            {
+                panelitem3.Visible = false;
+            }
+
+            else
+
+            {
+                panelitem3.Visible = true;
+            }
+
+            btnsubmenu3.Location = new Point(8, 617);
+            panelitem3.Location = new Point(8, 651);
+
+            if (panelitem3.Visible == false)
+            {
+
+                btnsubmenu1.Location = new Point(8, 18);
+                btnsubmenu2.Location = new Point(8, 383);
+                btnsubmenu3.Location = new Point(8, 617);
+            }
+        }
+
+      
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            btnmenu.Location = new Point(2, 158);
+            btnsubmenu1.Location = new Point(8, 18);
+            btnsubmenu2.Location = new Point(8, 380);
+            btnsubmenu3.Location = new Point(8, 617);
+            panelboton1.Hide();
+            panelitem1.Hide();
+            panelitem2.Hide();
+            panelitem3.Hide();
+        }
+
+        private void btnprincipalcliente_Click(object sender, EventArgs e)
+        {
+            Principal frmCliente = new Principal();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
+        }
+
+        private void btnclientemenu_Click(object sender, EventArgs e)
+        {
+            Principal frmCliente = new Principal();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
+        }
+
+        private void btnproveedormenu_Click(object sender, EventArgs e)
+        {
+            Proveedor frmProveedor = new Proveedor();
+            frmProveedor.MdiParent = this;
+            frmProveedor.Show();
+        }
+
+        private void btncategmenu_Click(object sender, EventArgs e)
+        {
+            Categoria frmCategoria = new Categoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void btnusuamenu_Click(object sender, EventArgs e)
+        {
+            Usuario frmUsuario = new Usuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+        }
+
+        private void btntipomenu_Click(object sender, EventArgs e)
+        {
+            TipoUsuario frmTipoUsuario = new TipoUsuario();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void btnprodumenu_Click(object sender, EventArgs e)
+        {
+            Productos frmTipoUsuario = new Productos();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void btnemplemenu_Click(object sender, EventArgs e)
+        {
+            Empleados frmEmpleados = new Empleados();
+            frmEmpleados.MdiParent = this;
+            frmEmpleados.Show();
+        }
+
+        private void btninvenmenu_Click(object sender, EventArgs e)
+        {
+            Inventario frmInventario = new Inventario();
+            frmInventario.MdiParent = this;
+            frmInventario.Show();
+        }
+
+        private void btnventamenu_Click(object sender, EventArgs e)
+        {
+             Ventas frmVentas = new Ventas();
+            frmVentas.MdiParent = this;
+            frmVentas.Show();
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btncompramenu_Click(object sender, EventArgs e)
+        {
+            Compra frmCompra = new Compra();
+            frmCompra.MdiParent = this;
+            frmCompra.Show();
+        }
+
+        private void btncatego_Click(object sender, EventArgs e)
+        {
+            Categoria frmCategoria = new Categoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void btnusuario_Click(object sender, EventArgs e)
+        {
+            Usuario frmUsuario = new Usuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+        }
+
+        private void btnprovee_Click(object sender, EventArgs e)
+        {
+            Proveedor frmProveedor = new Proveedor();
+            frmProveedor.MdiParent = this;
+            frmProveedor.Show();
+        }
+
+        private void btntipousu_Click(object sender, EventArgs e)
+        {
+            TipoUsuario frmTipoUsuario = new TipoUsuario();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void btnproductos_Click(object sender, EventArgs e)
+        {
+            Productos frmTipoUsuario = new Productos();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void btnemple_Click(object sender, EventArgs e)
+        {
+            Empleados frmEmpleados = new Empleados();
+            frmEmpleados.MdiParent = this;
+            frmEmpleados.Show();
+        }
+
+        private void btninventa_Click(object sender, EventArgs e)
+        {
+            Inventario frmInventario = new Inventario();
+            frmInventario.MdiParent = this;
+            frmInventario.Show();
+        }
+
+        private void btncompras_Click(object sender, EventArgs e)
+        {
+            Compra frmCompra = new Compra();
+            frmCompra.MdiParent = this;
+            frmCompra.Show();
+        }
+
+        private void btnventas_Click(object sender, EventArgs e)
+        {
+            Ventas frmVentas = new Ventas();
+            frmVentas.MdiParent = this;
+            frmVentas.Show();
+        }
     }
 }

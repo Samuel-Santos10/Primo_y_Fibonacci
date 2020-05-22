@@ -412,7 +412,7 @@
             this.Controls.Add(this.GrbDatosUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.Usuario_Load);
             this.GrbDatosUsuarios.ResumeLayout(false);

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categoria));
             this.GrbDatoscategoria = new System.Windows.Forms.GroupBox();
+            this.lblidcategoria = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcategoria = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,7 +54,6 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
-            this.lblidcategoria = new System.Windows.Forms.Label();
             this.GrbDatoscategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbNavegacion.SuspendLayout();
@@ -76,6 +76,15 @@
             this.GrbDatoscategoria.TabIndex = 15;
             this.GrbDatoscategoria.TabStop = false;
             this.GrbDatoscategoria.Text = "DATOS DE CATEGORIA";
+            // 
+            // lblidcategoria
+            // 
+            this.lblidcategoria.AutoSize = true;
+            this.lblidcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidcategoria.Location = new System.Drawing.Point(295, 61);
+            this.lblidcategoria.Name = "lblidcategoria";
+            this.lblidcategoria.Size = new System.Drawing.Size(0, 13);
+            this.lblidcategoria.TabIndex = 13;
             // 
             // label6
             // 
@@ -350,15 +359,6 @@
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
-            // lblidcategoria
-            // 
-            this.lblidcategoria.AutoSize = true;
-            this.lblidcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcategoria.Location = new System.Drawing.Point(295, 61);
-            this.lblidcategoria.Name = "lblidcategoria";
-            this.lblidcategoria.Size = new System.Drawing.Size(0, 13);
-            this.lblidcategoria.TabIndex = 13;
-            // 
             // Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,7 +371,7 @@
             this.Controls.Add(this.GrbDatoscategoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Categoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Categoria";
             this.Load += new System.EventHandler(this.Categoria_Load);
             this.GrbDatoscategoria.ResumeLayout(false);

@@ -528,7 +528,7 @@
             this.Controls.Add(this.GrbNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Empleados";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.Empleados_Load);
             this.GrbDatosEmpleado.ResumeLayout(false);

@@ -564,7 +564,7 @@
             this.Controls.Add(this.GrbNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.Productos_Load);
             this.GrbDatosProducto.ResumeLayout(false);

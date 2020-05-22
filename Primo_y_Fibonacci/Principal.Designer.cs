@@ -477,7 +477,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Principal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.GrbDatosCliente.ResumeLayout(false);
