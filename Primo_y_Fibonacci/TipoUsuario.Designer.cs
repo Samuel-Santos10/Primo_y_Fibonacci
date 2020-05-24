@@ -62,7 +62,7 @@
             // 
             // GrbDatosTipoUsuario
             // 
-            this.GrbDatosTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GrbDatosTipoUsuario.BackColor = System.Drawing.Color.Thistle;
             this.GrbDatosTipoUsuario.Controls.Add(this.LblTipo);
             this.GrbDatosTipoUsuario.Controls.Add(this.LblNombre);
             this.GrbDatosTipoUsuario.Controls.Add(this.TxtNombre);
@@ -70,9 +70,9 @@
             this.GrbDatosTipoUsuario.Controls.Add(this.LblIdTipousuario);
             this.GrbDatosTipoUsuario.Enabled = false;
             this.GrbDatosTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbDatosTipoUsuario.Location = new System.Drawing.Point(1, 2);
+            this.GrbDatosTipoUsuario.Location = new System.Drawing.Point(1, 0);
             this.GrbDatosTipoUsuario.Name = "GrbDatosTipoUsuario";
-            this.GrbDatosTipoUsuario.Size = new System.Drawing.Size(515, 226);
+            this.GrbDatosTipoUsuario.Size = new System.Drawing.Size(515, 216);
             this.GrbDatosTipoUsuario.TabIndex = 16;
             this.GrbDatosTipoUsuario.TabStop = false;
             this.GrbDatosTipoUsuario.Text = "DATOS DE TIPO USUARIO";
@@ -81,7 +81,7 @@
             // 
             this.LblTipo.AutoSize = true;
             this.LblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipo.Location = new System.Drawing.Point(295, 61);
+            this.LblTipo.Location = new System.Drawing.Point(314, 61);
             this.LblTipo.Name = "LblTipo";
             this.LblTipo.Size = new System.Drawing.Size(0, 13);
             this.LblTipo.TabIndex = 13;
@@ -109,7 +109,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -118,7 +118,7 @@
             // 
             this.LblIdTipousuario.AutoSize = true;
             this.LblIdTipousuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdTipousuario.Location = new System.Drawing.Point(163, 61);
+            this.LblIdTipousuario.Location = new System.Drawing.Point(182, 61);
             this.LblIdTipousuario.Name = "LblIdTipousuario";
             this.LblIdTipousuario.Size = new System.Drawing.Size(117, 13);
             this.LblIdTipousuario.TabIndex = 1;
@@ -137,7 +137,7 @@
             // 
             // GrbNavegacion
             // 
-            this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.GrbNavegacion.Controls.Add(this.lblnregistros);
             this.GrbNavegacion.Controls.Add(this.BtnAnterior);
             this.GrbNavegacion.Controls.Add(this.BtnPrimero);
@@ -225,7 +225,7 @@
             // 
             // GrbOpciones
             // 
-            this.GrbOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.GrbOpciones.Controls.Add(this.label5);
             this.GrbOpciones.Controls.Add(this.btnsalir);
             this.GrbOpciones.Controls.Add(this.label3);
@@ -362,6 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(517, 450);
             this.Controls.Add(this.GrbOpciones);
             this.Controls.Add(this.label4);

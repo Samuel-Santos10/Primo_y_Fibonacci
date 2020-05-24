@@ -62,7 +62,7 @@
             // 
             // GrbDatoscategoria
             // 
-            this.GrbDatoscategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GrbDatoscategoria.BackColor = System.Drawing.Color.Gainsboro;
             this.GrbDatoscategoria.Controls.Add(this.lblidcategoria);
             this.GrbDatoscategoria.Controls.Add(this.label6);
             this.GrbDatoscategoria.Controls.Add(this.txtcategoria);
@@ -81,7 +81,7 @@
             // 
             this.lblidcategoria.AutoSize = true;
             this.lblidcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcategoria.Location = new System.Drawing.Point(295, 61);
+            this.lblidcategoria.Location = new System.Drawing.Point(317, 61);
             this.lblidcategoria.Name = "lblidcategoria";
             this.lblidcategoria.Size = new System.Drawing.Size(0, 13);
             this.lblidcategoria.TabIndex = 13;
@@ -90,7 +90,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(180, 121);
+            this.label6.Location = new System.Drawing.Point(202, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 11;
@@ -98,7 +98,7 @@
             // 
             // txtcategoria
             // 
-            this.txtcategoria.Location = new System.Drawing.Point(280, 114);
+            this.txtcategoria.Location = new System.Drawing.Point(302, 114);
             this.txtcategoria.Multiline = true;
             this.txtcategoria.Name = "txtcategoria";
             this.txtcategoria.Size = new System.Drawing.Size(125, 31);
@@ -108,9 +108,9 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(160, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -119,7 +119,7 @@
             // 
             this.LblIDCliente.AutoSize = true;
             this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCliente.Location = new System.Drawing.Point(163, 61);
+            this.LblIDCliente.Location = new System.Drawing.Point(185, 61);
             this.LblIDCliente.Name = "LblIDCliente";
             this.LblIDCliente.Size = new System.Drawing.Size(99, 13);
             this.LblIDCliente.TabIndex = 1;
@@ -149,7 +149,7 @@
             // 
             // GrbNavegacion
             // 
-            this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbNavegacion.BackColor = System.Drawing.Color.Gainsboro;
             this.GrbNavegacion.Controls.Add(this.lblnregistros);
             this.GrbNavegacion.Controls.Add(this.BtnAnterior);
             this.GrbNavegacion.Controls.Add(this.BtnPrimero);
@@ -226,7 +226,7 @@
             // 
             // GrbCliente
             // 
-            this.GrbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbCliente.BackColor = System.Drawing.Color.Gainsboro;
             this.GrbCliente.Controls.Add(this.label5);
             this.GrbCliente.Controls.Add(this.btnsalir);
             this.GrbCliente.Controls.Add(this.label3);
@@ -363,6 +363,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(525, 562);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);

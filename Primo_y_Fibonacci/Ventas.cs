@@ -74,10 +74,10 @@ namespace Primo_y_Fibonacci
             lblregistroxden.Text = ventasBindingSource.Position + 1 + " de " + ventasBindingSource.Count;
         }
 
-        private void btnPrimero_Click(object sender, EventArgs e)
+
+        private void btnsalir_Click(object sender, EventArgs e)
         {
-            ventasBindingSource.MoveFirst();
-            totalizar();
+            Close();
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
@@ -95,6 +95,12 @@ namespace Primo_y_Fibonacci
         private void btnUltimo_Click(object sender, EventArgs e)
         {
             ventasBindingSource.MoveLast();
+            totalizar();
+        }
+
+        private void btnPrimero_Click(object sender, EventArgs e)
+        {
+            ventasBindingSource.MoveFirst();
             totalizar();
         }
     }

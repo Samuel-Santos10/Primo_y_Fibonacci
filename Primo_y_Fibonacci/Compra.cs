@@ -86,15 +86,14 @@ namespace Primo_y_Fibonacci
 
         }
 
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void btnPrimero_Click(object sender, EventArgs e)
         {
             compra_OrdenesBindingSource.MoveFirst();
-            totalizar();
-        }
-
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
-            compra_OrdenesBindingSource.MovePrevious();
             totalizar();
         }
 
@@ -110,9 +109,10 @@ namespace Primo_y_Fibonacci
             totalizar();
         }
 
-        private void btnsalir_Click(object sender, EventArgs e)
+        private void btnAnterior_Click(object sender, EventArgs e)
         {
-            Close();
+            compra_OrdenesBindingSource.MovePrevious();
+            totalizar();
         }
     }
 }

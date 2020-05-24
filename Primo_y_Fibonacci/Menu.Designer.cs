@@ -141,9 +141,9 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(41, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(26, 9);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(116, 93);
+            this.pictureBox6.Size = new System.Drawing.Size(141, 98);
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
@@ -197,7 +197,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(3, 129);
+            this.pictureBox12.Location = new System.Drawing.Point(6, 131);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(53, 52);
             this.pictureBox12.TabIndex = 13;
@@ -208,7 +208,7 @@
             this.btnpedidomenu.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnpedidomenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnpedidomenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpedidomenu.Location = new System.Drawing.Point(58, 129);
+            this.btnpedidomenu.Location = new System.Drawing.Point(61, 140);
             this.btnpedidomenu.Name = "btnpedidomenu";
             this.btnpedidomenu.Size = new System.Drawing.Size(121, 35);
             this.btnpedidomenu.TabIndex = 12;
@@ -220,7 +220,7 @@
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(3, 70);
+            this.pictureBox13.Location = new System.Drawing.Point(6, 69);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(53, 52);
             this.pictureBox13.TabIndex = 11;
@@ -231,7 +231,7 @@
             this.btncompramenu.BackColor = System.Drawing.Color.Pink;
             this.btncompramenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncompramenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncompramenu.Location = new System.Drawing.Point(58, 70);
+            this.btncompramenu.Location = new System.Drawing.Point(61, 81);
             this.btncompramenu.Name = "btncompramenu";
             this.btncompramenu.Size = new System.Drawing.Size(121, 35);
             this.btncompramenu.TabIndex = 10;
@@ -244,7 +244,7 @@
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.BackgroundImage")));
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(3, 8);
+            this.pictureBox14.Location = new System.Drawing.Point(6, 7);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(53, 52);
             this.pictureBox14.TabIndex = 9;
@@ -255,7 +255,7 @@
             this.btnventamenu.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnventamenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnventamenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnventamenu.Location = new System.Drawing.Point(58, 8);
+            this.btnventamenu.Location = new System.Drawing.Point(61, 19);
             this.btnventamenu.Name = "btnventamenu";
             this.btnventamenu.Size = new System.Drawing.Size(121, 35);
             this.btnventamenu.TabIndex = 8;
@@ -283,18 +283,18 @@
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(3, 134);
+            this.pictureBox11.Location = new System.Drawing.Point(6, 134);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(53, 52);
+            this.pictureBox11.Size = new System.Drawing.Size(53, 54);
             this.pictureBox11.TabIndex = 13;
             this.pictureBox11.TabStop = false;
             // 
             // btninvenmenu
             // 
-            this.btninvenmenu.BackColor = System.Drawing.Color.Gold;
+            this.btninvenmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btninvenmenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btninvenmenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btninvenmenu.Location = new System.Drawing.Point(58, 134);
+            this.btninvenmenu.Location = new System.Drawing.Point(61, 141);
             this.btninvenmenu.Name = "btninvenmenu";
             this.btninvenmenu.Size = new System.Drawing.Size(121, 35);
             this.btninvenmenu.TabIndex = 12;
@@ -307,7 +307,7 @@
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 70);
+            this.pictureBox10.Location = new System.Drawing.Point(6, 70);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(53, 52);
             this.pictureBox10.TabIndex = 11;
@@ -315,10 +315,10 @@
             // 
             // btnemplemenu
             // 
-            this.btnemplemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnemplemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnemplemenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnemplemenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnemplemenu.Location = new System.Drawing.Point(58, 70);
+            this.btnemplemenu.Location = new System.Drawing.Point(61, 70);
             this.btnemplemenu.Name = "btnemplemenu";
             this.btnemplemenu.Size = new System.Drawing.Size(121, 35);
             this.btnemplemenu.TabIndex = 10;
@@ -331,7 +331,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(53, 52);
             this.pictureBox4.TabIndex = 9;
@@ -342,7 +342,7 @@
             this.btnprodumenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnprodumenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnprodumenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprodumenu.Location = new System.Drawing.Point(58, 9);
+            this.btnprodumenu.Location = new System.Drawing.Point(61, 7);
             this.btnprodumenu.Name = "btnprodumenu";
             this.btnprodumenu.Size = new System.Drawing.Size(121, 35);
             this.btnprodumenu.TabIndex = 8;
@@ -553,9 +553,9 @@
             this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(957, -1);
+            this.btnsalir.Location = new System.Drawing.Point(1018, 7);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(70, 62);
+            this.btnsalir.Size = new System.Drawing.Size(54, 43);
             this.btnsalir.TabIndex = 27;
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -565,7 +565,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 60);
             this.pictureBox1.TabIndex = 3;
@@ -575,9 +575,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(152, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(612, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(803, 60);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 

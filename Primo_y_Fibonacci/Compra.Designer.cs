@@ -35,9 +35,11 @@
             System.Windows.Forms.Label nfacturaLabel;
             System.Windows.Forms.Label iD_PagoLabel;
             System.Windows.Forms.Label iD_TipoLabel;
+            System.Windows.Forms.Label label2;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,11 +70,11 @@
             this.tipodocumentoComboBox = new System.Windows.Forms.ComboBox();
             this.tipodocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblregistroxden = new System.Windows.Forms.Label();
             this.btnUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimero = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
+            this.lblregistroxden = new System.Windows.Forms.Label();
             this.productosTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProductosTableAdapter();
             this.condiciones_pagosTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.condiciones_pagosTableAdapter();
             this.tipo_documentoTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Tipo_documentoTableAdapter();
@@ -84,12 +86,14 @@
             this.lblSumaCompra = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnsalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             idCompraLabel = new System.Windows.Forms.Label();
             id_ProveedorLabel = new System.Windows.Forms.Label();
             fechaaLabel = new System.Windows.Forms.Label();
             nfacturaLabel = new System.Windows.Forms.Label();
             iD_PagoLabel = new System.Windows.Forms.Label();
             iD_TipoLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleCompraBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlDataSet)).BeginInit();
@@ -101,61 +105,85 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentoBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // idCompraLabel
             // 
             idCompraLabel.AutoSize = true;
-            idCompraLabel.Location = new System.Drawing.Point(321, 104);
+            idCompraLabel.BackColor = System.Drawing.Color.White;
+            idCompraLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idCompraLabel.Location = new System.Drawing.Point(331, 118);
             idCompraLabel.Name = "idCompraLabel";
-            idCompraLabel.Size = new System.Drawing.Size(21, 13);
+            idCompraLabel.Size = new System.Drawing.Size(26, 14);
             idCompraLabel.TabIndex = 12;
             idCompraLabel.Text = "ID:";
             // 
             // id_ProveedorLabel
             // 
             id_ProveedorLabel.AutoSize = true;
-            id_ProveedorLabel.Location = new System.Drawing.Point(4, 104);
+            id_ProveedorLabel.BackColor = System.Drawing.Color.White;
+            id_ProveedorLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            id_ProveedorLabel.Location = new System.Drawing.Point(17, 119);
             id_ProveedorLabel.Name = "id_ProveedorLabel";
-            id_ProveedorLabel.Size = new System.Drawing.Size(78, 13);
+            id_ProveedorLabel.Size = new System.Drawing.Size(79, 14);
             id_ProveedorLabel.TabIndex = 14;
             id_ProveedorLabel.Text = "PROVEEDOR:";
             // 
             // fechaaLabel
             // 
             fechaaLabel.AutoSize = true;
-            fechaaLabel.Location = new System.Drawing.Point(1, 164);
+            fechaaLabel.BackColor = System.Drawing.Color.White;
+            fechaaLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaaLabel.Location = new System.Drawing.Point(1, 178);
             fechaaLabel.Name = "fechaaLabel";
-            fechaaLabel.Size = new System.Drawing.Size(94, 13);
+            fechaaLabel.Size = new System.Drawing.Size(104, 14);
             fechaaLabel.TabIndex = 16;
             fechaaLabel.Text = "FECHA COMPRA:";
             // 
             // nfacturaLabel
             // 
             nfacturaLabel.AutoSize = true;
-            nfacturaLabel.Location = new System.Drawing.Point(473, 103);
+            nfacturaLabel.BackColor = System.Drawing.Color.White;
+            nfacturaLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nfacturaLabel.Location = new System.Drawing.Point(467, 118);
             nfacturaLabel.Name = "nfacturaLabel";
-            nfacturaLabel.Size = new System.Drawing.Size(77, 13);
+            nfacturaLabel.Size = new System.Drawing.Size(84, 14);
             nfacturaLabel.TabIndex = 18;
             nfacturaLabel.Text = "FACTURA No:";
             // 
             // iD_PagoLabel
             // 
             iD_PagoLabel.AutoSize = true;
-            iD_PagoLabel.Location = new System.Drawing.Point(321, 164);
+            iD_PagoLabel.BackColor = System.Drawing.Color.White;
+            iD_PagoLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iD_PagoLabel.Location = new System.Drawing.Point(321, 178);
             iD_PagoLabel.Name = "iD_PagoLabel";
-            iD_PagoLabel.Size = new System.Drawing.Size(40, 13);
+            iD_PagoLabel.Size = new System.Drawing.Size(43, 14);
             iD_PagoLabel.TabIndex = 20;
             iD_PagoLabel.Text = "PAGO:";
             // 
             // iD_TipoLabel
             // 
             iD_TipoLabel.AutoSize = true;
-            iD_TipoLabel.Location = new System.Drawing.Point(465, 164);
+            iD_TipoLabel.BackColor = System.Drawing.Color.White;
+            iD_TipoLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iD_TipoLabel.Location = new System.Drawing.Point(466, 178);
             iD_TipoLabel.Name = "iD_TipoLabel";
-            iD_TipoLabel.Size = new System.Drawing.Size(80, 13);
+            iD_TipoLabel.Size = new System.Drawing.Size(86, 14);
             iD_TipoLabel.TabIndex = 22;
             iD_TipoLabel.Text = "DOCUMENTO:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(189, 38);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(168, 38);
+            label2.TabIndex = 29;
+            label2.Text = "COMPRA";
             // 
             // proveedorTableAdapter
             // 
@@ -220,7 +248,7 @@
             this.descuento,
             this.subtotal});
             this.detalleCompraDataGridView.DataSource = this.detalleCompraBindingSource;
-            this.detalleCompraDataGridView.Location = new System.Drawing.Point(7, 224);
+            this.detalleCompraDataGridView.Location = new System.Drawing.Point(7, 238);
             this.detalleCompraDataGridView.Name = "detalleCompraDataGridView";
             this.detalleCompraDataGridView.ReadOnly = true;
             this.detalleCompraDataGridView.Size = new System.Drawing.Size(633, 220);
@@ -290,6 +318,8 @@
             // descuento
             // 
             this.descuento.DataPropertyName = "descuento";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
             this.descuento.HeaderText = "DESC";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
@@ -298,8 +328,8 @@
             // subtotal
             // 
             this.subtotal.DataPropertyName = "subtotal";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.subtotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.subtotal.HeaderText = "SUB TOTAL";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
@@ -307,7 +337,7 @@
             // idCompraTextBox
             // 
             this.idCompraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.compra_OrdenesBindingSource, "IdCompra", true));
-            this.idCompraTextBox.Location = new System.Drawing.Point(360, 101);
+            this.idCompraTextBox.Location = new System.Drawing.Point(360, 115);
             this.idCompraTextBox.Name = "idCompraTextBox";
             this.idCompraTextBox.ReadOnly = true;
             this.idCompraTextBox.Size = new System.Drawing.Size(84, 20);
@@ -320,7 +350,7 @@
             this.id_ProveedorComboBox.DisplayMember = "nombre";
             this.id_ProveedorComboBox.Enabled = false;
             this.id_ProveedorComboBox.FormattingEnabled = true;
-            this.id_ProveedorComboBox.Location = new System.Drawing.Point(103, 100);
+            this.id_ProveedorComboBox.Location = new System.Drawing.Point(103, 114);
             this.id_ProveedorComboBox.Name = "id_ProveedorComboBox";
             this.id_ProveedorComboBox.Size = new System.Drawing.Size(200, 21);
             this.id_ProveedorComboBox.TabIndex = 15;
@@ -335,7 +365,7 @@
             // 
             this.fechaaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.compra_OrdenesBindingSource, "fechaa", true));
             this.fechaaDateTimePicker.Enabled = false;
-            this.fechaaDateTimePicker.Location = new System.Drawing.Point(104, 161);
+            this.fechaaDateTimePicker.Location = new System.Drawing.Point(107, 175);
             this.fechaaDateTimePicker.Name = "fechaaDateTimePicker";
             this.fechaaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaaDateTimePicker.TabIndex = 17;
@@ -343,7 +373,7 @@
             // nfacturaTextBox
             // 
             this.nfacturaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.compra_OrdenesBindingSource, "nfactura", true));
-            this.nfacturaTextBox.Location = new System.Drawing.Point(556, 101);
+            this.nfacturaTextBox.Location = new System.Drawing.Point(556, 115);
             this.nfacturaTextBox.Name = "nfacturaTextBox";
             this.nfacturaTextBox.ReadOnly = true;
             this.nfacturaTextBox.Size = new System.Drawing.Size(88, 20);
@@ -356,7 +386,7 @@
             this.iD_PagoComboBox.DisplayMember = "tipo";
             this.iD_PagoComboBox.Enabled = false;
             this.iD_PagoComboBox.FormattingEnabled = true;
-            this.iD_PagoComboBox.Location = new System.Drawing.Point(367, 159);
+            this.iD_PagoComboBox.Location = new System.Drawing.Point(367, 173);
             this.iD_PagoComboBox.Name = "iD_PagoComboBox";
             this.iD_PagoComboBox.Size = new System.Drawing.Size(82, 21);
             this.iD_PagoComboBox.TabIndex = 21;
@@ -374,7 +404,7 @@
             this.tipodocumentoComboBox.DisplayMember = "tipo";
             this.tipodocumentoComboBox.Enabled = false;
             this.tipodocumentoComboBox.FormattingEnabled = true;
-            this.tipodocumentoComboBox.Location = new System.Drawing.Point(551, 160);
+            this.tipodocumentoComboBox.Location = new System.Drawing.Point(558, 174);
             this.tipodocumentoComboBox.Name = "tipodocumentoComboBox";
             this.tipodocumentoComboBox.Size = new System.Drawing.Size(78, 21);
             this.tipodocumentoComboBox.TabIndex = 23;
@@ -387,64 +417,78 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblregistroxden);
+            this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.btnUltimo);
             this.panel2.Controls.Add(this.btnSiguiente);
-            this.panel2.Controls.Add(this.btnAnterior);
             this.panel2.Controls.Add(this.btnPrimero);
-            this.panel2.Location = new System.Drawing.Point(43, 477);
+            this.panel2.Controls.Add(this.btnAnterior);
+            this.panel2.Controls.Add(this.lblregistroxden);
+            this.panel2.Location = new System.Drawing.Point(12, 491);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(204, 49);
+            this.panel2.Size = new System.Drawing.Size(385, 63);
             this.panel2.TabIndex = 24;
-            // 
-            // lblregistroxden
-            // 
-            this.lblregistroxden.AutoSize = true;
-            this.lblregistroxden.Location = new System.Drawing.Point(87, 16);
-            this.lblregistroxden.Name = "lblregistroxden";
-            this.lblregistroxden.Size = new System.Drawing.Size(36, 13);
-            this.lblregistroxden.TabIndex = 6;
-            this.lblregistroxden.Text = "x de n";
             // 
             // btnUltimo
             // 
-            this.btnUltimo.Location = new System.Drawing.Point(160, 3);
+            this.btnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUltimo.BackgroundImage")));
+            this.btnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUltimo.Location = new System.Drawing.Point(310, 8);
             this.btnUltimo.Name = "btnUltimo";
-            this.btnUltimo.Size = new System.Drawing.Size(32, 38);
-            this.btnUltimo.TabIndex = 3;
-            this.btnUltimo.Text = ">|";
-            this.btnUltimo.UseVisualStyleBackColor = true;
+            this.btnUltimo.Size = new System.Drawing.Size(56, 46);
+            this.btnUltimo.TabIndex = 29;
+            this.btnUltimo.UseVisualStyleBackColor = false;
             this.btnUltimo.Click += new System.EventHandler(this.btnUltimo_Click);
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(129, 3);
+            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.BackgroundImage")));
+            this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSiguiente.Location = new System.Drawing.Point(231, 8);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(32, 38);
-            this.btnSiguiente.TabIndex = 2;
-            this.btnSiguiente.Text = ">";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Size = new System.Drawing.Size(56, 46);
+            this.btnSiguiente.TabIndex = 28;
+            this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Location = new System.Drawing.Point(38, 3);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(32, 38);
-            this.btnAnterior.TabIndex = 1;
-            this.btnAnterior.Text = "<";
-            this.btnAnterior.UseVisualStyleBackColor = true;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnPrimero
             // 
-            this.btnPrimero.Location = new System.Drawing.Point(7, 3);
+            this.btnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrimero.BackgroundImage")));
+            this.btnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrimero.Location = new System.Drawing.Point(7, 8);
             this.btnPrimero.Name = "btnPrimero";
-            this.btnPrimero.Size = new System.Drawing.Size(32, 38);
-            this.btnPrimero.TabIndex = 0;
-            this.btnPrimero.Text = "|<";
-            this.btnPrimero.UseVisualStyleBackColor = true;
+            this.btnPrimero.Size = new System.Drawing.Size(56, 46);
+            this.btnPrimero.TabIndex = 28;
+            this.btnPrimero.UseVisualStyleBackColor = false;
             this.btnPrimero.Click += new System.EventHandler(this.btnPrimero_Click);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnterior.BackgroundImage")));
+            this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAnterior.Location = new System.Drawing.Point(85, 8);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(56, 46);
+            this.btnAnterior.TabIndex = 28;
+            this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // lblregistroxden
+            // 
+            this.lblregistroxden.AutoSize = true;
+            this.lblregistroxden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblregistroxden.Location = new System.Drawing.Point(163, 23);
+            this.lblregistroxden.Name = "lblregistroxden";
+            this.lblregistroxden.Size = new System.Drawing.Size(49, 16);
+            this.lblregistroxden.TabIndex = 6;
+            this.lblregistroxden.Text = "x de n";
             // 
             // productosTableAdapter1
             // 
@@ -460,13 +504,14 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.lblTotalCompra);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblIvaCompra);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblSumaCompra);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(436, 466);
+            this.panel1.Location = new System.Drawing.Point(436, 480);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 92);
             this.panel1.TabIndex = 25;
@@ -483,16 +528,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "TOTAL:";
             // 
             // lblIvaCompra
             // 
             this.lblIvaCompra.AutoSize = true;
-            this.lblIvaCompra.Location = new System.Drawing.Point(154, 36);
+            this.lblIvaCompra.Location = new System.Drawing.Point(142, 36);
             this.lblIvaCompra.Name = "lblIvaCompra";
             this.lblIvaCompra.Size = new System.Drawing.Size(34, 13);
             this.lblIvaCompra.TabIndex = 3;
@@ -501,9 +547,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 36);
+            this.label3.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "IVA:";
             // 
@@ -519,29 +566,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "SUMA:";
             // 
             // btnsalir
             // 
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
             this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(609, 12);
+            this.btnsalir.Location = new System.Drawing.Point(604, 5);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(31, 29);
+            this.btnsalir.Size = new System.Drawing.Size(40, 36);
             this.btnsalir.TabIndex = 27;
-            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(103, 98);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(647, 591);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -576,6 +640,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,10 +667,6 @@
         private System.Windows.Forms.BindingSource proveedorBindingSource1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblregistroxden;
-        private System.Windows.Forms.Button btnUltimo;
-        private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnPrimero;
         private ControlDataSetTableAdapters.ProductosTableAdapter productosTableAdapter1;
         private System.Windows.Forms.BindingSource condicionespagosBindingSource;
         private ControlDataSetTableAdapters.condiciones_pagosTableAdapter condiciones_pagosTableAdapter;
@@ -618,6 +679,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSumaCompra;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnAnterior;
+        private System.Windows.Forms.Button btnPrimero;
+        private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button btnUltimo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -627,6 +693,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

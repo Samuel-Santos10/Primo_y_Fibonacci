@@ -66,7 +66,7 @@
             // 
             // GrbDatosUsuarios
             // 
-            this.GrbDatosUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GrbDatosUsuarios.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.GrbDatosUsuarios.Controls.Add(this.LblTipoUsuario);
             this.GrbDatosUsuarios.Controls.Add(this.TxtTipoUsuario);
             this.GrbDatosUsuarios.Controls.Add(this.LblPassword);
@@ -89,7 +89,7 @@
             // 
             this.LblTipoUsuario.AutoSize = true;
             this.LblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipoUsuario.Location = new System.Drawing.Point(160, 168);
+            this.LblTipoUsuario.Location = new System.Drawing.Point(168, 168);
             this.LblTipoUsuario.Name = "LblTipoUsuario";
             this.LblTipoUsuario.Size = new System.Drawing.Size(100, 13);
             this.LblTipoUsuario.TabIndex = 16;
@@ -97,7 +97,7 @@
             // 
             // TxtTipoUsuario
             // 
-            this.TxtTipoUsuario.Location = new System.Drawing.Point(260, 168);
+            this.TxtTipoUsuario.Location = new System.Drawing.Point(268, 168);
             this.TxtTipoUsuario.Name = "TxtTipoUsuario";
             this.TxtTipoUsuario.Size = new System.Drawing.Size(196, 20);
             this.TxtTipoUsuario.TabIndex = 17;
@@ -106,7 +106,7 @@
             // 
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.Location = new System.Drawing.Point(160, 131);
+            this.LblPassword.Location = new System.Drawing.Point(168, 131);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(82, 13);
             this.LblPassword.TabIndex = 14;
@@ -114,7 +114,7 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(260, 131);
+            this.TxtPassword.Location = new System.Drawing.Point(268, 131);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(105, 20);
             this.TxtPassword.TabIndex = 15;
@@ -123,7 +123,7 @@
             // 
             this.LblUsuario.AutoSize = true;
             this.LblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Location = new System.Drawing.Point(295, 61);
+            this.LblUsuario.Location = new System.Drawing.Point(303, 61);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(0, 13);
             this.LblUsuario.TabIndex = 13;
@@ -132,7 +132,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(160, 93);
+            this.LblNombre.Location = new System.Drawing.Point(168, 93);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 11;
@@ -140,7 +140,7 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(260, 93);
+            this.TxtNombre.Location = new System.Drawing.Point(268, 93);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(154, 20);
             this.TxtNombre.TabIndex = 12;
@@ -149,9 +149,9 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -160,7 +160,7 @@
             // 
             this.LblIdUsuario.AutoSize = true;
             this.LblIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdUsuario.Location = new System.Drawing.Point(160, 61);
+            this.LblIdUsuario.Location = new System.Drawing.Point(168, 61);
             this.LblIdUsuario.Name = "LblIdUsuario";
             this.LblIdUsuario.Size = new System.Drawing.Size(84, 13);
             this.LblIdUsuario.TabIndex = 1;
@@ -404,7 +404,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 473);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(523, 473);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbUsuarios);
