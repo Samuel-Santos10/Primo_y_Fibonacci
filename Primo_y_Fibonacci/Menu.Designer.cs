@@ -70,7 +70,7 @@
             this.btnprovee = new System.Windows.Forms.Button();
             this.btnemple = new System.Windows.Forms.Button();
             this.btntipousu = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnpedidoCliente = new System.Windows.Forms.Button();
             this.btnproductos = new System.Windows.Forms.Button();
             this.btnusuario = new System.Windows.Forms.Button();
             this.btninventa = new System.Windows.Forms.Button();
@@ -87,6 +87,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelboton1.SuspendLayout();
@@ -214,6 +215,7 @@
             this.btnpedidomenu.TabIndex = 12;
             this.btnpedidomenu.Text = "PEDIDOS";
             this.btnpedidomenu.UseVisualStyleBackColor = false;
+            this.btnpedidomenu.Click += new System.EventHandler(this.btnpedidomenu_Click);
             // 
             // pictureBox13
             // 
@@ -641,20 +643,20 @@
             this.btntipousu.UseVisualStyleBackColor = false;
             this.btntipousu.Click += new System.EventHandler(this.btntipousu_Click);
             // 
-            // button12
+            // btnpedidoCliente
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(668, 840);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(160, 155);
-            this.button12.TabIndex = 32;
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.UseVisualStyleBackColor = false;
+            this.btnpedidoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnpedidoCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnpedidoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpedidoCliente.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpedidoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnpedidoCliente.Image")));
+            this.btnpedidoCliente.Location = new System.Drawing.Point(668, 840);
+            this.btnpedidoCliente.Name = "btnpedidoCliente";
+            this.btnpedidoCliente.Size = new System.Drawing.Size(160, 155);
+            this.btnpedidoCliente.TabIndex = 32;
+            this.btnpedidoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnpedidoCliente.UseVisualStyleBackColor = false;
+            this.btnpedidoCliente.Click += new System.EventHandler(this.btnpedidoCliente_Click);
             // 
             // btnproductos
             // 
@@ -866,6 +868,18 @@
             this.label11.TabIndex = 50;
             this.label11.Text = "VENTAS";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Black;
+            this.label12.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(681, 998);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(138, 16);
+            this.label12.TabIndex = 52;
+            this.label12.Text = "PEDIDOS CLIENTE";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -873,6 +887,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1189, 1044);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -889,7 +904,7 @@
             this.Controls.Add(this.btninventa);
             this.Controls.Add(this.btnusuario);
             this.Controls.Add(this.btnproductos);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.btnpedidoCliente);
             this.Controls.Add(this.btntipousu);
             this.Controls.Add(this.btnemple);
             this.Controls.Add(this.btnprovee);
@@ -972,7 +987,7 @@
         private System.Windows.Forms.Button btnprovee;
         private System.Windows.Forms.Button btnemple;
         private System.Windows.Forms.Button btntipousu;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnpedidoCliente;
         private System.Windows.Forms.Button btnproductos;
         private System.Windows.Forms.Button btnusuario;
         private System.Windows.Forms.Button btninventa;
@@ -989,5 +1004,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

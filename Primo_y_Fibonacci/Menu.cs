@@ -341,5 +341,19 @@ namespace Primo_y_Fibonacci
             frmVentas.MdiParent = this;
             frmVentas.Show();
         }
+
+        private void btnpedidoCliente_Click(object sender, EventArgs e)
+        {
+            Pedido_Cliente frmPedidoC = new Pedido_Cliente();
+            frmPedidoC.MdiParent = this;
+            frmPedidoC.Show();
+        }
+
+        private void btnpedidomenu_Click(object sender, EventArgs e)
+        {
+            Pedido_Cliente frmPedidoC = new Pedido_Cliente();
+            frmPedidoC.MdiParent = this;
+            frmPedidoC.Show();
+        }
     }
 }
