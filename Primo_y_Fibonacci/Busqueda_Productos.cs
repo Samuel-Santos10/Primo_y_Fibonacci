@@ -15,6 +15,7 @@ namespace Primo_y_Fibonacci
 
         ConexionClass objConexion = new ConexionClass();
         public int _IdProductos;
+        public String _nombreProducto, _codigoProducto;
 
         public Busqueda_Productos()
         {
@@ -31,6 +32,8 @@ namespace Primo_y_Fibonacci
             if (GrdBusquedaProducto.RowCount > 0)
             {
                 _IdProductos = int.Parse(GrdBusquedaProducto.CurrentRow.Cells["IdProductos"].Value.ToString());
+                _nombreProducto = GrdBusquedaProducto.CurrentRow.Cells["nombre"].Value.ToString();
+                _codigoProducto = GrdBusquedaProducto.CurrentRow.Cells["codigo"].Value.ToString();
                 Close();
             }
             else
