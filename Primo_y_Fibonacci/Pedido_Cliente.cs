@@ -46,8 +46,8 @@ namespace Primo_y_Fibonacci
         {
          try
                    {
-                        // TODO: esta línea de código carga datos en la tabla 'controlDataSet.Empleado' Puede moverla o quitarla según sea necesario.
-                        this.empleadoTableAdapter.Fill(this.controlDataSet.Empleado);
+                     // TODO: esta línea de código carga datos en la tabla 'controlDataSet.Empleado' Puede moverla o quitarla según sea necesario.
+                     this.empleadoTableAdapter.Fill(this.controlDataSet.Empleado);
                     // TODO: esta línea de código carga datos en la tabla 'controlDataSet.Cliente' Puede moverla o quitarla según sea necesario.
                     this.clienteTableAdapter.Fill(this.controlDataSet.Cliente);
                     // TODO: esta línea de código carga datos en la tabla 'controlDataSet.DetallePedido' Puede moverla o quitarla según sea necesario.
@@ -199,6 +199,7 @@ namespace Primo_y_Fibonacci
                         decimal.Parse(Detalle_Pedido_Client[i, 4])
                     );
                 }
+                pedido_ClienteTableAdapter.Connection.Close();
                 actualziarDs();
                 pedido_ClienteBindingSource.MoveLast();
 

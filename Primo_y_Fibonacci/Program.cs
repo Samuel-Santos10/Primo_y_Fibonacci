@@ -16,7 +16,7 @@ namespace Primo_y_Fibonacci
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Factura_Venta());
+            Application.Run(new Compra());
         }
     }
 }

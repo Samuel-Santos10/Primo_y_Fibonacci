@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Primo_y_Fibonacci.ControlDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,9 @@ namespace Primo_y_Fibonacci
 {
     public partial class Factura_Venta : Form
     {
+
+        private int _IdFacturaV = 0;
+
         public Factura_Venta()
         {
             InitializeComponent();
@@ -53,6 +58,7 @@ namespace Primo_y_Fibonacci
 
         private void Factura_Venta_Load(object sender, EventArgs e)
         {
+            factura_ventaTableAdapter1.Connection.Close();
             actualziarDs();
         }
 
@@ -109,6 +115,136 @@ namespace Primo_y_Fibonacci
         {
             factura_ventaBindingSource.MoveLast();
             totalizar();
+        }
+
+        private void habdes_controles(Boolean estado)
+        {
+            idClienteComboBox.Enabled = !estado;
+            idEmpleadoComboBox.Enabled = !estado;
+            fecha_facturaDateTimePicker.Enabled = !estado;
+            tipoventaComboBox.Enabled = !estado;
+            tipodocumentoComboBox.Enabled = !estado;
+
+            nfacturaTextBox.ReadOnly = estado;
+            dFacturaVentaDataGridView.ReadOnly = estado;
+            pnlProductosGrid.Visible = !estado;
+
+            pnlNavegacion.Visible = estado;
+            btnEliminar.Enabled = estado;
+            btnBuscar.Enabled = estado;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (btnAgregar.Text == "Nuevo")
+            {//nuevo
+                btnAgregar.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+                factura_ventaBindingSource.AddNew();//agregamos un registro nuevo...
+            }
+            else
+            {//guardar
+                _IdFacturaV = int.Parse(IdFacturaVTextBox.Text);
+                this.Validate();
+                this.factura_ventaBindingSource.EndEdit();
+
+                /**
+                 * Abrimos la conexion a la BD
+                 */
+                factura_ventaTableAdapter.Connection.Open();
+                SqlCommand sqlCmd = new SqlCommand();
+                sqlCmd.Connection = factura_ventaTableAdapter.Connection;
+
+                if (_IdFacturaV > 0)
+                {//modificando...
+                    sqlCmd.CommandText = "delete from DFactura_V where IdFacturaV=" + _IdFacturaV;
+                    sqlCmd.ExecuteNonQuery();
+                }
+                else
+                {//nuevo....
+                    sqlCmd.CommandText = "select ident_current('factura_venta') + 1 AS IdFacturaV";
+                    _IdFacturaV = int.Parse(sqlCmd.ExecuteScalar().ToString());
+                }
+                int nfilas = dFacturaVentaDataGridView.RowCount;
+                string[,] DFactura_V = new string[nfilas, 5];
+                DataGridViewRow fila = new DataGridViewRow();
+                for (int i = 0; i < nfilas; i++)
+                {
+                    fila = dFacturaVentaDataGridView.Rows[i];
+
+                    DFactura_V[i, 0] = fila.Cells["Idproducto"].Value.ToString();
+                    DFactura_V[i, 1] = fila.Cells["cantidad"].Value.ToString();
+                    DFactura_V[i, 2] = fila.Cells["precio"].Value.ToString();
+                    DFactura_V[i, 3] = fila.Cells["descuento"].Value.ToString();
+                    DFactura_V[i, 4] = fila.Cells["unidades"].Value.ToString();
+                }
+                this.tableAdapterManager.UpdateAll(this.controlDataSet);
+
+                for (int i = 0; i < nfilas; i++)
+                {
+                        dFactura_VTableAdapter1.Insert(
+                        _IdFacturaV,
+                        int.Parse(DFactura_V[i, 0]),
+                        int.Parse(DFactura_V[i, 1]),
+                        decimal.Parse(DFactura_V[i, 2]),
+                        int.Parse(DFactura_V[i, 3]),
+                        int.Parse(DFactura_V[i, 4]),
+                        int.Parse(DFactura_V[i, 5])
+                    );
+                }
+                factura_ventaTableAdapter1.Connection.Close();
+                actualziarDs();
+                factura_ventaBindingSource.MoveLast();
+                habdes_controles(true);
+                btnAgregar.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (btnModificar.Text == "Modificar")
+            {//modificar
+                btnAgregar.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
+
+                habdes_controles(false);//habilitar los controles...
+
+            }
+            else
+            {//cancelar
+                factura_ventaBindingSource.CancelEdit();
+                dFacturaVentaBindingSource.CancelEdit();
+
+                habdes_controles(true);//deshabilitar los controles...
+                btnAgregar.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
+            }
+        }
+
+        private void btnAgregarProductosGrid_Click(object sender, EventArgs e)
+        {
+            Busqueda_Productos buscarProductos = new Busqueda_Productos();
+            buscarProductos.ShowDialog();
+            if (buscarProductos._IdProductos > 0)
+            {
+                dFacturaVentaBindingSource.AddNew();
+
+                dFacturaVentaDataGridView.CurrentRow.Cells["IdProducto"].Value = buscarProductos._IdProductos;
+                dFacturaVentaDataGridView.CurrentRow.Cells["codigo"].Value = buscarProductos._codigoProducto;
+                dFacturaVentaDataGridView.CurrentRow.Cells["nombre"].Value = buscarProductos._nombreProducto;
+                dFacturaVentaDataGridView.CurrentRow.Cells["cantidad"].Value = 1;
+            }
+        }
+
+        private void btnQuitarProductosGrid_Click(object sender, EventArgs e)
+        {
+            if (dFacturaVentaDataGridView.RowCount > 0)
+            {
+                dFacturaVentaDataGridView.Rows.Remove(dFacturaVentaDataGridView.CurrentRow);
+            }
         }
     }
 }
