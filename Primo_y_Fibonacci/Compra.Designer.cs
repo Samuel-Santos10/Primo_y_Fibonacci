@@ -36,12 +36,12 @@
             System.Windows.Forms.Label iD_PagoLabel;
             System.Windows.Forms.Label iD_TipoLabel;
             System.Windows.Forms.Label label2;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detalleCompraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -52,6 +52,16 @@
             this.detalleCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detalleCompraTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.DetalleCompraTableAdapter();
             this.detalleCompraDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantid_compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCompraTextBox = new System.Windows.Forms.TextBox();
             this.id_ProveedorComboBox = new System.Windows.Forms.ComboBox();
             this.proveedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -88,16 +98,6 @@
             this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
             this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
             this.detalle_CompraTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.detalle_CompraTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantid_compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idCompraLabel = new System.Windows.Forms.Label();
             id_ProveedorLabel = new System.Windows.Forms.Label();
             fechaaLabel = new System.Windows.Forms.Label();
@@ -226,8 +226,10 @@
             this.tableAdapterManager.detalle_CompraTableAdapter = null;
             this.tableAdapterManager.Detalle_Pedido_ClientTableAdapter = null;
             this.tableAdapterManager.Detalle_VentaTableAdapter = null;
+            this.tableAdapterManager.Dfactura_CTableAdapter = null;
             this.tableAdapterManager.DFactura_VTableAdapter = null;
             this.tableAdapterManager.EmpleadoTableAdapter = null;
+            this.tableAdapterManager.factura_compraTableAdapter = null;
             this.tableAdapterManager.factura_ventaTableAdapter = null;
             this.tableAdapterManager.InventarioTableAdapter = null;
             this.tableAdapterManager.Pedido_ClienteTableAdapter = null;
@@ -271,6 +273,96 @@
             this.detalleCompraDataGridView.ReadOnly = true;
             this.detalleCompraDataGridView.Size = new System.Drawing.Size(633, 159);
             this.detalleCompraDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDCompra";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdDCompra";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ID_Compra";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID_Compra";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // ID_producto
+            // 
+            this.ID_producto.DataPropertyName = "ID_producto";
+            this.ID_producto.HeaderText = "ID_producto";
+            this.ID_producto.Name = "ID_producto";
+            this.ID_producto.ReadOnly = true;
+            this.ID_producto.Visible = false;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "CODIGO";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "NOMBRE";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 130;
+            // 
+            // cantid_compra
+            // 
+            this.cantid_compra.DataPropertyName = "cantid_compra";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle1;
+            this.cantid_compra.HeaderText = "CANT";
+            this.cantid_compra.Name = "cantid_compra";
+            this.cantid_compra.ReadOnly = true;
+            this.cantid_compra.Width = 60;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "precio";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.precio.HeaderText = "PRECIO";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 80;
+            // 
+            // descuento
+            // 
+            this.descuento.DataPropertyName = "descuento";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.descuento.HeaderText = "DESC";
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
+            this.descuento.Width = 50;
+            // 
+            // unidades
+            // 
+            this.unidades.DataPropertyName = "unidades";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.unidades.DefaultCellStyle = dataGridViewCellStyle4;
+            this.unidades.HeaderText = "UNID";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            this.unidades.Width = 80;
+            // 
+            // subtotal
+            // 
+            this.subtotal.DataPropertyName = "subtotal";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.subtotal.DefaultCellStyle = dataGridViewCellStyle5;
+            this.subtotal.HeaderText = "SUB TOTAL";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // idCompraTextBox
             // 
@@ -621,96 +713,6 @@
             // detalle_CompraTableAdapter1
             // 
             this.detalle_CompraTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDCompra";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdDCompra";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ID_Compra";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID_Compra";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // ID_producto
-            // 
-            this.ID_producto.DataPropertyName = "ID_producto";
-            this.ID_producto.HeaderText = "ID_producto";
-            this.ID_producto.Name = "ID_producto";
-            this.ID_producto.ReadOnly = true;
-            this.ID_producto.Visible = false;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "CODIGO";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 130;
-            // 
-            // cantid_compra
-            // 
-            this.cantid_compra.DataPropertyName = "cantid_compra";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle1;
-            this.cantid_compra.HeaderText = "CANT";
-            this.cantid_compra.Name = "cantid_compra";
-            this.cantid_compra.ReadOnly = true;
-            this.cantid_compra.Width = 60;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.precio.HeaderText = "PRECIO";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 80;
-            // 
-            // descuento
-            // 
-            this.descuento.DataPropertyName = "descuento";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
-            this.descuento.HeaderText = "DESC";
-            this.descuento.Name = "descuento";
-            this.descuento.ReadOnly = true;
-            this.descuento.Width = 50;
-            // 
-            // unidades
-            // 
-            this.unidades.DataPropertyName = "unidades";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.unidades.DefaultCellStyle = dataGridViewCellStyle4;
-            this.unidades.HeaderText = "UNID";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            this.unidades.Width = 80;
-            // 
-            // subtotal
-            // 
-            this.subtotal.DataPropertyName = "subtotal";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.subtotal.DefaultCellStyle = dataGridViewCellStyle5;
-            this.subtotal.HeaderText = "SUB TOTAL";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
             // 
             // Compra
             // 
