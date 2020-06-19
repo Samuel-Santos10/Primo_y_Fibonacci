@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categoria));
+            System.Windows.Forms.Label label7;
             this.GrbDatoscategoria = new System.Windows.Forms.GroupBox();
             this.lblidcategoria = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
+            label7 = new System.Windows.Forms.Label();
             this.GrbDatoscategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbNavegacion.SuspendLayout();
@@ -63,6 +65,7 @@
             // GrbDatoscategoria
             // 
             this.GrbDatoscategoria.BackColor = System.Drawing.Color.Gainsboro;
+            this.GrbDatoscategoria.Controls.Add(label7);
             this.GrbDatoscategoria.Controls.Add(this.lblidcategoria);
             this.GrbDatoscategoria.Controls.Add(this.label6);
             this.GrbDatoscategoria.Controls.Add(this.txtcategoria);
@@ -72,16 +75,15 @@
             this.GrbDatoscategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrbDatoscategoria.Location = new System.Drawing.Point(2, 1);
             this.GrbDatoscategoria.Name = "GrbDatoscategoria";
-            this.GrbDatoscategoria.Size = new System.Drawing.Size(525, 226);
+            this.GrbDatoscategoria.Size = new System.Drawing.Size(525, 235);
             this.GrbDatoscategoria.TabIndex = 15;
             this.GrbDatoscategoria.TabStop = false;
-            this.GrbDatoscategoria.Text = "DATOS DE CATEGORIA";
             // 
             // lblidcategoria
             // 
             this.lblidcategoria.AutoSize = true;
             this.lblidcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcategoria.Location = new System.Drawing.Point(317, 61);
+            this.lblidcategoria.Location = new System.Drawing.Point(317, 90);
             this.lblidcategoria.Name = "lblidcategoria";
             this.lblidcategoria.Size = new System.Drawing.Size(0, 13);
             this.lblidcategoria.TabIndex = 13;
@@ -89,16 +91,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(202, 121);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(202, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "CATEGORIA:";
             // 
             // txtcategoria
             // 
-            this.txtcategoria.Location = new System.Drawing.Point(302, 114);
+            this.txtcategoria.Location = new System.Drawing.Point(302, 146);
             this.txtcategoria.Multiline = true;
             this.txtcategoria.Name = "txtcategoria";
             this.txtcategoria.Size = new System.Drawing.Size(125, 31);
@@ -108,7 +110,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,19 +120,19 @@
             // LblIDCliente
             // 
             this.LblIDCliente.AutoSize = true;
-            this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCliente.Location = new System.Drawing.Point(185, 61);
+            this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIDCliente.Location = new System.Drawing.Point(260, 90);
             this.LblIDCliente.Name = "LblIDCliente";
-            this.LblIDCliente.Size = new System.Drawing.Size(99, 13);
+            this.LblIDCliente.Size = new System.Drawing.Size(25, 15);
             this.LblIDCliente.TabIndex = 1;
-            this.LblIDCliente.Text = "ID CATEGORIA:";
+            this.LblIDCliente.Text = "ID:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 387);
+            this.label4.Location = new System.Drawing.Point(218, 393);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 23;
@@ -141,7 +143,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(209, 252);
+            this.label1.Location = new System.Drawing.Point(209, 257);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 22;
@@ -156,7 +158,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(0, 291);
+            this.GrbNavegacion.Location = new System.Drawing.Point(0, 288);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 20;
@@ -174,7 +176,7 @@
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAnterior.BackColor = System.Drawing.Color.Blue;
             this.BtnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.BackgroundImage")));
             this.BtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -187,7 +189,7 @@
             // 
             // BtnPrimero
             // 
-            this.BtnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPrimero.BackColor = System.Drawing.Color.Blue;
             this.BtnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrimero.BackgroundImage")));
             this.BtnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -200,7 +202,7 @@
             // 
             // BtnSiguiente
             // 
-            this.BtnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.BtnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSiguiente.BackgroundImage")));
             this.BtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -213,7 +215,7 @@
             // 
             // BtnUltimo
             // 
-            this.BtnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnUltimo.BackColor = System.Drawing.Color.Blue;
             this.BtnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.BackgroundImage")));
             this.BtnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -238,7 +240,7 @@
             this.GrbCliente.Controls.Add(this.BtnModificar);
             this.GrbCliente.Controls.Add(this.BtnNuevo);
             this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 427);
+            this.GrbCliente.Location = new System.Drawing.Point(0, 424);
             this.GrbCliente.Name = "GrbCliente";
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 21;
@@ -359,13 +361,24 @@
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label7.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.Location = new System.Drawing.Point(143, 8);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(233, 38);
+            label7.TabIndex = 39;
+            label7.Text = "CATEGORIAS";
+            // 
             // Categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(525, 562);
+            this.ClientSize = new System.Drawing.Size(525, 527);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbNavegacion);

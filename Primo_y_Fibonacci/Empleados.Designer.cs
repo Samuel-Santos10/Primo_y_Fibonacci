@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
+            System.Windows.Forms.Label label14;
             this.label1 = new System.Windows.Forms.Label();
             this.GrbDatosEmpleado = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
             this.GrbDatosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Grbempleado.SuspendLayout();
@@ -79,7 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 328);
+            this.label1.Location = new System.Drawing.Point(196, 385);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 19;
@@ -87,7 +89,8 @@
             // 
             // GrbDatosEmpleado
             // 
-            this.GrbDatosEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbDatosEmpleado.BackColor = System.Drawing.Color.Moccasin;
+            this.GrbDatosEmpleado.Controls.Add(label14);
             this.GrbDatosEmpleado.Controls.Add(this.label13);
             this.GrbDatosEmpleado.Controls.Add(this.lblidemple);
             this.GrbDatosEmpleado.Controls.Add(this.BtnBuscarTipoEmpleado);
@@ -111,16 +114,15 @@
             this.GrbDatosEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrbDatosEmpleado.Location = new System.Drawing.Point(0, 1);
             this.GrbDatosEmpleado.Name = "GrbDatosEmpleado";
-            this.GrbDatosEmpleado.Size = new System.Drawing.Size(525, 312);
+            this.GrbDatosEmpleado.Size = new System.Drawing.Size(525, 367);
             this.GrbDatosEmpleado.TabIndex = 18;
             this.GrbDatosEmpleado.TabStop = false;
-            this.GrbDatosEmpleado.Text = "DATOS DE EMPLEADO";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(403, 53);
+            this.label13.Location = new System.Drawing.Point(403, 103);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 29;
@@ -130,7 +132,7 @@
             // 
             this.lblidemple.AutoSize = true;
             this.lblidemple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidemple.Location = new System.Drawing.Point(242, 66);
+            this.lblidemple.Location = new System.Drawing.Point(242, 116);
             this.lblidemple.Name = "lblidemple";
             this.lblidemple.Size = new System.Drawing.Size(0, 13);
             this.lblidemple.TabIndex = 29;
@@ -140,7 +142,7 @@
             this.BtnBuscarTipoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarTipoEmpleado.BackgroundImage")));
             this.BtnBuscarTipoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscarTipoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscarTipoEmpleado.Location = new System.Drawing.Point(404, 29);
+            this.BtnBuscarTipoEmpleado.Location = new System.Drawing.Point(404, 79);
             this.BtnBuscarTipoEmpleado.Name = "BtnBuscarTipoEmpleado";
             this.BtnBuscarTipoEmpleado.Size = new System.Drawing.Size(47, 21);
             this.BtnBuscarTipoEmpleado.TabIndex = 28;
@@ -150,7 +152,7 @@
             // cbotipoEmple
             // 
             this.cbotipoEmple.FormattingEnabled = true;
-            this.cbotipoEmple.Location = new System.Drawing.Point(233, 26);
+            this.cbotipoEmple.Location = new System.Drawing.Point(233, 76);
             this.cbotipoEmple.Margin = new System.Windows.Forms.Padding(1);
             this.cbotipoEmple.Name = "cbotipoEmple";
             this.cbotipoEmple.Size = new System.Drawing.Size(154, 21);
@@ -160,7 +162,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(92, 29);
+            this.label9.Location = new System.Drawing.Point(92, 79);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 13);
@@ -169,7 +171,7 @@
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(234, 233);
+            this.txttelefono.Location = new System.Drawing.Point(234, 283);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 26;
@@ -178,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(162, 101);
+            this.label4.Location = new System.Drawing.Point(162, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 11;
@@ -188,7 +190,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(145, 236);
+            this.label8.Location = new System.Drawing.Point(145, 286);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 25;
@@ -196,14 +198,14 @@
             // 
             // txtcodigoEmp
             // 
-            this.txtcodigoEmp.Location = new System.Drawing.Point(234, 98);
+            this.txtcodigoEmp.Location = new System.Drawing.Point(234, 148);
             this.txtcodigoEmp.Name = "txtcodigoEmp";
             this.txtcodigoEmp.Size = new System.Drawing.Size(100, 20);
             this.txtcodigoEmp.TabIndex = 12;
             // 
             // txtnit
             // 
-            this.txtnit.Location = new System.Drawing.Point(234, 198);
+            this.txtnit.Location = new System.Drawing.Point(234, 248);
             this.txtnit.Name = "txtnit";
             this.txtnit.Size = new System.Drawing.Size(100, 20);
             this.txtnit.TabIndex = 24;
@@ -212,7 +214,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(189, 201);
+            this.label7.Location = new System.Drawing.Point(189, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 23;
@@ -222,7 +224,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 93);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 143);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +233,7 @@
             // 
             // txtdireccionEmp
             // 
-            this.txtdireccionEmp.Location = new System.Drawing.Point(234, 266);
+            this.txtdireccionEmp.Location = new System.Drawing.Point(234, 316);
             this.txtdireccionEmp.Multiline = true;
             this.txtdireccionEmp.Name = "txtdireccionEmp";
             this.txtdireccionEmp.Size = new System.Drawing.Size(282, 39);
@@ -241,7 +243,7 @@
             // 
             this.LblIDCliente.AutoSize = true;
             this.LblIDCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCliente.Location = new System.Drawing.Point(196, 66);
+            this.LblIDCliente.Location = new System.Drawing.Point(196, 116);
             this.LblIDCliente.Name = "LblIDCliente";
             this.LblIDCliente.Size = new System.Drawing.Size(24, 13);
             this.LblIDCliente.TabIndex = 1;
@@ -251,7 +253,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(157, 134);
+            this.LblNombre.Location = new System.Drawing.Point(157, 184);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 3;
@@ -261,7 +263,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(142, 269);
+            this.LblDireccion.Location = new System.Drawing.Point(142, 319);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(79, 13);
             this.LblDireccion.TabIndex = 7;
@@ -269,14 +271,14 @@
             // 
             // txtnomEmpl
             // 
-            this.txtnomEmpl.Location = new System.Drawing.Point(234, 131);
+            this.txtnomEmpl.Location = new System.Drawing.Point(234, 181);
             this.txtnomEmpl.Name = "txtnomEmpl";
             this.txtnomEmpl.Size = new System.Drawing.Size(193, 20);
             this.txtnomEmpl.TabIndex = 4;
             // 
             // txtdui
             // 
-            this.txtdui.Location = new System.Drawing.Point(234, 166);
+            this.txtdui.Location = new System.Drawing.Point(234, 216);
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(100, 20);
             this.txtdui.TabIndex = 6;
@@ -285,7 +287,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(188, 169);
+            this.LblEmail.Location = new System.Drawing.Point(188, 219);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(33, 13);
             this.LblEmail.TabIndex = 5;
@@ -293,7 +295,7 @@
             // 
             // Grbempleado
             // 
-            this.Grbempleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Grbempleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Grbempleado.Controls.Add(this.label6);
             this.Grbempleado.Controls.Add(this.button1);
             this.Grbempleado.Controls.Add(this.label3);
@@ -305,7 +307,7 @@
             this.Grbempleado.Controls.Add(this.BtnModificar);
             this.Grbempleado.Controls.Add(this.BtnNuevo);
             this.Grbempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grbempleado.Location = new System.Drawing.Point(0, 453);
+            this.Grbempleado.Location = new System.Drawing.Point(0, 510);
             this.Grbempleado.Name = "Grbempleado";
             this.Grbempleado.Size = new System.Drawing.Size(525, 96);
             this.Grbempleado.TabIndex = 17;
@@ -428,14 +430,14 @@
             // 
             // GrbNavegacion
             // 
-            this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.GrbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.GrbNavegacion.Controls.Add(this.lblnregistros);
             this.GrbNavegacion.Controls.Add(this.BtnAnterior);
             this.GrbNavegacion.Controls.Add(this.BtnPrimero);
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(-1, 350);
+            this.GrbNavegacion.Location = new System.Drawing.Point(-1, 410);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 16;
@@ -453,7 +455,7 @@
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAnterior.BackColor = System.Drawing.Color.Blue;
             this.BtnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.BackgroundImage")));
             this.BtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -466,7 +468,7 @@
             // 
             // BtnPrimero
             // 
-            this.BtnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPrimero.BackColor = System.Drawing.Color.Blue;
             this.BtnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrimero.BackgroundImage")));
             this.BtnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -479,7 +481,7 @@
             // 
             // BtnSiguiente
             // 
-            this.BtnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.BtnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSiguiente.BackgroundImage")));
             this.BtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -492,7 +494,7 @@
             // 
             // BtnUltimo
             // 
-            this.BtnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnUltimo.BackColor = System.Drawing.Color.Blue;
             this.BtnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.BackgroundImage")));
             this.BtnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -508,11 +510,22 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(208, 427);
+            this.label5.Location = new System.Drawing.Point(208, 484);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "OPCIONES";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = System.Drawing.Color.Transparent;
+            label14.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label14.Location = new System.Drawing.Point(153, 16);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(223, 38);
+            label14.TabIndex = 40;
+            label14.Text = "EMPLEADOS";
             // 
             // Empleados
             // 
@@ -520,7 +533,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(525, 562);
+            this.ClientSize = new System.Drawing.Size(525, 617);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbDatosEmpleado);

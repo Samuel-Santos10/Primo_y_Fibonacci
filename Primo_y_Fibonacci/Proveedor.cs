@@ -203,5 +203,11 @@ namespace Primo_y_Fibonacci
         {
             Close();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Impresion_Proveedor imprimir = new Impresion_Proveedor(int.Parse(txtidProveedor.Text));
+            imprimir.ShowDialog();
+        }
     }
 }

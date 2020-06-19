@@ -42,22 +42,32 @@
             this.factura_compraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.factura_compraTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.factura_compraTableAdapter();
             this.tableAdapterManager = new Primo_y_Fibonacci.ControlDataSetTableAdapters.TableAdapterManager();
+            this.condiciones_pagosTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.condiciones_pagosTableAdapter();
+            this.dfactura_CTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Dfactura_CTableAdapter();
+            this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
+            this.tipo_documentoTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Tipo_documentoTableAdapter();
             this.idFacturaCTextBox = new System.Windows.Forms.TextBox();
             this.idProveedorComboBox = new System.Windows.Forms.ComboBox();
+            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoventaComboBox = new System.Windows.Forms.ComboBox();
+            this.tipodocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idPagoComboBox = new System.Windows.Forms.ComboBox();
+            this.condicionespagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechafacturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.fechaODCDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.nfacturaTextBox = new System.Windows.Forms.TextBox();
             this.dFacturaCompraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dFacturaCompraTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.DFacturaCompraTableAdapter();
             this.dFacturaCompraDataGridView = new System.Windows.Forms.DataGridView();
-            this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
-            this.tipodocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipo_documentoTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Tipo_documentoTableAdapter();
-            this.condicionespagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.condiciones_pagosTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.condiciones_pagosTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdFacturaC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnsalir = new System.Windows.Forms.Button();
             this.pnlProductosGrid = new System.Windows.Forms.Panel();
             this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
@@ -80,17 +90,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dfactura_CTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Dfactura_CTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdFacturaC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio_envio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnImprimir = new System.Windows.Forms.Button();
             idFacturaCLabel = new System.Windows.Forms.Label();
             idProveedorLabel = new System.Windows.Forms.Label();
             idTipoLabel = new System.Windows.Forms.Label();
@@ -101,16 +101,90 @@
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.controlDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.factura_compraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.condicionespagosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraDataGridView)).BeginInit();
             this.pnlProductosGrid.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlNavegacion.SuspendLayout();
             this.pnlEdicion.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idFacturaCLabel
+            // 
+            idFacturaCLabel.AutoSize = true;
+            idFacturaCLabel.Location = new System.Drawing.Point(273, 172);
+            idFacturaCLabel.Name = "idFacturaCLabel";
+            idFacturaCLabel.Size = new System.Drawing.Size(18, 13);
+            idFacturaCLabel.TabIndex = 1;
+            idFacturaCLabel.Text = "ID";
+            // 
+            // idProveedorLabel
+            // 
+            idProveedorLabel.AutoSize = true;
+            idProveedorLabel.Location = new System.Drawing.Point(20, 172);
+            idProveedorLabel.Name = "idProveedorLabel";
+            idProveedorLabel.Size = new System.Drawing.Size(75, 13);
+            idProveedorLabel.TabIndex = 3;
+            idProveedorLabel.Text = "PROVEEDOR";
+            // 
+            // idTipoLabel
+            // 
+            idTipoLabel.AutoSize = true;
+            idTipoLabel.Location = new System.Drawing.Point(333, 230);
+            idTipoLabel.Name = "idTipoLabel";
+            idTipoLabel.Size = new System.Drawing.Size(43, 13);
+            idTipoLabel.TabIndex = 5;
+            idTipoLabel.Text = "Id Tipo:";
+            // 
+            // idPagoLabel
+            // 
+            idPagoLabel.AutoSize = true;
+            idPagoLabel.Location = new System.Drawing.Point(518, 230);
+            idPagoLabel.Name = "idPagoLabel";
+            idPagoLabel.Size = new System.Drawing.Size(47, 13);
+            idPagoLabel.TabIndex = 7;
+            idPagoLabel.Text = "Id Pago:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(424, 175);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(37, 13);
+            fechaLabel.TabIndex = 9;
+            fechaLabel.Text = "fecha:";
+            // 
+            // fechaODCLabel
+            // 
+            fechaODCLabel.AutoSize = true;
+            fechaODCLabel.Location = new System.Drawing.Point(20, 232);
+            fechaODCLabel.Name = "fechaODCLabel";
+            fechaODCLabel.Size = new System.Drawing.Size(63, 13);
+            fechaODCLabel.TabIndex = 11;
+            fechaODCLabel.Text = "fecha ODC:";
+            // 
+            // nfacturaLabel
+            // 
+            nfacturaLabel.AutoSize = true;
+            nfacturaLabel.Location = new System.Drawing.Point(468, 121);
+            nfacturaLabel.Name = "nfacturaLabel";
+            nfacturaLabel.Size = new System.Drawing.Size(49, 13);
+            nfacturaLabel.TabIndex = 13;
+            nfacturaLabel.Text = "nfactura:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label2.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(132, 52);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(329, 38);
+            label2.TabIndex = 36;
+            label2.Text = "FACTURA COMPRA";
             // 
             // controlDataSet
             // 
@@ -151,14 +225,21 @@
             this.tableAdapterManager.UsuariosTableAdapter = null;
             this.tableAdapterManager.VentasTableAdapter = null;
             // 
-            // idFacturaCLabel
+            // condiciones_pagosTableAdapter
             // 
-            idFacturaCLabel.AutoSize = true;
-            idFacturaCLabel.Location = new System.Drawing.Point(273, 172);
-            idFacturaCLabel.Name = "idFacturaCLabel";
-            idFacturaCLabel.Size = new System.Drawing.Size(68, 13);
-            idFacturaCLabel.TabIndex = 1;
-            idFacturaCLabel.Text = "Id Factura C:";
+            this.condiciones_pagosTableAdapter.ClearBeforeFill = true;
+            // 
+            // dfactura_CTableAdapter1
+            // 
+            this.dfactura_CTableAdapter1.ClearBeforeFill = true;
+            // 
+            // proveedorTableAdapter
+            // 
+            this.proveedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipo_documentoTableAdapter
+            // 
+            this.tipo_documentoTableAdapter.ClearBeforeFill = true;
             // 
             // idFacturaCTextBox
             // 
@@ -168,15 +249,6 @@
             this.idFacturaCTextBox.ReadOnly = true;
             this.idFacturaCTextBox.Size = new System.Drawing.Size(61, 20);
             this.idFacturaCTextBox.TabIndex = 2;
-            // 
-            // idProveedorLabel
-            // 
-            idProveedorLabel.AutoSize = true;
-            idProveedorLabel.Location = new System.Drawing.Point(20, 172);
-            idProveedorLabel.Name = "idProveedorLabel";
-            idProveedorLabel.Size = new System.Drawing.Size(71, 13);
-            idProveedorLabel.TabIndex = 3;
-            idProveedorLabel.Text = "Id Proveedor:";
             // 
             // idProveedorComboBox
             // 
@@ -192,14 +264,10 @@
             this.idProveedorComboBox.TabIndex = 4;
             this.idProveedorComboBox.ValueMember = "IdProveedor";
             // 
-            // idTipoLabel
+            // proveedorBindingSource
             // 
-            idTipoLabel.AutoSize = true;
-            idTipoLabel.Location = new System.Drawing.Point(333, 230);
-            idTipoLabel.Name = "idTipoLabel";
-            idTipoLabel.Size = new System.Drawing.Size(43, 13);
-            idTipoLabel.TabIndex = 5;
-            idTipoLabel.Text = "Id Tipo:";
+            this.proveedorBindingSource.DataMember = "Proveedor";
+            this.proveedorBindingSource.DataSource = this.controlDataSet;
             // 
             // tipoventaComboBox
             // 
@@ -215,14 +283,10 @@
             this.tipoventaComboBox.TabIndex = 6;
             this.tipoventaComboBox.ValueMember = "IdTipo";
             // 
-            // idPagoLabel
+            // tipodocumentoBindingSource
             // 
-            idPagoLabel.AutoSize = true;
-            idPagoLabel.Location = new System.Drawing.Point(518, 230);
-            idPagoLabel.Name = "idPagoLabel";
-            idPagoLabel.Size = new System.Drawing.Size(47, 13);
-            idPagoLabel.TabIndex = 7;
-            idPagoLabel.Text = "Id Pago:";
+            this.tipodocumentoBindingSource.DataMember = "Tipo_documento";
+            this.tipodocumentoBindingSource.DataSource = this.controlDataSet;
             // 
             // idPagoComboBox
             // 
@@ -238,14 +302,10 @@
             this.idPagoComboBox.TabIndex = 8;
             this.idPagoComboBox.ValueMember = "IdPago";
             // 
-            // fechaLabel
+            // condicionespagosBindingSource
             // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(424, 175);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(37, 13);
-            fechaLabel.TabIndex = 9;
-            fechaLabel.Text = "fecha:";
+            this.condicionespagosBindingSource.DataMember = "condiciones_pagos";
+            this.condicionespagosBindingSource.DataSource = this.controlDataSet;
             // 
             // fechafacturaDateTimePicker
             // 
@@ -256,15 +316,6 @@
             this.fechafacturaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechafacturaDateTimePicker.TabIndex = 10;
             // 
-            // fechaODCLabel
-            // 
-            fechaODCLabel.AutoSize = true;
-            fechaODCLabel.Location = new System.Drawing.Point(20, 232);
-            fechaODCLabel.Name = "fechaODCLabel";
-            fechaODCLabel.Size = new System.Drawing.Size(63, 13);
-            fechaODCLabel.TabIndex = 11;
-            fechaODCLabel.Text = "fecha ODC:";
-            // 
             // fechaODCDateTimePicker
             // 
             this.fechaODCDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.factura_compraBindingSource, "fechaODC", true));
@@ -273,15 +324,6 @@
             this.fechaODCDateTimePicker.Name = "fechaODCDateTimePicker";
             this.fechaODCDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaODCDateTimePicker.TabIndex = 12;
-            // 
-            // nfacturaLabel
-            // 
-            nfacturaLabel.AutoSize = true;
-            nfacturaLabel.Location = new System.Drawing.Point(468, 121);
-            nfacturaLabel.Name = "nfacturaLabel";
-            nfacturaLabel.Size = new System.Drawing.Size(49, 13);
-            nfacturaLabel.TabIndex = 13;
-            nfacturaLabel.Text = "nfactura:";
             // 
             // nfacturaTextBox
             // 
@@ -316,7 +358,6 @@
             this.cantidad,
             this.precio,
             this.descuento,
-            this.precio_envio,
             this.subtotal});
             this.dFacturaCompraDataGridView.DataSource = this.dFacturaCompraBindingSource;
             this.dFacturaCompraDataGridView.Location = new System.Drawing.Point(-1, 327);
@@ -325,43 +366,71 @@
             this.dFacturaCompraDataGridView.Size = new System.Drawing.Size(689, 164);
             this.dFacturaCompraDataGridView.TabIndex = 15;
             // 
-            // proveedorBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.proveedorBindingSource.DataMember = "Proveedor";
-            this.proveedorBindingSource.DataSource = this.controlDataSet;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDFacturaC";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdDFacturaC";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // proveedorTableAdapter
+            // IdFacturaC
             // 
-            this.proveedorTableAdapter.ClearBeforeFill = true;
+            this.IdFacturaC.DataPropertyName = "IdFacturaC";
+            this.IdFacturaC.HeaderText = "IdFacturaC";
+            this.IdFacturaC.Name = "IdFacturaC";
+            this.IdFacturaC.ReadOnly = true;
+            this.IdFacturaC.Visible = false;
             // 
-            // tipodocumentoBindingSource
+            // IdProducto
             // 
-            this.tipodocumentoBindingSource.DataMember = "Tipo_documento";
-            this.tipodocumentoBindingSource.DataSource = this.controlDataSet;
+            this.IdProducto.DataPropertyName = "IdProducto";
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            this.IdProducto.Visible = false;
             // 
-            // tipo_documentoTableAdapter
+            // codigo
             // 
-            this.tipo_documentoTableAdapter.ClearBeforeFill = true;
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "codigo";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             // 
-            // condicionespagosBindingSource
+            // nombre
             // 
-            this.condicionespagosBindingSource.DataMember = "condiciones_pagos";
-            this.condicionespagosBindingSource.DataSource = this.controlDataSet;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
-            // condiciones_pagosTableAdapter
+            // cantidad
             // 
-            this.condiciones_pagosTableAdapter.ClearBeforeFill = true;
+            this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
             // 
-            // label2
+            // precio
             // 
-            label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(132, 52);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(329, 38);
-            label2.TabIndex = 36;
-            label2.Text = "FACTURA COMPRA";
+            this.precio.DataPropertyName = "precio";
+            this.precio.HeaderText = "precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // descuento
+            // 
+            this.descuento.DataPropertyName = "descuento";
+            this.descuento.HeaderText = "descuento";
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.DataPropertyName = "subtotal";
+            this.subtotal.HeaderText = "subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // btnsalir
             // 
@@ -557,6 +626,7 @@
             // 
             this.pnlEdicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlEdicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdicion.Controls.Add(this.btnImprimir);
             this.pnlEdicion.Controls.Add(this.btnBuscar);
             this.pnlEdicion.Controls.Add(this.btnAgregar);
             this.pnlEdicion.Controls.Add(this.btnModificar);
@@ -568,7 +638,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(478, 0);
+            this.btnBuscar.Location = new System.Drawing.Point(457, -1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(67, 33);
             this.btnBuscar.TabIndex = 3;
@@ -577,7 +647,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(53, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(53, -1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(67, 33);
             this.btnAgregar.TabIndex = 0;
@@ -587,7 +657,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(202, 0);
+            this.btnModificar.Location = new System.Drawing.Point(196, -1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(67, 33);
             this.btnModificar.TabIndex = 1;
@@ -597,89 +667,21 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(338, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(321, -1);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 33);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dfactura_CTableAdapter1
+            // btnImprimir
             // 
-            this.dfactura_CTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdDFacturaC";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdDFacturaC";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // IdFacturaC
-            // 
-            this.IdFacturaC.DataPropertyName = "IdFacturaC";
-            this.IdFacturaC.HeaderText = "IdFacturaC";
-            this.IdFacturaC.Name = "IdFacturaC";
-            this.IdFacturaC.ReadOnly = true;
-            this.IdFacturaC.Visible = false;
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.DataPropertyName = "IdProducto";
-            this.IdProducto.HeaderText = "IdProducto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            this.IdProducto.Visible = false;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.DataPropertyName = "cantidad";
-            this.cantidad.HeaderText = "cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.HeaderText = "precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // descuento
-            // 
-            this.descuento.DataPropertyName = "descuento";
-            this.descuento.HeaderText = "descuento";
-            this.descuento.Name = "descuento";
-            this.descuento.ReadOnly = true;
-            // 
-            // precio_envio
-            // 
-            this.precio_envio.DataPropertyName = "precio_envio";
-            this.precio_envio.HeaderText = "precio_envio";
-            this.precio_envio.Name = "precio_envio";
-            this.precio_envio.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.DataPropertyName = "subtotal";
-            this.subtotal.HeaderText = "subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
+            this.btnImprimir.Location = new System.Drawing.Point(570, -1);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(67, 33);
+            this.btnImprimir.TabIndex = 48;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // Factura_Compra
             // 
@@ -714,11 +716,11 @@
             this.Load += new System.EventHandler(this.Factura_Compra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.controlDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.factura_compraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.condicionespagosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dFacturaCompraDataGridView)).EndInit();
             this.pnlProductosGrid.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -785,5 +787,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio_envio;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoUsuario));
+            System.Windows.Forms.Label label7;
             this.GrbDatosTipoUsuario = new System.Windows.Forms.GroupBox();
             this.LblTipo = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
+            label7 = new System.Windows.Forms.Label();
             this.GrbDatosTipoUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbNavegacion.SuspendLayout();
@@ -63,6 +65,7 @@
             // GrbDatosTipoUsuario
             // 
             this.GrbDatosTipoUsuario.BackColor = System.Drawing.Color.Thistle;
+            this.GrbDatosTipoUsuario.Controls.Add(label7);
             this.GrbDatosTipoUsuario.Controls.Add(this.LblTipo);
             this.GrbDatosTipoUsuario.Controls.Add(this.LblNombre);
             this.GrbDatosTipoUsuario.Controls.Add(this.TxtNombre);
@@ -72,16 +75,15 @@
             this.GrbDatosTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrbDatosTipoUsuario.Location = new System.Drawing.Point(1, 0);
             this.GrbDatosTipoUsuario.Name = "GrbDatosTipoUsuario";
-            this.GrbDatosTipoUsuario.Size = new System.Drawing.Size(515, 216);
+            this.GrbDatosTipoUsuario.Size = new System.Drawing.Size(515, 220);
             this.GrbDatosTipoUsuario.TabIndex = 16;
             this.GrbDatosTipoUsuario.TabStop = false;
-            this.GrbDatosTipoUsuario.Text = "DATOS DE TIPO USUARIO";
             // 
             // LblTipo
             // 
             this.LblTipo.AutoSize = true;
             this.LblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipo.Location = new System.Drawing.Point(314, 61);
+            this.LblTipo.Location = new System.Drawing.Point(314, 89);
             this.LblTipo.Name = "LblTipo";
             this.LblTipo.Size = new System.Drawing.Size(0, 13);
             this.LblTipo.TabIndex = 13;
@@ -90,7 +92,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(180, 121);
+            this.LblNombre.Location = new System.Drawing.Point(180, 149);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(64, 13);
             this.LblNombre.TabIndex = 11;
@@ -98,7 +100,7 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(251, 118);
+            this.TxtNombre.Location = new System.Drawing.Point(251, 146);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(200, 20);
             this.TxtNombre.TabIndex = 12;
@@ -107,7 +109,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +120,7 @@
             // 
             this.LblIdTipousuario.AutoSize = true;
             this.LblIdTipousuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdTipousuario.Location = new System.Drawing.Point(182, 61);
+            this.LblIdTipousuario.Location = new System.Drawing.Point(182, 89);
             this.LblIdTipousuario.Name = "LblIdTipousuario";
             this.LblIdTipousuario.Size = new System.Drawing.Size(117, 13);
             this.LblIdTipousuario.TabIndex = 1;
@@ -129,7 +131,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 231);
+            this.label1.Location = new System.Drawing.Point(197, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 23;
@@ -144,7 +146,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(1, 261);
+            this.GrbNavegacion.Location = new System.Drawing.Point(1, 256);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(515, 62);
             this.GrbNavegacion.TabIndex = 24;
@@ -162,7 +164,7 @@
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAnterior.BackColor = System.Drawing.Color.Blue;
             this.BtnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.BackgroundImage")));
             this.BtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -175,7 +177,7 @@
             // 
             // BtnPrimero
             // 
-            this.BtnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPrimero.BackColor = System.Drawing.Color.Blue;
             this.BtnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrimero.BackgroundImage")));
             this.BtnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -188,7 +190,7 @@
             // 
             // BtnSiguiente
             // 
-            this.BtnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.BtnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSiguiente.BackgroundImage")));
             this.BtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -201,7 +203,7 @@
             // 
             // BtnUltimo
             // 
-            this.BtnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnUltimo.BackColor = System.Drawing.Color.Blue;
             this.BtnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.BackgroundImage")));
             this.BtnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -217,7 +219,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(208, 326);
+            this.label4.Location = new System.Drawing.Point(206, 327);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 25;
@@ -237,9 +239,9 @@
             this.GrbOpciones.Controls.Add(this.BtnModificar);
             this.GrbOpciones.Controls.Add(this.BtnNuevo);
             this.GrbOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbOpciones.Location = new System.Drawing.Point(1, 346);
+            this.GrbOpciones.Location = new System.Drawing.Point(1, 350);
             this.GrbOpciones.Name = "GrbOpciones";
-            this.GrbOpciones.Size = new System.Drawing.Size(515, 96);
+            this.GrbOpciones.Size = new System.Drawing.Size(515, 92);
             this.GrbOpciones.TabIndex = 26;
             this.GrbOpciones.TabStop = false;
             // 
@@ -357,6 +359,17 @@
             this.BtnNuevo.TabIndex = 4;
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = System.Drawing.Color.Transparent;
+            label7.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.Location = new System.Drawing.Point(116, 16);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(293, 38);
+            label7.TabIndex = 39;
+            label7.Text = "TIPOS USUARIOS";
             // 
             // TipoUsuario
             // 

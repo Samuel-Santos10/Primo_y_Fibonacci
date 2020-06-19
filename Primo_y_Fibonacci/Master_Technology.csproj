@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -166,6 +170,12 @@
     <Compile Include="Factura_Venta.Designer.cs">
       <DependentUpon>Factura_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Impresion_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impresion_Proveedor.Designer.cs">
+      <DependentUpon>Impresion_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +286,9 @@
     <EmbeddedResource Include="Factura_Venta.resx">
       <DependentUpon>Factura_Venta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Impresion_Proveedor.resx">
+      <DependentUpon>Impresion_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +319,7 @@
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportProveedor.rdlc" />
     <EmbeddedResource Include="TipoUsuario.resx">
       <DependentUpon>TipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +340,7 @@
     <None Include="ControlDataSet.xss">
       <DependentUpon>ControlDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
+            System.Windows.Forms.Label label14;
             this.GrbDatosInventario = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.BtnBuscarInventarioProducto = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
+            label14 = new System.Windows.Forms.Label();
             this.GrbDatosInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -71,6 +73,7 @@
             // GrbDatosInventario
             // 
             this.GrbDatosInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GrbDatosInventario.Controls.Add(label14);
             this.GrbDatosInventario.Controls.Add(this.label13);
             this.GrbDatosInventario.Controls.Add(this.BtnBuscarInventarioProducto);
             this.GrbDatosInventario.Controls.Add(this.lblidventas);
@@ -88,16 +91,15 @@
             this.GrbDatosInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrbDatosInventario.Location = new System.Drawing.Point(2, 2);
             this.GrbDatosInventario.Name = "GrbDatosInventario";
-            this.GrbDatosInventario.Size = new System.Drawing.Size(525, 276);
+            this.GrbDatosInventario.Size = new System.Drawing.Size(525, 289);
             this.GrbDatosInventario.TabIndex = 19;
             this.GrbDatosInventario.TabStop = false;
-            this.GrbDatosInventario.Text = "DATOS DE INVENTARIO";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(471, 61);
+            this.label13.Location = new System.Drawing.Point(461, 109);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 33;
@@ -108,7 +110,7 @@
             this.BtnBuscarInventarioProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarInventarioProducto.BackgroundImage")));
             this.BtnBuscarInventarioProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscarInventarioProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscarInventarioProducto.Location = new System.Drawing.Point(472, 37);
+            this.BtnBuscarInventarioProducto.Location = new System.Drawing.Point(462, 85);
             this.BtnBuscarInventarioProducto.Name = "BtnBuscarInventarioProducto";
             this.BtnBuscarInventarioProducto.Size = new System.Drawing.Size(47, 21);
             this.BtnBuscarInventarioProducto.TabIndex = 32;
@@ -119,7 +121,7 @@
             // 
             this.lblidventas.AutoSize = true;
             this.lblidventas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidventas.Location = new System.Drawing.Point(324, 120);
+            this.lblidventas.Location = new System.Drawing.Point(314, 168);
             this.lblidventas.Name = "lblidventas";
             this.lblidventas.Size = new System.Drawing.Size(0, 13);
             this.lblidventas.TabIndex = 31;
@@ -128,7 +130,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(211, 120);
+            this.label7.Location = new System.Drawing.Point(201, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 30;
@@ -138,7 +140,7 @@
             // 
             this.lblidinventario.AutoSize = true;
             this.lblidinventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidinventario.Location = new System.Drawing.Point(324, 80);
+            this.lblidinventario.Location = new System.Drawing.Point(314, 128);
             this.lblidinventario.Name = "lblidinventario";
             this.lblidinventario.Size = new System.Drawing.Size(0, 13);
             this.lblidinventario.TabIndex = 29;
@@ -146,7 +148,7 @@
             // cbotInventProducto
             // 
             this.cbotInventProducto.FormattingEnabled = true;
-            this.cbotInventProducto.Location = new System.Drawing.Point(310, 37);
+            this.cbotInventProducto.Location = new System.Drawing.Point(300, 85);
             this.cbotInventProducto.Margin = new System.Windows.Forms.Padding(1);
             this.cbotInventProducto.Name = "cbotInventProducto";
             this.cbotInventProducto.Size = new System.Drawing.Size(154, 21);
@@ -156,7 +158,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(208, 40);
+            this.label9.Location = new System.Drawing.Point(198, 88);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
@@ -167,7 +169,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 102);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +180,7 @@
             // 
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.Location = new System.Drawing.Point(264, 80);
+            this.LblID.Location = new System.Drawing.Point(254, 128);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(24, 13);
             this.LblID.TabIndex = 1;
@@ -188,7 +190,7 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(213, 163);
+            this.LblNombre.Location = new System.Drawing.Point(203, 211);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(75, 13);
             this.LblNombre.TabIndex = 3;
@@ -196,14 +198,14 @@
             // 
             // txtunidades
             // 
-            this.txtunidades.Location = new System.Drawing.Point(310, 160);
+            this.txtunidades.Location = new System.Drawing.Point(300, 208);
             this.txtunidades.Name = "txtunidades";
             this.txtunidades.Size = new System.Drawing.Size(100, 20);
             this.txtunidades.TabIndex = 4;
             // 
             // txtcantExistente
             // 
-            this.txtcantExistente.Location = new System.Drawing.Point(310, 204);
+            this.txtcantExistente.Location = new System.Drawing.Point(300, 252);
             this.txtcantExistente.Name = "txtcantExistente";
             this.txtcantExistente.Size = new System.Drawing.Size(100, 20);
             this.txtcantExistente.TabIndex = 6;
@@ -212,7 +214,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(141, 207);
+            this.LblEmail.Location = new System.Drawing.Point(131, 255);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(147, 13);
             this.LblEmail.TabIndex = 5;
@@ -224,7 +226,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(215, 416);
+            this.label1.Location = new System.Drawing.Point(215, 419);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 27;
@@ -236,7 +238,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(200, 299);
+            this.label2.Location = new System.Drawing.Point(200, 307);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 26;
@@ -256,7 +258,7 @@
             this.GrbCliente.Controls.Add(this.BtnModificar);
             this.GrbCliente.Controls.Add(this.BtnNuevo);
             this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 449);
+            this.GrbCliente.Location = new System.Drawing.Point(0, 452);
             this.GrbCliente.Name = "GrbCliente";
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 25;
@@ -386,7 +388,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(0, 334);
+            this.GrbNavegacion.Location = new System.Drawing.Point(0, 337);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 24;
@@ -404,7 +406,7 @@
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAnterior.BackColor = System.Drawing.Color.Blue;
             this.BtnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.BackgroundImage")));
             this.BtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -417,7 +419,7 @@
             // 
             // BtnPrimero
             // 
-            this.BtnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPrimero.BackColor = System.Drawing.Color.Blue;
             this.BtnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrimero.BackgroundImage")));
             this.BtnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -430,7 +432,7 @@
             // 
             // BtnSiguiente
             // 
-            this.BtnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.BtnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSiguiente.BackgroundImage")));
             this.BtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -443,7 +445,7 @@
             // 
             // BtnUltimo
             // 
-            this.BtnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnUltimo.BackColor = System.Drawing.Color.Blue;
             this.BtnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.BackgroundImage")));
             this.BtnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -453,6 +455,17 @@
             this.BtnUltimo.TabIndex = 3;
             this.BtnUltimo.UseVisualStyleBackColor = false;
             this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = System.Drawing.Color.Transparent;
+            label14.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label14.Location = new System.Drawing.Point(132, 16);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(240, 38);
+            label14.TabIndex = 41;
+            label14.Text = "INVENTARIO";
             // 
             // Inventario
             // 

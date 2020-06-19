@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
+            System.Windows.Forms.Label label14;
             this.GrbDatosProducto = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.BtnBuscarCategoriaProducto = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.BtnSiguiente = new System.Windows.Forms.Button();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
             this.GrbDatosProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
@@ -79,6 +81,7 @@
             // GrbDatosProducto
             // 
             this.GrbDatosProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.GrbDatosProducto.Controls.Add(label14);
             this.GrbDatosProducto.Controls.Add(this.label13);
             this.GrbDatosProducto.Controls.Add(this.BtnBuscarCategoriaProducto);
             this.GrbDatosProducto.Controls.Add(this.txtmedida);
@@ -106,16 +109,15 @@
             this.GrbDatosProducto.Margin = new System.Windows.Forms.Padding(1);
             this.GrbDatosProducto.Name = "GrbDatosProducto";
             this.GrbDatosProducto.Padding = new System.Windows.Forms.Padding(1);
-            this.GrbDatosProducto.Size = new System.Drawing.Size(524, 314);
+            this.GrbDatosProducto.Size = new System.Drawing.Size(524, 370);
             this.GrbDatosProducto.TabIndex = 7;
             this.GrbDatosProducto.TabStop = false;
-            this.GrbDatosProducto.Text = "DATOS PRODUCTOS";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(449, 58);
+            this.label13.Location = new System.Drawing.Point(449, 106);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 27;
@@ -126,7 +128,7 @@
             this.BtnBuscarCategoriaProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscarCategoriaProducto.BackgroundImage")));
             this.BtnBuscarCategoriaProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscarCategoriaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscarCategoriaProducto.Location = new System.Drawing.Point(450, 34);
+            this.BtnBuscarCategoriaProducto.Location = new System.Drawing.Point(450, 82);
             this.BtnBuscarCategoriaProducto.Name = "BtnBuscarCategoriaProducto";
             this.BtnBuscarCategoriaProducto.Size = new System.Drawing.Size(47, 21);
             this.BtnBuscarCategoriaProducto.TabIndex = 26;
@@ -135,7 +137,7 @@
             // 
             // txtmedida
             // 
-            this.txtmedida.Location = new System.Drawing.Point(290, 288);
+            this.txtmedida.Location = new System.Drawing.Point(290, 335);
             this.txtmedida.Margin = new System.Windows.Forms.Padding(1);
             this.txtmedida.Name = "txtmedida";
             this.txtmedida.Size = new System.Drawing.Size(112, 20);
@@ -145,7 +147,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(209, 291);
+            this.label12.Location = new System.Drawing.Point(209, 338);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
@@ -154,7 +156,7 @@
             // 
             // txtcapacidad
             // 
-            this.txtcapacidad.Location = new System.Drawing.Point(290, 253);
+            this.txtcapacidad.Location = new System.Drawing.Point(290, 300);
             this.txtcapacidad.Margin = new System.Windows.Forms.Padding(1);
             this.txtcapacidad.Name = "txtcapacidad";
             this.txtcapacidad.Size = new System.Drawing.Size(112, 20);
@@ -164,7 +166,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(187, 256);
+            this.label11.Location = new System.Drawing.Point(187, 303);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 13);
@@ -173,7 +175,7 @@
             // 
             // txtmodelo
             // 
-            this.txtmodelo.Location = new System.Drawing.Point(290, 219);
+            this.txtmodelo.Location = new System.Drawing.Point(290, 266);
             this.txtmodelo.Margin = new System.Windows.Forms.Padding(1);
             this.txtmodelo.Name = "txtmodelo";
             this.txtmodelo.Size = new System.Drawing.Size(112, 20);
@@ -183,7 +185,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(205, 222);
+            this.label10.Location = new System.Drawing.Point(205, 269);
             this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 13);
@@ -194,7 +196,7 @@
             // 
             this.lblidProducto.AutoSize = true;
             this.lblidProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidProducto.Location = new System.Drawing.Point(296, 72);
+            this.lblidProducto.Location = new System.Drawing.Point(296, 120);
             this.lblidProducto.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblidProducto.Name = "lblidProducto";
             this.lblidProducto.Size = new System.Drawing.Size(0, 13);
@@ -202,7 +204,7 @@
             // 
             // txtmarca
             // 
-            this.txtmarca.Location = new System.Drawing.Point(290, 182);
+            this.txtmarca.Location = new System.Drawing.Point(290, 229);
             this.txtmarca.Margin = new System.Windows.Forms.Padding(1);
             this.txtmarca.Name = "txtmarca";
             this.txtmarca.Size = new System.Drawing.Size(112, 20);
@@ -212,7 +214,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(214, 185);
+            this.label9.Location = new System.Drawing.Point(214, 232);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 13);
@@ -223,7 +225,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 113);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,7 +235,7 @@
             // cboCategoriaProductos
             // 
             this.cboCategoriaProductos.FormattingEnabled = true;
-            this.cboCategoriaProductos.Location = new System.Drawing.Point(290, 34);
+            this.cboCategoriaProductos.Location = new System.Drawing.Point(290, 82);
             this.cboCategoriaProductos.Margin = new System.Windows.Forms.Padding(1);
             this.cboCategoriaProductos.Name = "cboCategoriaProductos";
             this.cboCategoriaProductos.Size = new System.Drawing.Size(154, 21);
@@ -241,7 +243,7 @@
             // 
             // txtproducto
             // 
-            this.txtproducto.Location = new System.Drawing.Point(290, 146);
+            this.txtproducto.Location = new System.Drawing.Point(290, 193);
             this.txtproducto.Margin = new System.Windows.Forms.Padding(1);
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(142, 20);
@@ -251,7 +253,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(204, 149);
+            this.label8.Location = new System.Drawing.Point(204, 196);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 13);
@@ -260,7 +262,7 @@
             // 
             // txtcodigoprod
             // 
-            this.txtcodigoprod.Location = new System.Drawing.Point(290, 108);
+            this.txtcodigoprod.Location = new System.Drawing.Point(290, 155);
             this.txtcodigoprod.Margin = new System.Windows.Forms.Padding(1);
             this.txtcodigoprod.Name = "txtcodigoprod";
             this.txtcodigoprod.Size = new System.Drawing.Size(112, 20);
@@ -270,7 +272,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(209, 111);
+            this.label7.Location = new System.Drawing.Point(209, 158);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
@@ -299,7 +301,7 @@
             // 
             this.lbldireccion.AutoSize = true;
             this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldireccion.Location = new System.Drawing.Point(186, 37);
+            this.lbldireccion.Location = new System.Drawing.Point(186, 85);
             this.lbldireccion.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lbldireccion.Name = "lbldireccion";
             this.lbldireccion.Size = new System.Drawing.Size(82, 13);
@@ -310,7 +312,7 @@
             // 
             this.LblIdPro.AutoSize = true;
             this.LblIdPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdPro.Location = new System.Drawing.Point(244, 72);
+            this.LblIdPro.Location = new System.Drawing.Point(244, 120);
             this.LblIdPro.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.LblIdPro.Name = "LblIdPro";
             this.LblIdPro.Size = new System.Drawing.Size(24, 13);
@@ -322,7 +324,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 330);
+            this.label1.Location = new System.Drawing.Point(194, 388);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 22;
@@ -342,7 +344,7 @@
             this.GrbCliente.Controls.Add(this.BtnModificar);
             this.GrbCliente.Controls.Add(this.BtnNuevo);
             this.GrbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbCliente.Location = new System.Drawing.Point(0, 448);
+            this.GrbCliente.Location = new System.Drawing.Point(0, 512);
             this.GrbCliente.Name = "GrbCliente";
             this.GrbCliente.Size = new System.Drawing.Size(525, 96);
             this.GrbCliente.TabIndex = 21;
@@ -472,7 +474,7 @@
             this.GrbNavegacion.Controls.Add(this.BtnSiguiente);
             this.GrbNavegacion.Controls.Add(this.BtnUltimo);
             this.GrbNavegacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbNavegacion.Location = new System.Drawing.Point(0, 350);
+            this.GrbNavegacion.Location = new System.Drawing.Point(0, 411);
             this.GrbNavegacion.Name = "GrbNavegacion";
             this.GrbNavegacion.Size = new System.Drawing.Size(525, 62);
             this.GrbNavegacion.TabIndex = 20;
@@ -490,7 +492,7 @@
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnAnterior.BackColor = System.Drawing.Color.Blue;
             this.BtnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.BackgroundImage")));
             this.BtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -503,7 +505,7 @@
             // 
             // BtnPrimero
             // 
-            this.BtnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPrimero.BackColor = System.Drawing.Color.Blue;
             this.BtnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPrimero.BackgroundImage")));
             this.BtnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -516,7 +518,7 @@
             // 
             // BtnSiguiente
             // 
-            this.BtnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.BtnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnSiguiente.BackgroundImage")));
             this.BtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -529,7 +531,7 @@
             // 
             // BtnUltimo
             // 
-            this.BtnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnUltimo.BackColor = System.Drawing.Color.Blue;
             this.BtnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.BackgroundImage")));
             this.BtnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -545,18 +547,29 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(198, 427);
+            this.label4.Location = new System.Drawing.Point(204, 488);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "OPCIONES";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = System.Drawing.Color.Transparent;
+            label14.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label14.Location = new System.Drawing.Point(133, 19);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(206, 38);
+            label14.TabIndex = 39;
+            label14.Text = "PRODUCTOS";
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(525, 562);
+            this.ClientSize = new System.Drawing.Size(525, 616);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GrbCliente);
