@@ -36,11 +36,11 @@
             System.Windows.Forms.Label iD_PagoLabel;
             System.Windows.Forms.Label iD_TipoLabel;
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -90,6 +90,7 @@
             this.btnsalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlEdicion = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -125,10 +126,10 @@
             // 
             idCompraLabel.AutoSize = true;
             idCompraLabel.BackColor = System.Drawing.Color.White;
-            idCompraLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idCompraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idCompraLabel.Location = new System.Drawing.Point(331, 118);
             idCompraLabel.Name = "idCompraLabel";
-            idCompraLabel.Size = new System.Drawing.Size(26, 14);
+            idCompraLabel.Size = new System.Drawing.Size(22, 15);
             idCompraLabel.TabIndex = 12;
             idCompraLabel.Text = "ID:";
             // 
@@ -136,10 +137,10 @@
             // 
             id_ProveedorLabel.AutoSize = true;
             id_ProveedorLabel.BackColor = System.Drawing.Color.White;
-            id_ProveedorLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            id_ProveedorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             id_ProveedorLabel.Location = new System.Drawing.Point(17, 119);
             id_ProveedorLabel.Name = "id_ProveedorLabel";
-            id_ProveedorLabel.Size = new System.Drawing.Size(79, 14);
+            id_ProveedorLabel.Size = new System.Drawing.Size(86, 15);
             id_ProveedorLabel.TabIndex = 14;
             id_ProveedorLabel.Text = "PROVEEDOR:";
             // 
@@ -147,10 +148,10 @@
             // 
             fechaaLabel.AutoSize = true;
             fechaaLabel.BackColor = System.Drawing.Color.White;
-            fechaaLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaaLabel.Location = new System.Drawing.Point(1, 178);
             fechaaLabel.Name = "fechaaLabel";
-            fechaaLabel.Size = new System.Drawing.Size(104, 14);
+            fechaaLabel.Size = new System.Drawing.Size(104, 15);
             fechaaLabel.TabIndex = 16;
             fechaaLabel.Text = "FECHA COMPRA:";
             // 
@@ -158,10 +159,10 @@
             // 
             nfacturaLabel.AutoSize = true;
             nfacturaLabel.BackColor = System.Drawing.Color.White;
-            nfacturaLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nfacturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nfacturaLabel.Location = new System.Drawing.Point(467, 118);
             nfacturaLabel.Name = "nfacturaLabel";
-            nfacturaLabel.Size = new System.Drawing.Size(84, 14);
+            nfacturaLabel.Size = new System.Drawing.Size(83, 15);
             nfacturaLabel.TabIndex = 18;
             nfacturaLabel.Text = "FACTURA No:";
             // 
@@ -169,10 +170,10 @@
             // 
             iD_PagoLabel.AutoSize = true;
             iD_PagoLabel.BackColor = System.Drawing.Color.White;
-            iD_PagoLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iD_PagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             iD_PagoLabel.Location = new System.Drawing.Point(321, 178);
             iD_PagoLabel.Name = "iD_PagoLabel";
-            iD_PagoLabel.Size = new System.Drawing.Size(43, 14);
+            iD_PagoLabel.Size = new System.Drawing.Size(43, 15);
             iD_PagoLabel.TabIndex = 20;
             iD_PagoLabel.Text = "PAGO:";
             // 
@@ -180,10 +181,10 @@
             // 
             iD_TipoLabel.AutoSize = true;
             iD_TipoLabel.BackColor = System.Drawing.Color.White;
-            iD_TipoLabel.Font = new System.Drawing.Font("Forte", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            iD_TipoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             iD_TipoLabel.Location = new System.Drawing.Point(466, 178);
             iD_TipoLabel.Name = "iD_TipoLabel";
-            iD_TipoLabel.Size = new System.Drawing.Size(86, 14);
+            iD_TipoLabel.Size = new System.Drawing.Size(89, 15);
             iD_TipoLabel.TabIndex = 22;
             iD_TipoLabel.Text = "DOCUMENTO:";
             // 
@@ -191,10 +192,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.Location = new System.Drawing.Point(189, 38);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(168, 38);
+            label2.Size = new System.Drawing.Size(169, 39);
             label2.TabIndex = 29;
             label2.Text = "COMPRA";
             // 
@@ -235,6 +236,7 @@
             this.tableAdapterManager.Pedido_ClienteTableAdapter = null;
             this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedorTableAdapter = this.proveedorTableAdapter;
+            this.tableAdapterManager.ReportProveedorTableAdapter = null;
             this.tableAdapterManager.Tipo_documentoTableAdapter = null;
             this.tableAdapterManager.Tipo_UsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Primo_y_Fibonacci.ControlDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -316,8 +318,8 @@
             // cantid_compra
             // 
             this.cantid_compra.DataPropertyName = "cantid_compra";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle6;
             this.cantid_compra.HeaderText = "CANT";
             this.cantid_compra.Name = "cantid_compra";
             this.cantid_compra.ReadOnly = true;
@@ -326,10 +328,10 @@
             // precio
             // 
             this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.precio.DefaultCellStyle = dataGridViewCellStyle7;
             this.precio.HeaderText = "PRECIO";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
@@ -338,8 +340,8 @@
             // descuento
             // 
             this.descuento.DataPropertyName = "descuento";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle8;
             this.descuento.HeaderText = "DESC";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
@@ -348,8 +350,8 @@
             // unidades
             // 
             this.unidades.DataPropertyName = "unidades";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.unidades.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.unidades.DefaultCellStyle = dataGridViewCellStyle9;
             this.unidades.HeaderText = "UNID";
             this.unidades.Name = "unidades";
             this.unidades.ReadOnly = true;
@@ -358,8 +360,8 @@
             // subtotal
             // 
             this.subtotal.DataPropertyName = "subtotal";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.subtotal.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.subtotal.DefaultCellStyle = dataGridViewCellStyle10;
             this.subtotal.HeaderText = "SUB TOTAL";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
@@ -631,6 +633,7 @@
             // 
             this.pnlEdicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlEdicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdicion.Controls.Add(this.button1);
             this.pnlEdicion.Controls.Add(this.btnBuscar);
             this.pnlEdicion.Controls.Add(this.btnAgregar);
             this.pnlEdicion.Controls.Add(this.btnModificar);
@@ -640,9 +643,19 @@
             this.pnlEdicion.Size = new System.Drawing.Size(654, 33);
             this.pnlEdicion.TabIndex = 42;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(579, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 33);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "IMPRIMIR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(478, 0);
+            this.btnBuscar.Location = new System.Drawing.Point(452, -1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(67, 33);
             this.btnBuscar.TabIndex = 3;
@@ -651,7 +664,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(53, 0);
+            this.btnAgregar.Location = new System.Drawing.Point(21, -1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(67, 33);
             this.btnAgregar.TabIndex = 0;
@@ -661,7 +674,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(202, 0);
+            this.btnModificar.Location = new System.Drawing.Point(170, -1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(67, 33);
             this.btnModificar.TabIndex = 1;
@@ -671,7 +684,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(338, 0);
+            this.btnEliminar.Location = new System.Drawing.Point(313, -1);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 33);
             this.btnEliminar.TabIndex = 2;
@@ -825,5 +838,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Button button1;
     }
 }

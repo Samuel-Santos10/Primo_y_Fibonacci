@@ -249,5 +249,11 @@ namespace Primo_y_Fibonacci
                 detalleCompraDataGridView.Rows.Remove(detalleCompraDataGridView.CurrentRow);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmImpresionCompra imprimir = new FrmImpresionCompra(int.Parse(idCompraTextBox.Text));
+            imprimir.ShowDialog();
+        }
     }
 }
