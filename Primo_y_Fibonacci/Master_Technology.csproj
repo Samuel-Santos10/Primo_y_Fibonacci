@@ -170,6 +170,12 @@
     <Compile Include="Factura_Venta.Designer.cs">
       <DependentUpon>Factura_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmImpresionCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpresionCompra.Designer.cs">
+      <DependentUpon>FrmImpresionCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Impresion_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     <EmbeddedResource Include="Factura_Venta.resx">
       <DependentUpon>Factura_Venta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpresionCompra.resx">
+      <DependentUpon>FrmImpresionCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Impresion_Proveedor.resx">
       <DependentUpon>Impresion_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +329,7 @@
       <DependentUpon>Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportProveedor.rdlc" />
+    <EmbeddedResource Include="RptCompra.rdlc" />
     <EmbeddedResource Include="TipoUsuario.resx">
       <DependentUpon>TipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
