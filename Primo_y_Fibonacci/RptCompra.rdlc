@@ -98,7 +98,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Factura N°</Value>
+                <Value>Factura N</Value>
                 <Style />
               </TextRun>
             </TextRuns>
