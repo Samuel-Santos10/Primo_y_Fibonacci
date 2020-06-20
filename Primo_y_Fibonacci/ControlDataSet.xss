@@ -452,11 +452,11 @@
         </Point>
         <Point>
           <X>804</X>
-          <Y>1006</Y>
+          <Y>992</Y>
         </Point>
         <Point>
-          <X>1290</X>
-          <Y>1006</Y>
+          <X>1368</X>
+          <Y>992</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -468,11 +468,11 @@
         </Point>
         <Point>
           <X>181</X>
-          <Y>1014</Y>
+          <Y>1000</Y>
         </Point>
         <Point>
-          <X>1290</X>
-          <Y>1014</Y>
+          <X>1368</X>
+          <Y>1000</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -499,12 +499,12 @@
     <Connector ID="DesignRelation:factura_venta_DFactura_V" ZOrder="20" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>1395</X>
+          <X>1473</X>
           <Y>913</Y>
         </Point>
         <Point>
-          <X>1395</X>
-          <Y>989</Y>
+          <X>1473</X>
+          <Y>975</Y>
         </Point>
       </RoutePoints>
     </Connector>
