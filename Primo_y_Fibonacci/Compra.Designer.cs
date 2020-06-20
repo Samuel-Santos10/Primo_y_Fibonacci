@@ -36,11 +36,11 @@
             System.Windows.Forms.Label iD_PagoLabel;
             System.Windows.Forms.Label iD_TipoLabel;
             System.Windows.Forms.Label label2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compra));
             this.proveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ProveedorTableAdapter();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -192,10 +192,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.Location = new System.Drawing.Point(189, 38);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(169, 39);
+            label2.Size = new System.Drawing.Size(156, 37);
             label2.TabIndex = 29;
             label2.Text = "COMPRA";
             // 
@@ -318,8 +318,8 @@
             // cantid_compra
             // 
             this.cantid_compra.DataPropertyName = "cantid_compra";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cantid_compra.DefaultCellStyle = dataGridViewCellStyle1;
             this.cantid_compra.HeaderText = "CANT";
             this.cantid_compra.Name = "cantid_compra";
             this.cantid_compra.ReadOnly = true;
@@ -328,10 +328,10 @@
             // precio
             // 
             this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.precio.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
             this.precio.HeaderText = "PRECIO";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
@@ -340,8 +340,8 @@
             // descuento
             // 
             this.descuento.DataPropertyName = "descuento";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.descuento.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
             this.descuento.HeaderText = "DESC";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
@@ -350,8 +350,8 @@
             // unidades
             // 
             this.unidades.DataPropertyName = "unidades";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.unidades.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.unidades.DefaultCellStyle = dataGridViewCellStyle4;
             this.unidades.HeaderText = "UNID";
             this.unidades.Name = "unidades";
             this.unidades.ReadOnly = true;
@@ -360,8 +360,8 @@
             // subtotal
             // 
             this.subtotal.DataPropertyName = "subtotal";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.subtotal.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.subtotal.DefaultCellStyle = dataGridViewCellStyle5;
             this.subtotal.HeaderText = "SUB TOTAL";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
