@@ -156,16 +156,6 @@ namespace Primo_y_Fibonacci {
         
         private global::System.Data.DataRelation relationFK_Dfactura_C_Productos1;
         
-        private global::System.Data.DataRelation relationFK_detalle_Compra_Compra_Ordenes1;
-        
-        private global::System.Data.DataRelation relationFK_Compra_Ordenes_condiciones_pagos1;
-        
-        private global::System.Data.DataRelation relationFK_Compra_Ordenes_Proveedor1;
-        
-        private global::System.Data.DataRelation relationFK_Compra_Ordenes_Proveedor2;
-        
-        private global::System.Data.DataRelation relationFK_Compra_Ordenes_Tipo_documento1;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -945,11 +935,6 @@ namespace Primo_y_Fibonacci {
             this.relationFK_Dfactura_C_Productos = this.Relations["FK_Dfactura_C_Productos"];
             this.relationFK_Dfactura_C_factura_compra1 = this.Relations["FK_Dfactura_C_factura_compra1"];
             this.relationFK_Dfactura_C_Productos1 = this.Relations["FK_Dfactura_C_Productos1"];
-            this.relationFK_detalle_Compra_Compra_Ordenes1 = this.Relations["FK_detalle_Compra_Compra_Ordenes1"];
-            this.relationFK_Compra_Ordenes_condiciones_pagos1 = this.Relations["FK_Compra_Ordenes_condiciones_pagos1"];
-            this.relationFK_Compra_Ordenes_Proveedor1 = this.Relations["FK_Compra_Ordenes_Proveedor1"];
-            this.relationFK_Compra_Ordenes_Proveedor2 = this.Relations["FK_Compra_Ordenes_Proveedor2"];
-            this.relationFK_Compra_Ordenes_Tipo_documento1 = this.Relations["FK_Compra_Ordenes_Tipo_documento1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1170,26 +1155,6 @@ namespace Primo_y_Fibonacci {
                         this.tableProductos.IdProductosColumn}, new global::System.Data.DataColumn[] {
                         this.tableDFacturaCompra.IdProductoColumn}, false);
             this.Relations.Add(this.relationFK_Dfactura_C_Productos1);
-            this.relationFK_detalle_Compra_Compra_Ordenes1 = new global::System.Data.DataRelation("FK_detalle_Compra_Compra_Ordenes1", new global::System.Data.DataColumn[] {
-                        this.tableReportCompra.IdCompraColumn}, new global::System.Data.DataColumn[] {
-                        this.tabledetalle_Compra.ID_CompraColumn}, false);
-            this.Relations.Add(this.relationFK_detalle_Compra_Compra_Ordenes1);
-            this.relationFK_Compra_Ordenes_condiciones_pagos1 = new global::System.Data.DataRelation("FK_Compra_Ordenes_condiciones_pagos1", new global::System.Data.DataColumn[] {
-                        this.tablecondiciones_pagos.IdPagoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReportCompra.ID_PagoColumn}, false);
-            this.Relations.Add(this.relationFK_Compra_Ordenes_condiciones_pagos1);
-            this.relationFK_Compra_Ordenes_Proveedor1 = new global::System.Data.DataRelation("FK_Compra_Ordenes_Proveedor1", new global::System.Data.DataColumn[] {
-                        this.tableProveedor.IdProveedorColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReportCompra.Id_ProveedorColumn}, false);
-            this.Relations.Add(this.relationFK_Compra_Ordenes_Proveedor1);
-            this.relationFK_Compra_Ordenes_Proveedor2 = new global::System.Data.DataRelation("FK_Compra_Ordenes_Proveedor2", new global::System.Data.DataColumn[] {
-                        this.tableReportProveedor.IdProveedorColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReportCompra.Id_ProveedorColumn}, false);
-            this.Relations.Add(this.relationFK_Compra_Ordenes_Proveedor2);
-            this.relationFK_Compra_Ordenes_Tipo_documento1 = new global::System.Data.DataRelation("FK_Compra_Ordenes_Tipo_documento1", new global::System.Data.DataColumn[] {
-                        this.tableTipo_documento.IdTipoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableReportCompra.ID_TipoColumn}, false);
-            this.Relations.Add(this.relationFK_Compra_Ordenes_Tipo_documento1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10859,11 +10824,11 @@ namespace Primo_y_Fibonacci {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ReportCompraRow AddReportCompraRow(
-                        ProveedorRow parentProveedorRowByFK_Compra_Ordenes_Proveedor1, 
-                        condiciones_pagosRow parentcondiciones_pagosRowByFK_Compra_Ordenes_condiciones_pagos1, 
+                        int Id_Proveedor, 
+                        int ID_Pago, 
                         System.DateTime fechaa, 
                         string nfactura, 
-                        Tipo_documentoRow parentTipo_documentoRowByFK_Compra_Ordenes_Tipo_documento1, 
+                        int ID_Tipo, 
                         int ID_producto, 
                         int cantid_compra, 
                         decimal precio, 
@@ -10882,11 +10847,11 @@ namespace Primo_y_Fibonacci {
                 ReportCompraRow rowReportCompraRow = ((ReportCompraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
-                        null,
+                        Id_Proveedor,
+                        ID_Pago,
                         fechaa,
                         nfactura,
-                        null,
+                        ID_Tipo,
                         null,
                         ID_producto,
                         cantid_compra,
@@ -10903,15 +10868,6 @@ namespace Primo_y_Fibonacci {
                         marca,
                         tipo,
                         tipo_documento};
-                if ((parentProveedorRowByFK_Compra_Ordenes_Proveedor1 != null)) {
-                    columnValuesArray[1] = parentProveedorRowByFK_Compra_Ordenes_Proveedor1[0];
-                }
-                if ((parentcondiciones_pagosRowByFK_Compra_Ordenes_condiciones_pagos1 != null)) {
-                    columnValuesArray[2] = parentcondiciones_pagosRowByFK_Compra_Ordenes_condiciones_pagos1[0];
-                }
-                if ((parentTipo_documentoRowByFK_Compra_Ordenes_Tipo_documento1 != null)) {
-                    columnValuesArray[5] = parentTipo_documentoRowByFK_Compra_Ordenes_Tipo_documento1[0];
-                }
                 rowReportCompraRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReportCompraRow);
                 return rowReportCompraRow;
@@ -11667,17 +11623,6 @@ namespace Primo_y_Fibonacci {
                     return ((factura_compraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_factura_compra_condiciones_pagos"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportCompraRow[] GetReportCompraRows() {
-                if ((this.Table.ChildRelations["FK_Compra_Ordenes_condiciones_pagos1"] == null)) {
-                    return new ReportCompraRow[0];
-                }
-                else {
-                    return ((ReportCompraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Compra_Ordenes_condiciones_pagos1"])));
-                }
-            }
         }
         
         /// <summary>
@@ -11805,17 +11750,6 @@ namespace Primo_y_Fibonacci {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_detalle_Compra_Productos"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportCompraRow ReportCompraRow {
-                get {
-                    return ((ReportCompraRow)(this.GetParentRow(this.Table.ParentRelations["FK_detalle_Compra_Compra_Ordenes1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_detalle_Compra_Compra_Ordenes1"]);
                 }
             }
             
@@ -12744,17 +12678,6 @@ namespace Primo_y_Fibonacci {
                     return ((factura_compraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_factura_compra_Proveedor"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportCompraRow[] GetReportCompraRows() {
-                if ((this.Table.ChildRelations["FK_Compra_Ordenes_Proveedor1"] == null)) {
-                    return new ReportCompraRow[0];
-                }
-                else {
-                    return ((ReportCompraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Compra_Ordenes_Proveedor1"])));
-                }
-            }
         }
         
         /// <summary>
@@ -12834,17 +12757,6 @@ namespace Primo_y_Fibonacci {
                 }
                 else {
                     return ((factura_compraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_factura_compra_Tipo_documento"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportCompraRow[] GetReportCompraRows() {
-                if ((this.Table.ChildRelations["FK_Compra_Ordenes_Tipo_documento1"] == null)) {
-                    return new ReportCompraRow[0];
-                }
-                else {
-                    return ((ReportCompraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Compra_Ordenes_Tipo_documento1"])));
                 }
             }
         }
@@ -15353,17 +15265,6 @@ namespace Primo_y_Fibonacci {
             public void SettelefonoNull() {
                 this[this.tableReportProveedor.telefonoColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportCompraRow[] GetReportCompraRows() {
-                if ((this.Table.ChildRelations["FK_Compra_Ordenes_Proveedor2"] == null)) {
-                    return new ReportCompraRow[0];
-                }
-                else {
-                    return ((ReportCompraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Compra_Ordenes_Proveedor2"])));
-                }
-            }
         }
         
         /// <summary>
@@ -15684,50 +15585,6 @@ namespace Primo_y_Fibonacci {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public condiciones_pagosRow condiciones_pagosRow {
-                get {
-                    return ((condiciones_pagosRow)(this.GetParentRow(this.Table.ParentRelations["FK_Compra_Ordenes_condiciones_pagos1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Compra_Ordenes_condiciones_pagos1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProveedorRow ProveedorRow {
-                get {
-                    return ((ProveedorRow)(this.GetParentRow(this.Table.ParentRelations["FK_Compra_Ordenes_Proveedor1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Compra_Ordenes_Proveedor1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ReportProveedorRow ReportProveedorRow {
-                get {
-                    return ((ReportProveedorRow)(this.GetParentRow(this.Table.ParentRelations["FK_Compra_Ordenes_Proveedor2"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Compra_Ordenes_Proveedor2"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Tipo_documentoRow Tipo_documentoRow {
-                get {
-                    return ((Tipo_documentoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Compra_Ordenes_Tipo_documento1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Compra_Ordenes_Tipo_documento1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsID_PagoNull() {
                 return this.IsNull(this.tableReportCompra.ID_PagoColumn);
             }
@@ -15868,17 +15725,6 @@ namespace Primo_y_Fibonacci {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipoNull() {
                 this[this.tableReportCompra.tipoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public detalle_CompraRow[] Getdetalle_CompraRows() {
-                if ((this.Table.ChildRelations["FK_detalle_Compra_Compra_Ordenes1"] == null)) {
-                    return new detalle_CompraRow[0];
-                }
-                else {
-                    return ((detalle_CompraRow[])(base.GetChildRows(this.Table.ChildRelations["FK_detalle_Compra_Compra_Ordenes1"])));
-                }
             }
         }
         
@@ -27067,15 +26913,6 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._reportProveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._reportProveedorTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._proveedorTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Proveedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -27154,6 +26991,15 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._inventarioTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._reportProveedorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._reportProveedorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27260,14 +27106,6 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._reportProveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._reportProveedorTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._proveedorTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Proveedor.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -27337,6 +27175,14 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._inventarioTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._reportProveedorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._reportProveedorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27430,6 +27276,14 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._reportProveedorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._reportProveedorTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._inventarioTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Inventario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -27499,14 +27353,6 @@ WHERE        (Compra_Ordenes.IdCompra = @IdCompra)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._proveedorTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._reportProveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ReportProveedor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._reportProveedorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
