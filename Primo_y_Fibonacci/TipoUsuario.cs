@@ -163,7 +163,7 @@ namespace Primo_y_Fibonacci
          MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
                 String[] valores = { LblTipo.Text };
-                objConexion.mantenimiento_datos_Categoria(valores, "eliminar");
+                objConexion.mantenimiento_datos_Tipo(valores, "eliminar");
 
                 actualizarDs();
                 posicion = posicion > 0 ? posicion - 1 : 0;
