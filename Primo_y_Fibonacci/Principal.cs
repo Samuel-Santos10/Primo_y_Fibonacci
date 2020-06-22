@@ -208,6 +208,11 @@ namespace Primo_y_Fibonacci
         {
             Close();
         }
-    
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Impresion_Cliente imprimir = new Impresion_Cliente(int.Parse(TxtIdCliente.Text));
+            imprimir.ShowDialog();
+        }
     }
 }

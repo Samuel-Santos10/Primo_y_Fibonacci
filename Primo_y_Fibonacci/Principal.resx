@@ -249,6 +249,28 @@
         BxH6brAe+MB0CHArAp8KrgUTisPVY4orl6u5D+fmOP8P596PHTGzHJkAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnImprimir.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAA8BJREFUeF7t
+        m01OFFEURnuiJrIC5wQSwQlsABp1B4yhw4ARM8IWdCKBQHQFrsKfBTgUia7AuaADkzbFfeQjqTy/7n59
+        u9qur70nOTNy3zu3oDpG6ARBEARBEARBEARB0AQnn35X8ySydGARyiJLBxahLLJ0YBHKIksHFqEssnRg
+        EcoiSwcWoSyydGARyiJLBxahLLJ0YBHKIksHFqEssnRgEcoiSwcWoSyydGARyiKrvXS73aoui1A270N2
+        e8gvyCKUzfuQ3R7yC7IIZfM+ZLeH/IIsQtm8D9ntIb8gi1A270N2e8gvyCKUzfuQ/e/Z3d190uv1Ts0v
+        5k+z+s9NO0i7ONnb21vFmprn4ODggR3y2vxjsouEvV7fvkHPt7e372NtzYDlf8wOCwf7odGHYE/1DTkk
+        HO4Z1jcZeOfHa2d8+zs7OytYox8blD5w2QHhaI+xRj825DIbGppPX+5XD78dVgvmsxf79GvMC6zRjw25
+        zoaGZlp85/vRrQtfD+nXmFdYox8yNDQLH8Dk/2BjQ8Pe7WsnPYS0/OeDX0HxAGYt1uiHDQ3LxRr9sKFh
+        uVijHzY0LBdr9MOGhuVijX7Y0LBcrNEPGxqWizX6YUPDcrFGP2xoWC7W6IcNDcvFGv3k/xkdjifW6IcN
+        DcvFGv2woWG5WKMfNjQsF2v0w4aG5WKNftjQsFys0Q8bGpaLNfphQ8NysUY/bChzc3OzWltbq5aWlqrF
+        xcW5dHl5+bYxtbIdMLFGP2woM12MXXoeTa1sB0ys0Q8bysy/87tvf82V9bb0k8B2wMQa/bChzHSp+iVZ
+        hLL1tlY+gPwVxCKUrbe18hV09yF895PAIpRNTa3+EM5lf+ajLGssEWv0w4aWyCKUZY0lYo1+bMhVPrRE
+        FqEsayzwB9box4ZcZkOLZBHKssYCJ//1dBtykg0tkkUwHx19boXsbnVZ4yjtw/oV1uhnY2Nj1Yb18+Gj
+        ZBFMtoxZyO5WlzWOsL+1tfUYa5wMe5Ln5IChsggmW8YsZHeryxqHacs/xfomJ/3JpQ19nx8yTBbBZMuY
+        hexudVnjIO0b9t36+vo9rK8Z8BDOzKLXEYtQljUS02vntPHl17Gnu2IHHZsX5jUO/ksWoSxrhGkHF+kD
+        t7F3fhOwCGWRpQOLUBZZOrAIJvtAnIbs7HFElg4sgsmWNQ3Z2eOILB1YBJMtaxqys8cRWTqwCCZb1jRk
+        Z48jsnRgEcoiSwcWoSyydGARyiJLBxahLLJ0YBHKIksHFqEssoIgCIIgCIIgCIIgmIBO5wb+OSYNbmaJ
+        7QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnsalir.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1566,9 +1588,6 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="label9.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsN

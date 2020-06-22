@@ -355,5 +355,150 @@ namespace Primo_y_Fibonacci
             frmPedidoC.MdiParent = this;
             frmPedidoC.Show();
         }
+
+        private void cOMPRAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Compra frmCompra = new Compra();
+            frmCompra.MdiParent = this;
+            frmCompra.Show();
+        }
+
+        private void cLIENTEToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Principal frmCliente = new Principal();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
+        }
+
+        private void cATEGORIAToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Categoria frmCategoria = new Categoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void pROVEEDORToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Proveedor frmProveedor = new Proveedor();
+            frmProveedor.MdiParent = this;
+            frmProveedor.Show();
+        }
+
+        private void vENTASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventas frmVentas = new Ventas();
+            frmVentas.MdiParent = this;
+            frmVentas.Show();
+        }
+
+        private void pEDIDOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pedido_Cliente frmPedidoC = new Pedido_Cliente();
+            frmPedidoC.MdiParent = this;
+            frmPedidoC.Show();
+        }
+
+        private void cLIENTESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal frmCliente = new Principal();
+            frmCliente.MdiParent = this;
+            frmCliente.Show();
+        }
+
+        private void pROVEEDORToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Proveedor frmProveedor = new Proveedor();
+            frmProveedor.MdiParent = this;
+            frmProveedor.Show();
+        }
+
+        private void cATEGORIAToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Categoria frmCategoria = new Categoria();
+            frmCategoria.MdiParent = this;
+            frmCategoria.Show();
+        }
+
+        private void uSUARIOSToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Usuario frmUsuario = new Usuario();
+            frmUsuario.MdiParent = this;
+            frmUsuario.Show();
+        }
+
+        private void tIPOUSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoUsuario frmTipoUsuario = new TipoUsuario();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void pRODUCTOSToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Productos frmTipoUsuario = new Productos();
+            frmTipoUsuario.MdiParent = this;
+            frmTipoUsuario.Show();
+        }
+
+        private void eMPLEADOSToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Empleados frmEmpleados = new Empleados();
+            frmEmpleados.MdiParent = this;
+            frmEmpleados.Show();
+        }
+
+        private void iNVENTARIOToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Inventario frmInventario = new Inventario();
+            frmInventario.MdiParent = this;
+            frmInventario.Show();
+        }
+
+        private void vENTASToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ventas frmVentas = new Ventas();
+            frmVentas.MdiParent = this;
+            frmVentas.Show();
+        }
+
+        private void cOMPRASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Compra frmCompra = new Compra();
+            frmCompra.MdiParent = this;
+            frmCompra.Show();
+        }
+
+        private void pEDIDOSToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Pedido_Cliente frmPedidoC = new Pedido_Cliente();
+            frmPedidoC.MdiParent = this;
+            frmPedidoC.Show();
+        }
+
+        private void fACTURAVENTAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura_Venta frmFACTURAV = new Factura_Venta();
+            frmFACTURAV.MdiParent = this;
+            frmFACTURAV.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Factura_Venta frmFACTURAV = new Factura_Venta();
+            frmFACTURAV.MdiParent = this;
+            frmFACTURAV.Show();
+        }
+
+        private void sALIRToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void asercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            acerca_de creadores = new acerca_de();
+            creadores.MdiParent = this;
+            creadores.Show();
+        }
     }
 }

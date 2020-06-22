@@ -66,16 +66,6 @@
             this.lblregistroxden = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.detallePedidoDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnsalir = new System.Windows.Forms.Button();
-            this.pnlEdicion = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.pnlProductosGrid = new System.Windows.Forms.Panel();
-            this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
-            this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
-            this.detalle_Pedido_ClientTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Detalle_Pedido_ClientTableAdapter();
             this.IdDOrdenC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDPedidoC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +76,22 @@
             this.precio_orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.pnlEdicion = new System.Windows.Forms.Panel();
+            this.btnimprimir = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pnlProductosGrid = new System.Windows.Forms.Panel();
+            this.btnQuitarProductosGrid = new System.Windows.Forms.Button();
+            this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
+            this.detalle_Pedido_ClientTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.Detalle_Pedido_ClientTableAdapter();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblop2 = new System.Windows.Forms.Label();
+            this.lblop = new System.Windows.Forms.Label();
             idPedidoClientLabel = new System.Windows.Forms.Label();
             id_ClienteLabel = new System.Windows.Forms.Label();
             id_EmpleadoLabel = new System.Windows.Forms.Label();
@@ -135,7 +141,7 @@
             // fecha_ordenLabel
             // 
             fecha_ordenLabel.AutoSize = true;
-            fecha_ordenLabel.Location = new System.Drawing.Point(12, 246);
+            fecha_ordenLabel.Location = new System.Drawing.Point(12, 243);
             fecha_ordenLabel.Name = "fecha_ordenLabel";
             fecha_ordenLabel.Size = new System.Drawing.Size(86, 13);
             fecha_ordenLabel.TabIndex = 11;
@@ -144,7 +150,7 @@
             // fecha_requeridaLabel
             // 
             fecha_requeridaLabel.AutoSize = true;
-            fecha_requeridaLabel.Location = new System.Drawing.Point(311, 248);
+            fecha_requeridaLabel.Location = new System.Drawing.Point(311, 245);
             fecha_requeridaLabel.Name = "fecha_requeridaLabel";
             fecha_requeridaLabel.Size = new System.Drawing.Size(109, 13);
             fecha_requeridaLabel.TabIndex = 13;
@@ -195,11 +201,18 @@
             this.tableAdapterManager.detalle_CompraTableAdapter = null;
             this.tableAdapterManager.Detalle_Pedido_ClientTableAdapter = null;
             this.tableAdapterManager.Detalle_VentaTableAdapter = null;
+            this.tableAdapterManager.Dfactura_CTableAdapter = null;
+            this.tableAdapterManager.DFactura_VTableAdapter = null;
             this.tableAdapterManager.EmpleadoTableAdapter = this.empleadoTableAdapter;
+            this.tableAdapterManager.factura_compraTableAdapter = null;
+            this.tableAdapterManager.factura_ventaTableAdapter = null;
             this.tableAdapterManager.InventarioTableAdapter = null;
             this.tableAdapterManager.Pedido_ClienteTableAdapter = this.pedido_ClienteTableAdapter;
             this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedorTableAdapter = null;
+            this.tableAdapterManager.ReportCategoTableAdapter = null;
+            this.tableAdapterManager.ReportClienteTableAdapter = null;
+            this.tableAdapterManager.ReportProveedorTableAdapter = null;
             this.tableAdapterManager.Tipo_documentoTableAdapter = null;
             this.tableAdapterManager.Tipo_UsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Primo_y_Fibonacci.ControlDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -265,7 +278,7 @@
             // 
             this.fecha_ordenDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pedido_ClienteBindingSource, "fecha_orden", true));
             this.fecha_ordenDateTimePicker.Enabled = false;
-            this.fecha_ordenDateTimePicker.Location = new System.Drawing.Point(101, 243);
+            this.fecha_ordenDateTimePicker.Location = new System.Drawing.Point(101, 240);
             this.fecha_ordenDateTimePicker.Name = "fecha_ordenDateTimePicker";
             this.fecha_ordenDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fecha_ordenDateTimePicker.TabIndex = 12;
@@ -274,7 +287,7 @@
             // 
             this.fecha_requeridaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pedido_ClienteBindingSource, "fecha_requerida", true));
             this.fecha_requeridaDateTimePicker.Enabled = false;
-            this.fecha_requeridaDateTimePicker.Location = new System.Drawing.Point(424, 244);
+            this.fecha_requeridaDateTimePicker.Location = new System.Drawing.Point(424, 241);
             this.fecha_requeridaDateTimePicker.Name = "fecha_requeridaDateTimePicker";
             this.fecha_requeridaDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fecha_requeridaDateTimePicker.TabIndex = 14;
@@ -305,14 +318,14 @@
             this.pnlNavegacion.Controls.Add(this.btnPrimero);
             this.pnlNavegacion.Controls.Add(this.btnAnterior);
             this.pnlNavegacion.Controls.Add(this.lblregistroxden);
-            this.pnlNavegacion.Location = new System.Drawing.Point(9, 567);
+            this.pnlNavegacion.Location = new System.Drawing.Point(87, 596);
             this.pnlNavegacion.Name = "pnlNavegacion";
             this.pnlNavegacion.Size = new System.Drawing.Size(385, 63);
             this.pnlNavegacion.TabIndex = 34;
             // 
             // btnUltimo
             // 
-            this.btnUltimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnUltimo.BackColor = System.Drawing.Color.Blue;
             this.btnUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUltimo.BackgroundImage")));
             this.btnUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -325,7 +338,7 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSiguiente.BackColor = System.Drawing.Color.Blue;
             this.btnSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.BackgroundImage")));
             this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -338,7 +351,7 @@
             // 
             // btnPrimero
             // 
-            this.btnPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnPrimero.BackColor = System.Drawing.Color.Blue;
             this.btnPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrimero.BackgroundImage")));
             this.btnPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -351,7 +364,7 @@
             // 
             // btnAnterior
             // 
-            this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAnterior.BackColor = System.Drawing.Color.Blue;
             this.btnAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnterior.BackgroundImage")));
             this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -368,7 +381,7 @@
             this.lblregistroxden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblregistroxden.Location = new System.Drawing.Point(163, 23);
             this.lblregistroxden.Name = "lblregistroxden";
-            this.lblregistroxden.Size = new System.Drawing.Size(49, 16);
+            this.lblregistroxden.Size = new System.Drawing.Size(51, 16);
             this.lblregistroxden.TabIndex = 6;
             this.lblregistroxden.Text = "x de n";
             // 
@@ -401,109 +414,11 @@
             this.descuento,
             this.subtotal});
             this.detallePedidoDataGridView.DataSource = this.detallePedidoBindingSource;
-            this.detallePedidoDataGridView.Location = new System.Drawing.Point(6, 330);
+            this.detallePedidoDataGridView.Location = new System.Drawing.Point(7, 361);
             this.detallePedidoDataGridView.Name = "detallePedidoDataGridView";
             this.detallePedidoDataGridView.ReadOnly = true;
             this.detallePedidoDataGridView.Size = new System.Drawing.Size(614, 166);
             this.detallePedidoDataGridView.TabIndex = 17;
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
-            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(582, 3);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(37, 37);
-            this.btnsalir.TabIndex = 37;
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
-            // pnlEdicion
-            // 
-            this.pnlEdicion.Controls.Add(this.btnBuscar);
-            this.pnlEdicion.Controls.Add(this.btnEliminar);
-            this.pnlEdicion.Controls.Add(this.btnModificar);
-            this.pnlEdicion.Controls.Add(this.btnAgregar);
-            this.pnlEdicion.Location = new System.Drawing.Point(400, 572);
-            this.pnlEdicion.Name = "pnlEdicion";
-            this.pnlEdicion.Size = new System.Drawing.Size(260, 49);
-            this.pnlEdicion.TabIndex = 38;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(200, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 38);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(146, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(53, 38);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(73, 3);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(72, 38);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(5, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(67, 38);
-            this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "Nuevo";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // pnlProductosGrid
-            // 
-            this.pnlProductosGrid.Controls.Add(this.btnQuitarProductosGrid);
-            this.pnlProductosGrid.Controls.Add(this.btnAgregarProductosGrid);
-            this.pnlProductosGrid.Location = new System.Drawing.Point(15, 502);
-            this.pnlProductosGrid.Name = "pnlProductosGrid";
-            this.pnlProductosGrid.Size = new System.Drawing.Size(94, 49);
-            this.pnlProductosGrid.TabIndex = 39;
-            this.pnlProductosGrid.Visible = false;
-            // 
-            // btnQuitarProductosGrid
-            // 
-            this.btnQuitarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarProductosGrid.Location = new System.Drawing.Point(52, 4);
-            this.btnQuitarProductosGrid.Name = "btnQuitarProductosGrid";
-            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(31, 38);
-            this.btnQuitarProductosGrid.TabIndex = 1;
-            this.btnQuitarProductosGrid.Text = "-";
-            this.btnQuitarProductosGrid.UseVisualStyleBackColor = true;
-            this.btnQuitarProductosGrid.Click += new System.EventHandler(this.btnQuitarProductosGrid_Click);
-            // 
-            // btnAgregarProductosGrid
-            // 
-            this.btnAgregarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProductosGrid.Location = new System.Drawing.Point(5, 4);
-            this.btnAgregarProductosGrid.Name = "btnAgregarProductosGrid";
-            this.btnAgregarProductosGrid.Size = new System.Drawing.Size(47, 38);
-            this.btnAgregarProductosGrid.TabIndex = 0;
-            this.btnAgregarProductosGrid.Text = "+";
-            this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
-            this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
-            // 
-            // detalle_Pedido_ClientTableAdapter1
-            // 
-            this.detalle_Pedido_ClientTableAdapter1.ClearBeforeFill = true;
             // 
             // IdDOrdenC
             // 
@@ -594,12 +509,192 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
+            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.Location = new System.Drawing.Point(582, 3);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(37, 37);
+            this.btnsalir.TabIndex = 37;
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // pnlEdicion
+            // 
+            this.pnlEdicion.BackColor = System.Drawing.Color.White;
+            this.pnlEdicion.Controls.Add(this.label6);
+            this.pnlEdicion.Controls.Add(this.btnimprimir);
+            this.pnlEdicion.Controls.Add(this.label5);
+            this.pnlEdicion.Controls.Add(this.btnBuscar);
+            this.pnlEdicion.Controls.Add(this.label1);
+            this.pnlEdicion.Controls.Add(this.btnEliminar);
+            this.pnlEdicion.Controls.Add(this.lblop2);
+            this.pnlEdicion.Controls.Add(this.lblop);
+            this.pnlEdicion.Controls.Add(this.btnModificar);
+            this.pnlEdicion.Controls.Add(this.btnAgregar);
+            this.pnlEdicion.Location = new System.Drawing.Point(6, 290);
+            this.pnlEdicion.Name = "pnlEdicion";
+            this.pnlEdicion.Size = new System.Drawing.Size(669, 53);
+            this.pnlEdicion.TabIndex = 38;
+            // 
+            // btnimprimir
+            // 
+            this.btnimprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnimprimir.BackgroundImage")));
+            this.btnimprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnimprimir.Location = new System.Drawing.Point(499, 0);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(51, 53);
+            this.btnimprimir.TabIndex = 40;
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.Location = new System.Drawing.Point(375, 0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(51, 53);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminar.Location = new System.Drawing.Point(250, 0);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(51, 53);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModificar.Location = new System.Drawing.Point(129, 0);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(51, 53);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregar.Location = new System.Drawing.Point(16, 0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(51, 53);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // pnlProductosGrid
+            // 
+            this.pnlProductosGrid.Controls.Add(this.btnQuitarProductosGrid);
+            this.pnlProductosGrid.Controls.Add(this.btnAgregarProductosGrid);
+            this.pnlProductosGrid.Location = new System.Drawing.Point(9, 530);
+            this.pnlProductosGrid.Name = "pnlProductosGrid";
+            this.pnlProductosGrid.Size = new System.Drawing.Size(94, 49);
+            this.pnlProductosGrid.TabIndex = 39;
+            this.pnlProductosGrid.Visible = false;
+            // 
+            // btnQuitarProductosGrid
+            // 
+            this.btnQuitarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarProductosGrid.Location = new System.Drawing.Point(52, 4);
+            this.btnQuitarProductosGrid.Name = "btnQuitarProductosGrid";
+            this.btnQuitarProductosGrid.Size = new System.Drawing.Size(31, 38);
+            this.btnQuitarProductosGrid.TabIndex = 1;
+            this.btnQuitarProductosGrid.Text = "-";
+            this.btnQuitarProductosGrid.UseVisualStyleBackColor = true;
+            this.btnQuitarProductosGrid.Click += new System.EventHandler(this.btnQuitarProductosGrid_Click);
+            // 
+            // btnAgregarProductosGrid
+            // 
+            this.btnAgregarProductosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProductosGrid.Location = new System.Drawing.Point(5, 4);
+            this.btnAgregarProductosGrid.Name = "btnAgregarProductosGrid";
+            this.btnAgregarProductosGrid.Size = new System.Drawing.Size(47, 38);
+            this.btnAgregarProductosGrid.TabIndex = 0;
+            this.btnAgregarProductosGrid.Text = "+";
+            this.btnAgregarProductosGrid.UseVisualStyleBackColor = true;
+            this.btnAgregarProductosGrid.Click += new System.EventHandler(this.btnAgregarProductosGrid_Click);
+            // 
+            // detalle_Pedido_ClientTableAdapter1
+            // 
+            this.detalle_Pedido_ClientTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(552, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Imprimir";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(428, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Buscar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(303, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Eliminar";
+            // 
+            // lblop2
+            // 
+            this.lblop2.AutoSize = true;
+            this.lblop2.BackColor = System.Drawing.Color.Black;
+            this.lblop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop2.ForeColor = System.Drawing.Color.White;
+            this.lblop2.Location = new System.Drawing.Point(182, 29);
+            this.lblop2.Name = "lblop2";
+            this.lblop2.Size = new System.Drawing.Size(59, 13);
+            this.lblop2.TabIndex = 47;
+            this.lblop2.Text = "Modificar";
+            // 
+            // lblop
+            // 
+            this.lblop.AutoSize = true;
+            this.lblop.BackColor = System.Drawing.Color.Black;
+            this.lblop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop.ForeColor = System.Drawing.Color.White;
+            this.lblop.Location = new System.Drawing.Point(68, 29);
+            this.lblop.Name = "lblop";
+            this.lblop.Size = new System.Drawing.Size(44, 13);
+            this.lblop.TabIndex = 48;
+            this.lblop.Text = "Nuevo";
+            // 
             // Pedido_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(676, 672);
+            this.ClientSize = new System.Drawing.Size(633, 667);
             this.Controls.Add(this.pnlProductosGrid);
             this.Controls.Add(this.pnlEdicion);
             this.Controls.Add(this.btnsalir);
@@ -634,6 +729,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidoDataGridView)).EndInit();
             this.pnlEdicion.ResumeLayout(false);
+            this.pnlEdicion.PerformLayout();
             this.pnlProductosGrid.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -686,5 +782,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio_orden;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Button btnimprimir;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblop2;
+        private System.Windows.Forms.Label lblop;
     }
 }

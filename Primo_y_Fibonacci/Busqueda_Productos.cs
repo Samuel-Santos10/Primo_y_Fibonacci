@@ -47,7 +47,7 @@ namespace Primo_y_Fibonacci
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaProducto.DataSource;
-            bs.Filter = "categoriaa like '%" + valor + "%' or codigo like '%" + valor + "%' or nombre like '%" + valor + "%'";
+            bs.Filter = "categoriaa like '%" + valor + "%' or codigo like '%" + valor + "%' or marca like '%" + valor + "%' or capacidad like '%" + valor + "%' or modelo like '%" + valor + "%' or nombre like '%" + valor + "%'";
             GrdBusquedaProducto.DataSource = bs;
 
         }

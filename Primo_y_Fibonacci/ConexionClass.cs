@@ -107,7 +107,6 @@ namespace Primo_y_Fibonacci
             miAdaptadorDatos.Fill(ds, "Inventario_Productos");
 
 
-
             comandosSQL.CommandText = "select * from Categorias";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "Categorias");

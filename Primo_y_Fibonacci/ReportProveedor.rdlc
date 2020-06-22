@@ -39,17 +39,19 @@
             <TextRuns>
               <TextRun>
                 <Value>COD</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bauhaus 93</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.61078cm</Top>
-        <Left>2.35162cm</Left>
+        <Top>1.63724cm</Top>
+        <Left>2.40453cm</Left>
         <Height>0.6cm</Height>
-        <Width>0.9084cm</Width>
+        <Width>0.9525cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -99,7 +101,9 @@
             <TextRuns>
               <TextRun>
                 <Value>PROVEEDOR</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bauhaus 93</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -159,14 +163,16 @@
             <TextRuns>
               <TextRun>
                 <Value>DUI</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bauhaus 93</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.27766cm</Top>
+        <Top>3.30412cm</Top>
         <Left>2.40453cm</Left>
         <Height>0.6cm</Height>
         <Width>0.85549cm</Width>
@@ -219,7 +225,9 @@
             <TextRuns>
               <TextRun>
                 <Value>DIRECCION</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bauhaus 93</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -279,17 +287,19 @@
             <TextRuns>
               <TextRun>
                 <Value>TELEFONO</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bauhaus 93</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>5.05037cm</Top>
-        <Left>1.24037cm</Left>
+        <Top>5.02391cm</Top>
+        <Left>1.58433cm</Left>
         <Height>0.57354cm</Height>
-        <Width>2.01965cm</Width>
+        <Width>1.67569cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>

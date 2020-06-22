@@ -90,6 +90,33 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iMPRIMIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iMPRIMIRToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLIENTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cATEGORIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROVEEDORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENTASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOMPRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pEDIDOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fORMULARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bASICOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROVEEDORToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cATEGORIAToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tIPOUSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNTERMEDIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRODUCTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eMPLEADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNVENTARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aVANZADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENTASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOMPRASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pEDIDOSToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fACTURAVENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelboton1.SuspendLayout();
@@ -110,6 +137,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,9 +150,9 @@
             this.panel1.Controls.Add(this.panelboton1);
             this.panel1.Controls.Add(this.btnmenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 1044);
+            this.panel1.Size = new System.Drawing.Size(205, 1020);
             this.panel1.TabIndex = 21;
             // 
             // label1
@@ -546,7 +574,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(205, 0);
+            this.panel3.Location = new System.Drawing.Point(205, 24);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(984, 60);
             this.panel3.TabIndex = 22;
@@ -592,7 +620,7 @@
             this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncliente.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
-            this.btncliente.Location = new System.Drawing.Point(864, 70);
+            this.btncliente.Location = new System.Drawing.Point(864, 89);
             this.btncliente.Name = "btncliente";
             this.btncliente.Size = new System.Drawing.Size(160, 155);
             this.btncliente.TabIndex = 25;
@@ -607,7 +635,7 @@
             this.btnprovee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnprovee.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprovee.Image = ((System.Drawing.Image)(resources.GetObject("btnprovee.Image")));
-            this.btnprovee.Location = new System.Drawing.Point(1072, 261);
+            this.btnprovee.Location = new System.Drawing.Point(1072, 280);
             this.btnprovee.Name = "btnprovee";
             this.btnprovee.Size = new System.Drawing.Size(160, 155);
             this.btnprovee.TabIndex = 29;
@@ -622,7 +650,7 @@
             this.btnemple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnemple.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnemple.Image = ((System.Drawing.Image)(resources.GetObject("btnemple.Image")));
-            this.btnemple.Location = new System.Drawing.Point(864, 650);
+            this.btnemple.Location = new System.Drawing.Point(864, 669);
             this.btnemple.Name = "btnemple";
             this.btnemple.Size = new System.Drawing.Size(160, 155);
             this.btnemple.TabIndex = 30;
@@ -637,7 +665,7 @@
             this.btntipousu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntipousu.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntipousu.Image = ((System.Drawing.Image)(resources.GetObject("btntipousu.Image")));
-            this.btntipousu.Location = new System.Drawing.Point(864, 455);
+            this.btntipousu.Location = new System.Drawing.Point(864, 474);
             this.btntipousu.Name = "btntipousu";
             this.btntipousu.Size = new System.Drawing.Size(160, 155);
             this.btntipousu.TabIndex = 31;
@@ -652,7 +680,7 @@
             this.btnpedidoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpedidoCliente.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpedidoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnpedidoCliente.Image")));
-            this.btnpedidoCliente.Location = new System.Drawing.Point(668, 840);
+            this.btnpedidoCliente.Location = new System.Drawing.Point(668, 859);
             this.btnpedidoCliente.Name = "btnpedidoCliente";
             this.btnpedidoCliente.Size = new System.Drawing.Size(160, 155);
             this.btnpedidoCliente.TabIndex = 32;
@@ -667,7 +695,7 @@
             this.btnproductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnproductos.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproductos.Image = ((System.Drawing.Image)(resources.GetObject("btnproductos.Image")));
-            this.btnproductos.Location = new System.Drawing.Point(1072, 455);
+            this.btnproductos.Location = new System.Drawing.Point(1072, 474);
             this.btnproductos.Name = "btnproductos";
             this.btnproductos.Size = new System.Drawing.Size(160, 155);
             this.btnproductos.TabIndex = 33;
@@ -682,7 +710,7 @@
             this.btnusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnusuario.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnusuario.Image = ((System.Drawing.Image)(resources.GetObject("btnusuario.Image")));
-            this.btnusuario.Location = new System.Drawing.Point(864, 261);
+            this.btnusuario.Location = new System.Drawing.Point(864, 280);
             this.btnusuario.Name = "btnusuario";
             this.btnusuario.Size = new System.Drawing.Size(160, 155);
             this.btnusuario.TabIndex = 34;
@@ -697,7 +725,7 @@
             this.btninventa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btninventa.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btninventa.Image = ((System.Drawing.Image)(resources.GetObject("btninventa.Image")));
-            this.btninventa.Location = new System.Drawing.Point(1072, 650);
+            this.btninventa.Location = new System.Drawing.Point(1072, 669);
             this.btninventa.Name = "btninventa";
             this.btninventa.Size = new System.Drawing.Size(160, 155);
             this.btninventa.TabIndex = 35;
@@ -712,7 +740,7 @@
             this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncompras.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncompras.Image = ((System.Drawing.Image)(resources.GetObject("btncompras.Image")));
-            this.btncompras.Location = new System.Drawing.Point(1072, 840);
+            this.btncompras.Location = new System.Drawing.Point(1072, 859);
             this.btncompras.Name = "btncompras";
             this.btncompras.Size = new System.Drawing.Size(160, 155);
             this.btncompras.TabIndex = 36;
@@ -727,7 +755,7 @@
             this.btnventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnventas.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnventas.Image = ((System.Drawing.Image)(resources.GetObject("btnventas.Image")));
-            this.btnventas.Location = new System.Drawing.Point(864, 840);
+            this.btnventas.Location = new System.Drawing.Point(864, 859);
             this.btnventas.Name = "btnventas";
             this.btnventas.Size = new System.Drawing.Size(160, 155);
             this.btnventas.TabIndex = 37;
@@ -742,7 +770,7 @@
             this.btncatego.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncatego.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncatego.Image = ((System.Drawing.Image)(resources.GetObject("btncatego.Image")));
-            this.btncatego.Location = new System.Drawing.Point(1072, 70);
+            this.btncatego.Location = new System.Drawing.Point(1072, 89);
             this.btncatego.Name = "btncatego";
             this.btncatego.Size = new System.Drawing.Size(160, 155);
             this.btncatego.TabIndex = 38;
@@ -756,7 +784,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(909, 228);
+            this.label2.Location = new System.Drawing.Point(909, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 16);
             this.label2.TabIndex = 40;
@@ -768,7 +796,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(909, 419);
+            this.label3.Location = new System.Drawing.Point(909, 438);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 41;
@@ -780,7 +808,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(1107, 419);
+            this.label4.Location = new System.Drawing.Point(1107, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 42;
@@ -792,7 +820,7 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(889, 613);
+            this.label5.Location = new System.Drawing.Point(889, 632);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 16);
             this.label5.TabIndex = 43;
@@ -804,7 +832,7 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(1091, 228);
+            this.label6.Location = new System.Drawing.Point(1091, 247);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 16);
             this.label6.TabIndex = 44;
@@ -816,7 +844,7 @@
             this.label7.BackColor = System.Drawing.Color.Black;
             this.label7.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(1107, 615);
+            this.label7.Location = new System.Drawing.Point(1107, 634);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 16);
             this.label7.TabIndex = 45;
@@ -828,7 +856,7 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(894, 809);
+            this.label8.Location = new System.Drawing.Point(894, 828);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 16);
             this.label8.TabIndex = 47;
@@ -840,7 +868,7 @@
             this.label9.BackColor = System.Drawing.Color.Black;
             this.label9.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(1096, 808);
+            this.label9.Location = new System.Drawing.Point(1096, 827);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 16);
             this.label9.TabIndex = 48;
@@ -852,7 +880,7 @@
             this.label10.BackColor = System.Drawing.Color.Black;
             this.label10.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(1107, 998);
+            this.label10.Location = new System.Drawing.Point(1107, 1017);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 16);
             this.label10.TabIndex = 49;
@@ -864,7 +892,7 @@
             this.label11.BackColor = System.Drawing.Color.Black;
             this.label11.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(914, 998);
+            this.label11.Location = new System.Drawing.Point(914, 1017);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 50;
@@ -876,7 +904,7 @@
             this.label12.BackColor = System.Drawing.Color.Black;
             this.label12.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(681, 998);
+            this.label12.Location = new System.Drawing.Point(681, 1017);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(138, 16);
             this.label12.TabIndex = 52;
@@ -888,7 +916,7 @@
             this.label13.BackColor = System.Drawing.Color.Black;
             this.label13.Font = new System.Drawing.Font("Forte", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(479, 998);
+            this.label13.Location = new System.Drawing.Point(479, 1017);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 16);
             this.label13.TabIndex = 55;
@@ -901,17 +929,262 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(465, 840);
+            this.button1.Location = new System.Drawing.Point(465, 859);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 155);
             this.button1.TabIndex = 54;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iMPRIMIRToolStripMenuItem,
+            this.iMPRIMIRToolStripMenuItem1,
+            this.fORMULARIOSToolStripMenuItem,
+            this.sALIRToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 24);
+            this.menuStrip1.TabIndex = 57;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // iMPRIMIRToolStripMenuItem
+            // 
+            this.iMPRIMIRToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.iMPRIMIRToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asercaDeToolStripMenuItem});
+            this.iMPRIMIRToolStripMenuItem.Name = "iMPRIMIRToolStripMenuItem";
+            this.iMPRIMIRToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.iMPRIMIRToolStripMenuItem.Text = "AYUDA";
+            // 
+            // iMPRIMIRToolStripMenuItem1
+            // 
+            this.iMPRIMIRToolStripMenuItem1.BackColor = System.Drawing.Color.Turquoise;
+            this.iMPRIMIRToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cATEGORIAToolStripMenuItem,
+            this.pROVEEDORToolStripMenuItem,
+            this.vENTASToolStripMenuItem,
+            this.cLIENTEToolStripMenuItem,
+            this.cOMPRAToolStripMenuItem,
+            this.pEDIDOSToolStripMenuItem});
+            this.iMPRIMIRToolStripMenuItem1.Name = "iMPRIMIRToolStripMenuItem1";
+            this.iMPRIMIRToolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+            this.iMPRIMIRToolStripMenuItem1.Text = "IMPRIMIR";
+            // 
+            // cLIENTEToolStripMenuItem
+            // 
+            this.cLIENTEToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.cLIENTEToolStripMenuItem.Name = "cLIENTEToolStripMenuItem";
+            this.cLIENTEToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cLIENTEToolStripMenuItem.Text = "CLIENTE";
+            this.cLIENTEToolStripMenuItem.Click += new System.EventHandler(this.cLIENTEToolStripMenuItem_Click_1);
+            // 
+            // cATEGORIAToolStripMenuItem
+            // 
+            this.cATEGORIAToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.cATEGORIAToolStripMenuItem.Name = "cATEGORIAToolStripMenuItem";
+            this.cATEGORIAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cATEGORIAToolStripMenuItem.Text = "CATEGORIA";
+            this.cATEGORIAToolStripMenuItem.Click += new System.EventHandler(this.cATEGORIAToolStripMenuItem_Click_1);
+            // 
+            // pROVEEDORToolStripMenuItem
+            // 
+            this.pROVEEDORToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.pROVEEDORToolStripMenuItem.Name = "pROVEEDORToolStripMenuItem";
+            this.pROVEEDORToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pROVEEDORToolStripMenuItem.Text = "PROVEEDOR";
+            this.pROVEEDORToolStripMenuItem.Click += new System.EventHandler(this.pROVEEDORToolStripMenuItem_Click_1);
+            // 
+            // vENTASToolStripMenuItem
+            // 
+            this.vENTASToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.vENTASToolStripMenuItem.Name = "vENTASToolStripMenuItem";
+            this.vENTASToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTASToolStripMenuItem.Text = "VENTAS";
+            this.vENTASToolStripMenuItem.Click += new System.EventHandler(this.vENTASToolStripMenuItem_Click);
+            // 
+            // cOMPRAToolStripMenuItem
+            // 
+            this.cOMPRAToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.cOMPRAToolStripMenuItem.Name = "cOMPRAToolStripMenuItem";
+            this.cOMPRAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cOMPRAToolStripMenuItem.Text = "COMPRA";
+            this.cOMPRAToolStripMenuItem.Click += new System.EventHandler(this.cOMPRAToolStripMenuItem_Click);
+            // 
+            // pEDIDOSToolStripMenuItem
+            // 
+            this.pEDIDOSToolStripMenuItem.BackColor = System.Drawing.Color.Turquoise;
+            this.pEDIDOSToolStripMenuItem.Name = "pEDIDOSToolStripMenuItem";
+            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pEDIDOSToolStripMenuItem.Text = "PEDIDOS";
+            this.pEDIDOSToolStripMenuItem.Click += new System.EventHandler(this.pEDIDOSToolStripMenuItem_Click);
+            // 
+            // fORMULARIOSToolStripMenuItem
+            // 
+            this.fORMULARIOSToolStripMenuItem.BackColor = System.Drawing.Color.Pink;
+            this.fORMULARIOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bASICOSToolStripMenuItem,
+            this.iNTERMEDIOSToolStripMenuItem,
+            this.aVANZADOSToolStripMenuItem});
+            this.fORMULARIOSToolStripMenuItem.Name = "fORMULARIOSToolStripMenuItem";
+            this.fORMULARIOSToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.fORMULARIOSToolStripMenuItem.Text = "FORMULARIOS";
+            // 
+            // bASICOSToolStripMenuItem
+            // 
+            this.bASICOSToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.bASICOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cLIENTESToolStripMenuItem,
+            this.pROVEEDORToolStripMenuItem1,
+            this.cATEGORIAToolStripMenuItem1,
+            this.uSUARIOSToolStripMenuItem,
+            this.tIPOUSUARIOSToolStripMenuItem});
+            this.bASICOSToolStripMenuItem.Name = "bASICOSToolStripMenuItem";
+            this.bASICOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bASICOSToolStripMenuItem.Text = "BASICOS";
+            // 
+            // cLIENTESToolStripMenuItem
+            // 
+            this.cLIENTESToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
+            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
+            this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
+            // 
+            // pROVEEDORToolStripMenuItem1
+            // 
+            this.pROVEEDORToolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pROVEEDORToolStripMenuItem1.Name = "pROVEEDORToolStripMenuItem1";
+            this.pROVEEDORToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.pROVEEDORToolStripMenuItem1.Text = "PROVEEDOR";
+            this.pROVEEDORToolStripMenuItem1.Click += new System.EventHandler(this.pROVEEDORToolStripMenuItem1_Click);
+            // 
+            // cATEGORIAToolStripMenuItem1
+            // 
+            this.cATEGORIAToolStripMenuItem1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.cATEGORIAToolStripMenuItem1.Name = "cATEGORIAToolStripMenuItem1";
+            this.cATEGORIAToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.cATEGORIAToolStripMenuItem1.Text = "CATEGORIA";
+            this.cATEGORIAToolStripMenuItem1.Click += new System.EventHandler(this.cATEGORIAToolStripMenuItem1_Click);
+            // 
+            // uSUARIOSToolStripMenuItem
+            // 
+            this.uSUARIOSToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.uSUARIOSToolStripMenuItem.Name = "uSUARIOSToolStripMenuItem";
+            this.uSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.uSUARIOSToolStripMenuItem.Text = "USUARIOS";
+            this.uSUARIOSToolStripMenuItem.Click += new System.EventHandler(this.uSUARIOSToolStripMenuItem_Click_1);
+            // 
+            // tIPOUSUARIOSToolStripMenuItem
+            // 
+            this.tIPOUSUARIOSToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.tIPOUSUARIOSToolStripMenuItem.Name = "tIPOUSUARIOSToolStripMenuItem";
+            this.tIPOUSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.tIPOUSUARIOSToolStripMenuItem.Text = "TIPO USUARIOS";
+            this.tIPOUSUARIOSToolStripMenuItem.Click += new System.EventHandler(this.tIPOUSUARIOSToolStripMenuItem_Click);
+            // 
+            // iNTERMEDIOSToolStripMenuItem
+            // 
+            this.iNTERMEDIOSToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iNTERMEDIOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pRODUCTOSToolStripMenuItem,
+            this.eMPLEADOSToolStripMenuItem,
+            this.iNVENTARIOToolStripMenuItem});
+            this.iNTERMEDIOSToolStripMenuItem.Name = "iNTERMEDIOSToolStripMenuItem";
+            this.iNTERMEDIOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iNTERMEDIOSToolStripMenuItem.Text = "INTERMEDIOS";
+            // 
+            // pRODUCTOSToolStripMenuItem
+            // 
+            this.pRODUCTOSToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pRODUCTOSToolStripMenuItem.Name = "pRODUCTOSToolStripMenuItem";
+            this.pRODUCTOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pRODUCTOSToolStripMenuItem.Text = "PRODUCTOS";
+            this.pRODUCTOSToolStripMenuItem.Click += new System.EventHandler(this.pRODUCTOSToolStripMenuItem_Click_1);
+            // 
+            // eMPLEADOSToolStripMenuItem
+            // 
+            this.eMPLEADOSToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.eMPLEADOSToolStripMenuItem.Name = "eMPLEADOSToolStripMenuItem";
+            this.eMPLEADOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eMPLEADOSToolStripMenuItem.Text = "EMPLEADOS";
+            this.eMPLEADOSToolStripMenuItem.Click += new System.EventHandler(this.eMPLEADOSToolStripMenuItem_Click_1);
+            // 
+            // iNVENTARIOToolStripMenuItem
+            // 
+            this.iNVENTARIOToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.iNVENTARIOToolStripMenuItem.Name = "iNVENTARIOToolStripMenuItem";
+            this.iNVENTARIOToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iNVENTARIOToolStripMenuItem.Text = "INVENTARIO";
+            this.iNVENTARIOToolStripMenuItem.Click += new System.EventHandler(this.iNVENTARIOToolStripMenuItem_Click_1);
+            // 
+            // aVANZADOSToolStripMenuItem
+            // 
+            this.aVANZADOSToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
+            this.aVANZADOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vENTASToolStripMenuItem1,
+            this.cOMPRASToolStripMenuItem,
+            this.pEDIDOSToolStripMenuItem1,
+            this.fACTURAVENTAToolStripMenuItem});
+            this.aVANZADOSToolStripMenuItem.Name = "aVANZADOSToolStripMenuItem";
+            this.aVANZADOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aVANZADOSToolStripMenuItem.Text = "AVANZADOS";
+            // 
+            // vENTASToolStripMenuItem1
+            // 
+            this.vENTASToolStripMenuItem1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.vENTASToolStripMenuItem1.Name = "vENTASToolStripMenuItem1";
+            this.vENTASToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.vENTASToolStripMenuItem1.Text = "VENTAS";
+            this.vENTASToolStripMenuItem1.Click += new System.EventHandler(this.vENTASToolStripMenuItem1_Click);
+            // 
+            // cOMPRASToolStripMenuItem
+            // 
+            this.cOMPRASToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
+            this.cOMPRASToolStripMenuItem.Name = "cOMPRASToolStripMenuItem";
+            this.cOMPRASToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.cOMPRASToolStripMenuItem.Text = "COMPRAS";
+            this.cOMPRASToolStripMenuItem.Click += new System.EventHandler(this.cOMPRASToolStripMenuItem_Click);
+            // 
+            // pEDIDOSToolStripMenuItem1
+            // 
+            this.pEDIDOSToolStripMenuItem1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pEDIDOSToolStripMenuItem1.Name = "pEDIDOSToolStripMenuItem1";
+            this.pEDIDOSToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.pEDIDOSToolStripMenuItem1.Text = "PEDIDOS";
+            this.pEDIDOSToolStripMenuItem1.Click += new System.EventHandler(this.pEDIDOSToolStripMenuItem1_Click);
+            // 
+            // fACTURAVENTAToolStripMenuItem
+            // 
+            this.fACTURAVENTAToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
+            this.fACTURAVENTAToolStripMenuItem.Name = "fACTURAVENTAToolStripMenuItem";
+            this.fACTURAVENTAToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.fACTURAVENTAToolStripMenuItem.Text = "FACTURA VENTA";
+            this.fACTURAVENTAToolStripMenuItem.Click += new System.EventHandler(this.fACTURAVENTAToolStripMenuItem_Click);
+            // 
+            // sALIRToolStripMenuItem
+            // 
+            this.sALIRToolStripMenuItem.BackColor = System.Drawing.Color.NavajoWhite;
+            this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
+            this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sALIRToolStripMenuItem.Text = "SALIR";
+            this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click_1);
+            // 
+            // asercaDeToolStripMenuItem
+            // 
+            this.asercaDeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.asercaDeToolStripMenuItem.Name = "asercaDeToolStripMenuItem";
+            this.asercaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.asercaDeToolStripMenuItem.Text = "ACERCA DE";
+            this.asercaDeToolStripMenuItem.Click += new System.EventHandler(this.asercaDeToolStripMenuItem_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1189, 1044);
@@ -941,8 +1214,10 @@
             this.Controls.Add(this.btncliente);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -969,6 +1244,8 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1037,5 +1314,32 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem iMPRIMIRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iMPRIMIRToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cLIENTEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cATEGORIAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pROVEEDORToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vENTASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cOMPRAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pEDIDOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fORMULARIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bASICOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cLIENTESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pROVEEDORToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cATEGORIAToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem uSUARIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tIPOUSUARIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iNTERMEDIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pRODUCTOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eMPLEADOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iNVENTARIOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aVANZADOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vENTASToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cOMPRASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pEDIDOSToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fACTURAVENTAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asercaDeToolStripMenuItem;
     }
 }

@@ -126,16 +126,17 @@ namespace Primo_y_Fibonacci
             detalleVentaDataGridView.ReadOnly = estado;
             pnlProductosGrid.Visible = !estado;
             pnlNavegacion.Visible = estado;
+            btnimprimir.Enabled = estado;
             btnEliminar.Enabled = estado;
             btnBuscar.Enabled = estado;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (btnAgregar.Text == "Nuevo")
+            if (lblop.Text == "Nuevo")
             {//nuevo
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
                 ventasBindingSource.AddNew();//agregamos un registro nuevo...
@@ -196,18 +197,18 @@ namespace Primo_y_Fibonacci
                 ventasBindingSource.MoveLast();
 
                 habdes_controles(true);
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
-            if (btnModificar.Text == "Modificar")
+            if (lblop2.Text == "Modificar")
             {//modificar
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
 
@@ -218,8 +219,8 @@ namespace Primo_y_Fibonacci
                 detalleVentaBindingSource.CancelEdit();
 
                 habdes_controles(true);//deshabilitar los controles...
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 
@@ -245,5 +246,13 @@ namespace Primo_y_Fibonacci
                 detalleVentaDataGridView.Rows.Remove(detalleVentaDataGridView.CurrentRow);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmImpresionesVentas imprimir = new FrmImpresionesVentas(int.Parse(idVentasTextBox.Text));
+            imprimir.ShowDialog();
+         }
+
+
     }
 }

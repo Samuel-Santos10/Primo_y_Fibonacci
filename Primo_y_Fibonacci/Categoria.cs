@@ -191,5 +191,11 @@ namespace Primo_y_Fibonacci
         {
             Close();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Impresion_Categoria imprimir = new Impresion_Categoria(int.Parse(lblidcategoria.Text));
+            imprimir.ShowDialog();
+        }
     }
 }

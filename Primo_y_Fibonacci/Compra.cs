@@ -133,15 +133,16 @@ namespace Primo_y_Fibonacci
             pnlProductosGrid.Visible = !estado;
             pnlNavegacion.Visible = estado;
             btnEliminar.Enabled = estado;
+            btnimprimir.Enabled = estado;
             btnBuscar.Enabled = estado;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (btnAgregar.Text == "Nuevo")
+            if (lblop.Text == "Nuevo")
             {//nuevo
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
                 compra_OrdenesBindingSource.AddNew();//agregamos un registro nuevo...
@@ -201,17 +202,17 @@ namespace Primo_y_Fibonacci
                 compra_OrdenesBindingSource.MoveLast();
 
                 habdes_controles(true);
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (btnModificar.Text == "Modificar")
+            if (lblop2.Text == "Modificar")
             {//modificar
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
 
@@ -222,8 +223,8 @@ namespace Primo_y_Fibonacci
                 detalleCompraBindingSource.CancelEdit();
 
                 habdes_controles(true);//deshabilitar los controles...
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 

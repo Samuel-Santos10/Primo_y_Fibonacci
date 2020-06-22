@@ -29,29 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.Windows.Forms.Label label2;
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Impresion_Proveedor));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ControlDataSet = new Primo_y_Fibonacci.ControlDataSet();
             this.ReportProveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ControlDataSet = new Primo_y_Fibonacci.ControlDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReportProveedorTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.ReportProveedorTableAdapter();
             this.btnsalir = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ControlDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportProveedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControlDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSetReportProveedor";
-            reportDataSource1.Value = this.ReportProveedorBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Primo_y_Fibonacci.ReportProveedor.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(6, 71);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(670, 336);
-            this.reportViewer1.TabIndex = 0;
             // 
             // label2
             // 
@@ -64,15 +53,26 @@
             label2.TabIndex = 37;
             label2.Text = "IMPRESION PROVEEDOR";
             // 
+            // ReportProveedorBindingSource
+            // 
+            this.ReportProveedorBindingSource.DataMember = "ReportProveedor";
+            this.ReportProveedorBindingSource.DataSource = this.ControlDataSet;
+            // 
             // ControlDataSet
             // 
             this.ControlDataSet.DataSetName = "ControlDataSet";
             this.ControlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ReportProveedorBindingSource
+            // reportViewer1
             // 
-            this.ReportProveedorBindingSource.DataMember = "ReportProveedor";
-            this.ReportProveedorBindingSource.DataSource = this.ControlDataSet;
+            reportDataSource1.Name = "DataSetReportProveedor";
+            reportDataSource1.Value = this.ReportProveedorBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Primo_y_Fibonacci.ReportProveedor.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(6, 71);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(670, 336);
+            this.reportViewer1.TabIndex = 0;
             // 
             // ReportProveedorTableAdapter
             // 
@@ -84,9 +84,9 @@
             this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(646, 2);
+            this.btnsalir.Location = new System.Drawing.Point(656, 2);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(37, 37);
+            this.btnsalir.Size = new System.Drawing.Size(26, 28);
             this.btnsalir.TabIndex = 38;
             this.btnsalir.UseVisualStyleBackColor = false;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -95,17 +95,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(686, 432);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(label2);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Impresion_Proveedor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Impresion_Proveedor";
             this.Load += new System.EventHandler(this.Impresion_Proveedor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ControlDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportProveedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ControlDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

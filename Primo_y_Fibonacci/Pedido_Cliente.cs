@@ -129,7 +129,7 @@ namespace Primo_y_Fibonacci
             direccionTextBox.ReadOnly = estado;
             detallePedidoDataGridView.ReadOnly = estado;
             pnlProductosGrid.Visible = !estado;
-
+            btnimprimir.Enabled = estado;
             pnlNavegacion.Visible = estado;
             btnEliminar.Enabled = estado;
             btnBuscar.Enabled = estado;
@@ -142,10 +142,10 @@ namespace Primo_y_Fibonacci
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (btnAgregar.Text == "Nuevo")
+            if (lblop.Text == "Nuevo")
             {//nuevo
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
                 pedido_ClienteBindingSource.AddNew();//agregamos un registro nuevo...
@@ -204,17 +204,17 @@ namespace Primo_y_Fibonacci
                 pedido_ClienteBindingSource.MoveLast();
 
                 habdes_controles(true);
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (btnModificar.Text == "Modificar")
+            if (lblop2.Text == "Modificar")
             {//modificar
-                btnAgregar.Text = "Guardar";
-                btnModificar.Text = "Cancelar";
+                lblop.Text = "Guardar";
+                lblop2.Text = "Cancelar";
 
                 habdes_controles(false);//habilitar los controles...
 
@@ -225,8 +225,8 @@ namespace Primo_y_Fibonacci
                 detallePedidoBindingSource.CancelEdit();
 
                 habdes_controles(true);//deshabilitar los controles...
-                btnAgregar.Text = "Nuevo";
-                btnModificar.Text = "Modificar";
+                lblop.Text = "Nuevo";
+                lblop2.Text = "Modificar";
             }
         }
 
@@ -250,6 +250,12 @@ namespace Primo_y_Fibonacci
             {
                 detallePedidoDataGridView.Rows.Remove(detallePedidoDataGridView.CurrentRow);
             }
+        }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            Impresion_Pedidos imprimir = new Impresion_Pedidos(int.Parse(idPedidoClientTextBox.Text));
+            imprimir.ShowDialog();
         }
     }
 }

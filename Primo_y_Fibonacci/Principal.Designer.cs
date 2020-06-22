@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             System.Windows.Forms.Label label9;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.GrbDatosCliente = new System.Windows.Forms.GroupBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -65,12 +65,25 @@
             this.BtnPrimero = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
             label9 = new System.Windows.Forms.Label();
             this.GrbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GrbCliente.SuspendLayout();
             this.GrbNavegacion.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = System.Drawing.Color.Transparent;
+            label9.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label9.Location = new System.Drawing.Point(179, 16);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(178, 38);
+            label9.TabIndex = 39;
+            label9.Text = "CLIENTES";
             // 
             // GrbDatosCliente
             // 
@@ -233,7 +246,9 @@
             // GrbCliente
             // 
             this.GrbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GrbCliente.Controls.Add(this.label10);
             this.GrbCliente.Controls.Add(this.label5);
+            this.GrbCliente.Controls.Add(this.btnImprimir);
             this.GrbCliente.Controls.Add(this.btnsalir);
             this.GrbCliente.Controls.Add(this.label3);
             this.GrbCliente.Controls.Add(this.label2);
@@ -254,7 +269,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(442, 73);
+            this.label5.Location = new System.Drawing.Point(460, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 21;
@@ -265,7 +280,7 @@
             this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
             this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(424, 13);
+            this.btnsalir.Location = new System.Drawing.Point(442, 13);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(66, 57);
             this.btnsalir.TabIndex = 20;
@@ -276,7 +291,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(330, 73);
+            this.label3.Location = new System.Drawing.Point(282, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 19;
@@ -286,7 +301,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(132, 73);
+            this.label2.Location = new System.Drawing.Point(106, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 18;
@@ -296,7 +311,7 @@
             // 
             this.lblop2.AutoSize = true;
             this.lblop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblop2.Location = new System.Drawing.Point(237, 73);
+            this.lblop2.Location = new System.Drawing.Point(196, 73);
             this.lblop2.Name = "lblop2";
             this.lblop2.Size = new System.Drawing.Size(40, 13);
             this.lblop2.TabIndex = 17;
@@ -306,7 +321,7 @@
             // 
             this.lblop.AutoSize = true;
             this.lblop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblop.Location = new System.Drawing.Point(32, 73);
+            this.lblop.Location = new System.Drawing.Point(18, 73);
             this.lblop.Name = "lblop";
             this.lblop.Size = new System.Drawing.Size(44, 13);
             this.lblop.TabIndex = 16;
@@ -317,7 +332,7 @@
             this.BtnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.BackgroundImage")));
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnBuscar.Location = new System.Drawing.Point(319, 13);
+            this.BtnBuscar.Location = new System.Drawing.Point(272, 13);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
             this.BtnBuscar.TabIndex = 5;
@@ -330,7 +345,7 @@
             this.BtnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnDelete.BackgroundImage")));
             this.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnDelete.Location = new System.Drawing.Point(123, 13);
+            this.BtnDelete.Location = new System.Drawing.Point(97, 13);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(66, 57);
             this.BtnDelete.TabIndex = 6;
@@ -343,7 +358,7 @@
             this.BtnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnModificar.BackgroundImage")));
             this.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnModificar.Location = new System.Drawing.Point(225, 13);
+            this.BtnModificar.Location = new System.Drawing.Point(184, 13);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(66, 57);
             this.BtnModificar.TabIndex = 5;
@@ -358,7 +373,7 @@
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnNuevo.Location = new System.Drawing.Point(22, 13);
+            this.BtnNuevo.Location = new System.Drawing.Point(8, 13);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
             this.BtnNuevo.TabIndex = 4;
@@ -464,16 +479,27 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "OPCIONES";
             // 
-            // label9
+            // label10
             // 
-            label9.AutoSize = true;
-            label9.BackColor = System.Drawing.Color.Transparent;
-            label9.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label9.Location = new System.Drawing.Point(179, 16);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(178, 38);
-            label9.TabIndex = 39;
-            label9.Text = "CLIENTES";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(364, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Imprimir";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.BackgroundImage")));
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImprimir.Location = new System.Drawing.Point(357, 13);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(66, 57);
+            this.btnImprimir.TabIndex = 51;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // Principal
             // 
@@ -542,5 +568,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

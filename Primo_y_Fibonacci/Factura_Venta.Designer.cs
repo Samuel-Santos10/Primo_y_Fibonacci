@@ -53,6 +53,17 @@
             this.fecha_facturaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dFacturaVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dFacturaVentaDataGridView = new System.Windows.Forms.DataGridView();
+            this.IdDFacturaV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdFacturaV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factura_ventaTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.factura_ventaTableAdapter();
             this.tableAdapterManager = new Primo_y_Fibonacci.ControlDataSetTableAdapters.TableAdapterManager();
             this.dFacturaVentaTableAdapter = new Primo_y_Fibonacci.ControlDataSetTableAdapters.DFacturaVentaTableAdapter();
@@ -83,17 +94,11 @@
             this.btnAgregarProductosGrid = new System.Windows.Forms.Button();
             this.dFactura_VTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.DFactura_VTableAdapter();
             this.factura_ventaTableAdapter1 = new Primo_y_Fibonacci.ControlDataSetTableAdapters.factura_ventaTableAdapter();
-            this.IdDFacturaV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdFacturaV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblop2 = new System.Windows.Forms.Label();
+            this.lblop = new System.Windows.Forms.Label();
             idFacturaVLabel = new System.Windows.Forms.Label();
             idClienteLabel = new System.Windows.Forms.Label();
             idEmpleadoLabel = new System.Windows.Forms.Label();
@@ -327,11 +332,98 @@
             this.unidades,
             this.subtotal});
             this.dFacturaVentaDataGridView.DataSource = this.dFacturaVentaBindingSource;
-            this.dFacturaVentaDataGridView.Location = new System.Drawing.Point(7, 275);
+            this.dFacturaVentaDataGridView.Location = new System.Drawing.Point(2, 275);
             this.dFacturaVentaDataGridView.Name = "dFacturaVentaDataGridView";
             this.dFacturaVentaDataGridView.ReadOnly = true;
             this.dFacturaVentaDataGridView.Size = new System.Drawing.Size(635, 195);
             this.dFacturaVentaDataGridView.TabIndex = 15;
+            // 
+            // IdDFacturaV
+            // 
+            this.IdDFacturaV.DataPropertyName = "IdDFacturaV";
+            this.IdDFacturaV.HeaderText = "IdDFacturaV";
+            this.IdDFacturaV.Name = "IdDFacturaV";
+            this.IdDFacturaV.ReadOnly = true;
+            this.IdDFacturaV.Visible = false;
+            // 
+            // IdFacturaV
+            // 
+            this.IdFacturaV.DataPropertyName = "IdFacturaV";
+            this.IdFacturaV.HeaderText = "IdFacturaV";
+            this.IdFacturaV.Name = "IdFacturaV";
+            this.IdFacturaV.ReadOnly = true;
+            this.IdFacturaV.Visible = false;
+            // 
+            // IdVenta
+            // 
+            this.IdVenta.DataPropertyName = "IdVenta";
+            this.IdVenta.HeaderText = "IdVenta";
+            this.IdVenta.Name = "IdVenta";
+            this.IdVenta.ReadOnly = true;
+            this.IdVenta.Visible = false;
+            // 
+            // Idproducto
+            // 
+            this.Idproducto.DataPropertyName = "Idproducto";
+            this.Idproducto.HeaderText = "Idproducto";
+            this.Idproducto.Name = "Idproducto";
+            this.Idproducto.ReadOnly = true;
+            this.Idproducto.Visible = false;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "CODIGO";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 80;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "NOMBRE";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 140;
+            // 
+            // cantidad
+            // 
+            this.cantidad.DataPropertyName = "cantidad";
+            this.cantidad.HeaderText = "CANT";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 60;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "precio";
+            this.precio.HeaderText = "PRECIO";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 80;
+            // 
+            // descuento
+            // 
+            this.descuento.DataPropertyName = "descuento";
+            this.descuento.HeaderText = "DESC";
+            this.descuento.Name = "descuento";
+            this.descuento.ReadOnly = true;
+            this.descuento.Width = 50;
+            // 
+            // unidades
+            // 
+            this.unidades.DataPropertyName = "unidades";
+            this.unidades.HeaderText = "UNID";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            this.unidades.Width = 80;
+            // 
+            // subtotal
+            // 
+            this.subtotal.DataPropertyName = "subtotal";
+            this.subtotal.HeaderText = "SUB TOTAL";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // factura_ventaTableAdapter
             // 
@@ -347,13 +439,18 @@
             this.tableAdapterManager.detalle_CompraTableAdapter = null;
             this.tableAdapterManager.Detalle_Pedido_ClientTableAdapter = null;
             this.tableAdapterManager.Detalle_VentaTableAdapter = null;
+            this.tableAdapterManager.Dfactura_CTableAdapter = null;
             this.tableAdapterManager.DFactura_VTableAdapter = null;
             this.tableAdapterManager.EmpleadoTableAdapter = null;
+            this.tableAdapterManager.factura_compraTableAdapter = null;
             this.tableAdapterManager.factura_ventaTableAdapter = this.factura_ventaTableAdapter;
             this.tableAdapterManager.InventarioTableAdapter = null;
             this.tableAdapterManager.Pedido_ClienteTableAdapter = null;
             this.tableAdapterManager.ProductosTableAdapter = null;
             this.tableAdapterManager.ProveedorTableAdapter = null;
+            this.tableAdapterManager.ReportCategoTableAdapter = null;
+            this.tableAdapterManager.ReportClienteTableAdapter = null;
+            this.tableAdapterManager.ReportProveedorTableAdapter = null;
             this.tableAdapterManager.Tipo_documentoTableAdapter = null;
             this.tableAdapterManager.Tipo_UsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Primo_y_Fibonacci.ControlDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -451,7 +548,7 @@
             this.lblregistroxden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblregistroxden.Location = new System.Drawing.Point(163, 23);
             this.lblregistroxden.Name = "lblregistroxden";
-            this.lblregistroxden.Size = new System.Drawing.Size(49, 16);
+            this.lblregistroxden.Size = new System.Drawing.Size(51, 16);
             this.lblregistroxden.TabIndex = 6;
             this.lblregistroxden.Text = "x de n";
             // 
@@ -531,52 +628,60 @@
             // 
             // pnlEdicion
             // 
-            this.pnlEdicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlEdicion.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.pnlEdicion.Controls.Add(this.btnBuscar);
+            this.pnlEdicion.Controls.Add(this.label5);
             this.pnlEdicion.Controls.Add(this.btnAgregar);
+            this.pnlEdicion.Controls.Add(this.label7);
             this.pnlEdicion.Controls.Add(this.btnModificar);
+            this.pnlEdicion.Controls.Add(this.lblop2);
+            this.pnlEdicion.Controls.Add(this.lblop);
             this.pnlEdicion.Controls.Add(this.btnEliminar);
-            this.pnlEdicion.Location = new System.Drawing.Point(0, 213);
+            this.pnlEdicion.Location = new System.Drawing.Point(0, 201);
             this.pnlEdicion.Name = "pnlEdicion";
-            this.pnlEdicion.Size = new System.Drawing.Size(669, 33);
+            this.pnlEdicion.Size = new System.Drawing.Size(669, 53);
             this.pnlEdicion.TabIndex = 40;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(478, 0);
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.Location = new System.Drawing.Point(493, 0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(67, 33);
+            this.btnBuscar.Size = new System.Drawing.Size(51, 53);
             this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(53, 0);
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregar.Location = new System.Drawing.Point(33, 0);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(67, 33);
+            this.btnAgregar.Size = new System.Drawing.Size(51, 53);
             this.btnAgregar.TabIndex = 0;
-            this.btnAgregar.Text = "Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(202, 0);
+            this.btnModificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificar.BackgroundImage")));
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModificar.Location = new System.Drawing.Point(171, 0);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(67, 33);
+            this.btnModificar.Size = new System.Drawing.Size(51, 53);
             this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(338, 0);
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminar.Location = new System.Drawing.Point(330, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(67, 33);
+            this.btnEliminar.Size = new System.Drawing.Size(51, 53);
             this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // pnlProductosGrid
@@ -619,99 +724,70 @@
             // 
             this.factura_ventaTableAdapter1.ClearBeforeFill = true;
             // 
-            // IdDFacturaV
+            // btnsalir
             // 
-            this.IdDFacturaV.DataPropertyName = "IdDFacturaV";
-            this.IdDFacturaV.HeaderText = "IdDFacturaV";
-            this.IdDFacturaV.Name = "IdDFacturaV";
-            this.IdDFacturaV.ReadOnly = true;
-            this.IdDFacturaV.Visible = false;
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
+            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.Location = new System.Drawing.Point(609, 5);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(26, 28);
+            this.btnsalir.TabIndex = 42;
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // IdFacturaV
+            // label5
             // 
-            this.IdFacturaV.DataPropertyName = "IdFacturaV";
-            this.IdFacturaV.HeaderText = "IdFacturaV";
-            this.IdFacturaV.Name = "IdFacturaV";
-            this.IdFacturaV.ReadOnly = true;
-            this.IdFacturaV.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(545, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Buscar";
             // 
-            // IdVenta
+            // label7
             // 
-            this.IdVenta.DataPropertyName = "IdVenta";
-            this.IdVenta.HeaderText = "IdVenta";
-            this.IdVenta.Name = "IdVenta";
-            this.IdVenta.ReadOnly = true;
-            this.IdVenta.Visible = false;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(382, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Eliminar";
             // 
-            // Idproducto
+            // lblop2
             // 
-            this.Idproducto.DataPropertyName = "Idproducto";
-            this.Idproducto.HeaderText = "Idproducto";
-            this.Idproducto.Name = "Idproducto";
-            this.Idproducto.ReadOnly = true;
-            this.Idproducto.Visible = false;
+            this.lblop2.AutoSize = true;
+            this.lblop2.BackColor = System.Drawing.Color.White;
+            this.lblop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop2.Location = new System.Drawing.Point(223, 29);
+            this.lblop2.Name = "lblop2";
+            this.lblop2.Size = new System.Drawing.Size(59, 13);
+            this.lblop2.TabIndex = 47;
+            this.lblop2.Text = "Modificar";
             // 
-            // codigo
+            // lblop
             // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "CODIGO";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 80;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "NOMBRE";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 140;
-            // 
-            // cantidad
-            // 
-            this.cantidad.DataPropertyName = "cantidad";
-            this.cantidad.HeaderText = "CANT";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 60;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.HeaderText = "PRECIO";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 80;
-            // 
-            // descuento
-            // 
-            this.descuento.DataPropertyName = "descuento";
-            this.descuento.HeaderText = "DESC";
-            this.descuento.Name = "descuento";
-            this.descuento.ReadOnly = true;
-            this.descuento.Width = 50;
-            // 
-            // unidades
-            // 
-            this.unidades.DataPropertyName = "unidades";
-            this.unidades.HeaderText = "UNID";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            this.unidades.Width = 80;
-            // 
-            // subtotal
-            // 
-            this.subtotal.DataPropertyName = "subtotal";
-            this.subtotal.HeaderText = "SUB TOTAL";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
+            this.lblop.AutoSize = true;
+            this.lblop.BackColor = System.Drawing.Color.White;
+            this.lblop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblop.Location = new System.Drawing.Point(85, 29);
+            this.lblop.Name = "lblop";
+            this.lblop.Size = new System.Drawing.Size(44, 13);
+            this.lblop.TabIndex = 48;
+            this.lblop.Text = "Nuevo";
             // 
             // Factura_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(667, 603);
+            this.ClientSize = new System.Drawing.Size(642, 603);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.pnlProductosGrid);
             this.Controls.Add(this.pnlEdicion);
             this.Controls.Add(this.pnlNavegacion);
@@ -734,7 +810,7 @@
             this.Controls.Add(this.fecha_facturaDateTimePicker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Factura_Venta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Factura_Venta";
             this.Load += new System.EventHandler(this.Factura_Venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.factura_ventaBindingSource)).EndInit();
@@ -750,6 +826,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlEdicion.ResumeLayout(false);
+            this.pnlEdicion.PerformLayout();
             this.pnlProductosGrid.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -814,5 +891,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblop2;
+        private System.Windows.Forms.Label lblop;
     }
 }
